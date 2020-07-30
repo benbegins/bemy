@@ -1,0 +1,43 @@
+.btn{
+	@apply uppercase font-extrabold border-solid border-2 border-bemy-light py-5 px-10 inline-block overflow-hidden z-10;
+}
+.btn-primary{
+	font-size: 0.85rem;
+	@screen md{
+		font-size: 1rem;
+	}
+}
+.btn::before{
+	content: "";
+	background: $bemy-red;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	transform: translateX(-100%);
+	transition: transform 0.4s 0.1s $ease;
+}
+.btn::after{
+	content: "";
+	background: $bemy-light;
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: -2;
+	transform: translateX(-100%);
+	transition: transform 0.4s $ease;
+}
+.btn:hover{
+	&::before{
+		transform: translateX(0);
+	}
+	&::after{
+		transform: translateX(0);
+	}
+}

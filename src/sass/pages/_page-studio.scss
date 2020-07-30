@@ -1,0 +1,14 @@
+.studio-presentation {
+    &__img {
+      background: url("./dist/images/benoit-tommy.png") no-repeat;
+      background-size: contain;
+      background-position: left bottom;
+      padding-bottom: 100%;
+        
+      @media screen and (min-width: $md){
+        background-position: -50px bottom;
+        top: -70%;
+        padding-bottom: 0;
+      }
+    }
+  }

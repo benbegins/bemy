@@ -1,0 +1,16 @@
+footer {
+    z-index: -1;
+}
+.footer-contact__link {
+    @media screen and (min-width: $md){
+        font-size: 3rem;
+    }
+    @media screen and (min-width: $lg) {
+        font-size: 6vw;
+    }
+}
+.footer-mentions__link {
+    &:hover {
+        color: $bemy-dark;
+    }
+}

@@ -10,7 +10,16 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 */
 
 @import "tailwindcss/base";
-
 @import "tailwindcss/components";
-
 @import "tailwindcss/utilities";
+
+@import url("https://use.typekit.net/cdi3ris.css");
+
+@import "./variables";
+@import "./global";
+@import "./buttons";
+
+@import "./components/header";
+@import "./components/footer";
+@import "./pages/page-home";
+@import "./pages/page-studio";

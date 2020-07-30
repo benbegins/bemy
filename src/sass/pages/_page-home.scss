@@ -1,0 +1,26 @@
+.home-intro {
+    &__btn {
+        @media screen and (min-width: $md){
+            bottom: 2.5rem;
+        }
+        @media screen and (min-width: $lg){
+            bottom: 15vh;
+        }
+    }
+  }
+  .home-projets {
+    &__img-mask {
+      width: 150%;
+      transform: skewX(-18deg) translateX(-70%);
+    }
+    &__img {
+      background-size: cover;
+      background-position: center center;
+      @media screen and (min-width: $lg){
+        background-attachment: fixed;
+      }
+    }
+  }
+  .home-studio__bloc-rouge {
+    transform: translateX(100%) skew(-18deg);
+  }
