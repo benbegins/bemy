@@ -54,3 +54,65 @@ add_action( 'rest_api_init', function () {
         'callback' => 'custom_wp_menu',
     ) );
 } );
+
+
+// Custom image size
+add_image_size( 'xl', 1440);
+add_image_size( 'xxl', 1900);
+
+
+//Projet post type
+function projet_post_type() {
+
+	$labels = array(
+		'name'                  => _x( 'Projets', 'Post Type General Name', 'bemy' ),
+		'singular_name'         => _x( 'Projet', 'Post Type Singular Name', 'bemy' ),
+		'menu_name'             => __( 'Projets', 'bemy' ),
+		'name_admin_bar'        => __( 'Projet', 'bemy' ),
+		'archives'              => __( 'Archives', 'bemy' ),
+		'attributes'            => __( 'Item Attributes', 'bemy' ),
+		'parent_item_colon'     => __( 'Parent Item:', 'bemy' ),
+		'all_items'             => __( 'Tous les projets', 'bemy' ),
+		'add_new_item'          => __( 'Ajouter un projet', 'bemy' ),
+		'add_new'               => __( 'Ajouter un projet', 'bemy' ),
+		'new_item'              => __( 'Nouveau projet', 'bemy' ),
+		'edit_item'             => __( 'Editer le projet', 'bemy' ),
+		'update_item'           => __( 'Mettre à jour le projet', 'bemy' ),
+		'view_item'             => __( 'Voir le projet', 'bemy' ),
+		'view_items'            => __( 'Voir les projets', 'bemy' ),
+		'search_items'          => __( 'Rechercher un projet', 'bemy' ),
+		'not_found'             => __( 'Rien trouvé', 'bemy' ),
+		'not_found_in_trash'    => __( 'Rien trouvé', 'bemy' ),
+		'featured_image'        => __( 'Image vignette', 'bemy' ),
+		'set_featured_image'    => __( 'Définir image vignette', 'bemy' ),
+		'remove_featured_image' => __( 'Supprimer l\'image vignette', 'bemy' ),
+		'use_featured_image'    => __( 'Utiliser comme image vignette', 'bemy' ),
+		'insert_into_item'      => __( 'Insérer dans le projet', 'bemy' ),
+		'uploaded_to_this_item' => __( 'Uploaded to this item', 'bemy' ),
+		'items_list'            => __( 'Items list', 'bemy' ),
+		'items_list_navigation' => __( 'Items list navigation', 'bemy' ),
+		'filter_items_list'     => __( 'Filter items list', 'bemy' ),
+	);
+	$args = array(
+		'label'                 => __( 'Projet', 'bemy' ),
+		'description'           => __( 'Projet Bemy', 'bemy' ),
+		'labels'                => $labels,
+		'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'hierarchical'          => false,
+		'public'                => true,
+		'show_ui'               => true,
+		'show_in_menu'          => true,
+		'menu_position'         => 5,
+		'show_in_admin_bar'     => true,
+		'show_in_nav_menus'     => true,
+		'can_export'            => true,
+		'has_archive'           => true,
+		'exclude_from_search'   => false,
+		'publicly_queryable'    => true,
+		'capability_type'       => 'page',
+		'show_in_rest'          => true,
+	);
+	register_post_type( 'projet', $args );
+
+}
+add_action( 'init', 'projet_post_type', 0 );

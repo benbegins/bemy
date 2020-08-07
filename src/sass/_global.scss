@@ -16,9 +16,11 @@ strong{
 	font-weight: 800;
 }
 
-.page{
-	margin-bottom:100vh;
+.page-container{
 	background-color: $bemy-dark;
+	@media screen and (min-width: $lg){
+		margin-bottom:100vh;
+	}
 }
 
 .text-40{
@@ -55,4 +57,52 @@ strong{
 
 .link-transition{
 	transition: 0.25s;
+}
+
+.reveal-bloc{
+	position: relative;
+	overflow: hidden;
+	padding: 20px 0;
+}
+.reveal-bloc-1, .reveal-bloc-2{
+	position: absolute;
+	width: 120%;
+	height: 110%;
+	left: -10%;
+	top: -5%;
+}
+.reveal-bloc-1{
+	transform-origin: center right;
+}
+.reveal-bloc-2{
+	transform-origin: center left;
+}
+
+.page-transition{
+	pointer-events: none;
+	.swipe{
+		height: 100vh;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		transform: translateX(-100%);
+	}
+	.loading-icon{
+		display: none;
+		background: url('./dist/images/loading.gif') center center no-repeat;
+		width: 40px;
+		height: 40px;
+		position: fixed;
+		top: calc(50% - 20px);
+		left: calc(50% - 20px);
+		z-index: 110;
+		pointer-events: none;
+		opacity: 0;
+	}
 }

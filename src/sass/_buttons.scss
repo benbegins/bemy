@@ -1,10 +1,10 @@
 .btn{
-	@apply uppercase font-extrabold border-solid border-2 border-bemy-light py-5 px-10 inline-block overflow-hidden z-10;
+	@apply uppercase font-extrabold border-solid border border-bemy-light py-4 px-8 inline-block z-10 overflow-hidden;
 }
 .btn-primary{
 	font-size: 0.85rem;
-	@screen md{
-		font-size: 1rem;
+	@media screen and (min-width: $md){
+		font-size: 0.95rem;
 	}
 }
 .btn::before{
@@ -12,12 +12,13 @@
 	background: $bemy-red;
 	display: block;
 	position: absolute;
-	width: 100%;
+	width: 120%;
 	height: 100%;
-	left: 0;
+	left: -10%;
 	top: 0;
 	z-index: -1;
-	transform: translateX(-100%);
+	transform: scaleX(0) skewX(-18deg);
+	transform-origin: center left;
 	transition: transform 0.4s 0.1s $ease;
 }
 .btn::after{
@@ -25,19 +26,83 @@
 	background: $bemy-light;
 	display: block;
 	position: absolute;
-	width: 100%;
+	width: 120%;
 	height: 100%;
-	left: 0;
+	left: -10%;
 	top: 0;
 	z-index: -2;
-	transform: translateX(-100%);
+	transform: scaleX(0) skewX(-18deg);
+	transform-origin: center left;
 	transition: transform 0.4s $ease;
 }
 .btn:hover{
 	&::before{
-		transform: translateX(0);
+		transform: scaleX(1) skewX(-18deg);
 	}
 	&::after{
-		transform: translateX(0);
+		transform: scaleX(1) skewX(-18deg);
+	}
+}
+
+.link-border-bottom{
+	line-height: 1;
+	position: relative;
+	z-index: 1;
+	font-size: 1.5rem;
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 100%;
+        height: 2px;
+        background-color: $bemy-light;
+    }
+    @media screen and (min-width: $md){
+        font-size: 3rem;
+        &::after{
+            height: 3px;
+            bottom: -10px;
+        }
+    }
+    @media screen and (min-width: $lg) {
+        font-size: 6vw;
+        transition:color 0.3s;
+        &::after{
+            height: 4px;
+            bottom: -20px;
+            z-index: -1;
+            transition: 0.4s $ease;
+        }
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: -20px;
+            width: 100%;
+            height: calc(100% + 20px);
+            transform: scaleY(0);
+            transform-origin: bottom center;
+            transition: 0.4s $ease;
+            z-index: -1;
+            background-color: $bemy-light;
+        }
+        &:hover{
+            color: $bemy-red;
+            &::before{
+                transform: scaleY(1);
+            }
+        }
+    }
+}
+
+.std-link{
+	transition:0.3s;
+	&:hover{
+		background: $bemy-light;
+		color: $bemy-red;
+		text-decoration: none;
 	}
 }

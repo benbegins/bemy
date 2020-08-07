@@ -1,26 +1,69 @@
 .home-intro {
-    &__btn {
+    &__btn-container {
         @media screen and (min-width: $md){
-            bottom: 2.5rem;
+            bottom: 5rem;
         }
         @media screen and (min-width: $lg){
             bottom: 15vh;
         }
+        @media screen and (min-width: $lg){
+          &::after{
+            content: "";
+            background-color: $bemy-light;
+            position: absolute;
+            width: 1px;
+            height: 500px;
+            bottom: -30px;
+            left: 50%;
+            transform: translateY(100%) rotate(18deg);
+            transform-origin: top center;
+          }
+        }
+        
     }
+}
+.home-projets {
+  &__img-mask {
+    width: 150%;
+    transform: skewX(-18deg) translateX(-70%);
   }
-  .home-projets {
-    &__img-mask {
-      width: 150%;
-      transform: skewX(-18deg) translateX(-70%);
+  &__img {
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transition: filter 0.2s linear;
+    @media screen and (min-width: $lg){
+      background-attachment: fixed;
+      background-position: 25vw center;
     }
-    &__img {
-      background-size: cover;
-      background-position: center center;
-      @media screen and (min-width: $lg){
-        background-attachment: fixed;
+    &::after{
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      background-color: $bemy-dark;
+      transform-origin: center left;
+      transition: 0.2s linear;
+      opacity: 0;
+    }
+    &:hover{
+      filter: grayscale(80%);
+      &::after{
+        //opacity: 0.2;
       }
     }
   }
-  .home-studio__bloc-rouge {
+}
+.home-studio{
+  &__btn-container{
+    &::after{
+      @extend %line-bottom;
+    }
+  }
+  &__bloc-rouge {
     transform: translateX(100%) skew(-18deg);
   }
+}

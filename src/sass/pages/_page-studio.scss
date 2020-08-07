@@ -12,3 +12,26 @@
       }
     }
   }
+
+  .studio-approche{
+    &__img{
+      &::after{
+        @extend %line-bottom;
+      }
+    }
+  }
+
+  .studio-projets{
+    &__list{
+      border-top:1px solid $bemy-light;
+      border-bottom:1px solid $bemy-light;
+    }
+    &__item{
+      position: relative;
+      z-index: 1;
+      transition: 0.25s;
+      &:hover{
+        color: $bemy-red;
+      }
+    }
+  }

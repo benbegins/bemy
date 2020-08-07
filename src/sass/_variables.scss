@@ -10,3 +10,14 @@ $lg: 1024px;
 $xl: 1280px;
 $xxl: 1480px;
 
+%line-bottom{
+    content: "";
+    background-color: $bemy-light;
+    position: absolute;
+    width: 1px;
+    height: 500px;
+    bottom: -30px;
+    left: 50%;
+    transform: translateY(100%) rotate(18deg);
+    transform-origin: top center;
+}
