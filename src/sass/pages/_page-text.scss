@@ -13,4 +13,12 @@
             }
         }
     }
+    a{
+        transition: 0.2s;
+        font-weight: 800;
+        &:hover{
+            color: $bemy-red;
+            background: $bemy-light;
+        }
+    }
 }

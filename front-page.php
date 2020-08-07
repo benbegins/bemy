@@ -5,13 +5,12 @@
     <section class="home-intro min-h-screen flex items-center justify-center container relative">
       <div class="home-intro__content mx-auto w-full">
         <h1 class="home-intro__title text-title reveal-bloc">
-          Le studio de création
-          <br />qui envoie
-          <span class="text-bemy-red">du pâté.</span>
+          Digital productions that rock your world.
+          <br /><span class="text-bemy-red">Nothing less.</span>
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
           <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
         </h1>
-        <h2 class="home-intro__description uppercase text-base mt-8 reveal-hero">Web Design &amp; Brand Identity</h2>
+        <h2 class="home-intro__description uppercase text-base xxl:text-xl pl-2 reveal-hero">Web Design &amp; Brand Identity</h2>
         <div class="home-intro__btn-container relative inline-block md:absolute mt-8 md:right-0 md:mr-12 reveal-opacity">
           <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary relative home-intro__btn reveal-hero">Contactez-nous</a>  
         </div>
@@ -40,7 +39,7 @@
             <p class="home-projets__proj-title uppercase opacity-50 text-sm lg:text-base reveal-item"
             ><?php the_field('nom_du_client'); ?></p>
             <p class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-40 leading-tight reveal-item"
-            ><a href="<?php the_permalink(); ?>" class="hover:text-bemy-red transition duration-200"><?php the_field('description_du_client'); ?></a></p>
+            ><a href="<?php the_permalink(); ?>"><?php the_field('description_du_client'); ?></a></p>
             <p class="home-projets__proj-services text-sm lg:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>

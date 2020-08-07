@@ -9,7 +9,7 @@
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
           <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
 		</h1>
-		<p class="text-40">Pas de panique, la page a sans doute juste été déplacée.</p>
+		<p class="text-40 reveal-hero">Pas de panique, la page a sans doute juste été déplacée.</p>
 		<div class="relative inline-block mt-12">
           <a href="<?php echo get_site_url(); ?>" class="btn btn-primary relative">Retour à l'accueil</a>  
         </div>

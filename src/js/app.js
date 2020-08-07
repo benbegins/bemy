@@ -35,68 +35,73 @@ const footerParallax = () => {
 	const contactLink = document.querySelector('.footer-contact__link');
 	const pageContainer = document.querySelector('.page-container');
 	const triggerFooter = document.querySelector('.trigger-footer');
-	gsap.from(contactLink, {
-		y: "40vh",
-		ease: "none",
-		scrollTrigger: {
-			id: "footerID",
-			trigger: triggerFooter,
-			start: "bottom bottom",
-			end: "bottom top",
-			scrub: true,
-		}
-	});
+	if (window.innerWidth > 1024) {
+		gsap.from(contactLink, {
+			y: "40vh",
+			ease: "none",
+			scrollTrigger: {
+				id: "footerID",
+				trigger: triggerFooter,
+				start: "bottom bottom",
+				end: "bottom top",
+				scrub: true,
+			}
+		});
+	}
 }
 
 // Reveal 
 const revealElements = () => {
-	// const revealElements = document.querySelectorAll('.reveal');
-	// const revealGroups = document.querySelectorAll('.reveal-group');
-	// const revealOpacity = document.querySelectorAll('.reveal-opacity');
+	const revealElements = document.querySelectorAll('.reveal');
+	const revealGroups = document.querySelectorAll('.reveal-group');
+	const revealOpacity = document.querySelectorAll('.reveal-opacity');
 	const revealBlocs = document.querySelectorAll('.reveal-bloc');
 	// Simple reveal translate+opacity
-	// if (revealElements) {
-	// 	revealElements.forEach(element => {
-	// 		gsap.from(element, {
-	// 			y: 100,
-	// 			opacity: 0,
-	// 			ease: "power3.out",
-	// 			scrollTrigger: {
-	// 				trigger: element,
-	// 				start: "top 85%",
-	// 			}
-	// 		})
-	// 	})
-	// }
+	if (revealElements) {
+		revealElements.forEach(element => {
+			gsap.from(element, {
+				y: `${innerHeight / 20}`,
+				opacity: 0,
+				duration: 0.7,
+				ease: "power3.out",
+				scrollTrigger: {
+					trigger: element,
+					start: "top 85%",
+				}
+			})
+		})
+	}
 	// Reveal opacity
-	// if (revealOpacity) {
-	// 	revealOpacity.forEach(element => {
-	// 		gsap.from(element, {
-	// 			opacity: 0,
-	// 			ease: "none",
-	// 			scrollTrigger: {
-	// 				trigger: element,
-	// 				start: "top 85%",
-	// 			}
-	// 		})
-	// 	})
-	// }
+	if (revealOpacity) {
+		revealOpacity.forEach(element => {
+			gsap.from(element, {
+				opacity: 0,
+				ease: "none",
+				duration: 0.5,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 85%",
+				}
+			})
+		})
+	}
 	// Reveal grouped elements
-	// if (revealGroups) {
-	// 	revealGroups.forEach(element => {
-	// 		const revealElements = element.querySelectorAll('.reveal-item');
-	// 		gsap.from(revealElements, {
-	// 			y: 100,
-	// 			opacity: 0,
-	// 			ease: "power3.out",
-	// 			stagger: 0.2,
-	// 			scrollTrigger: {
-	// 				trigger: element,
-	// 				start: "top 85%",
-	// 			}
-	// 		})
-	// 	})
-	// }
+	if (revealGroups) {
+		revealGroups.forEach(element => {
+			const revealElements = element.querySelectorAll('.reveal-item');
+			gsap.from(revealElements, {
+				y: `${innerHeight / 20}`,
+				opacity: 0,
+				ease: "power3.out",
+				duration: 0.7,
+				stagger: 0.1,
+				scrollTrigger: {
+					trigger: element,
+					start: "top 85%",
+				}
+			})
+		})
+	}
 	// Reveal bloc text
 	if (revealBlocs) {
 		revealBlocs.forEach(bloc => {
@@ -150,8 +155,8 @@ const animStudio = () => {
 		gsap.from(benTom, {
 			//y: "15%",
 			opacity: 0,
-			ease: "none",
-			duration: 1,
+			ease: "linear",
+			duration: 0.7,
 			scrollTrigger: {
 				trigger: benTom,
 				start: "top 50%",
@@ -163,6 +168,17 @@ const animStudio = () => {
 	}
 }
 
+// Page projet
+const animProjet = () => {
+	const videos = document.querySelectorAll('.video-projet');
+	if (videos) {
+		videos.forEach(video => {
+			video.play();
+		})
+	}
+}
+
+
 // Animation
 const animation = () => {
 	imgParallax();
@@ -170,6 +186,7 @@ const animation = () => {
 	revealElements();
 	animHome();
 	animStudio();
+	animProjet();
 }
 animation();
 

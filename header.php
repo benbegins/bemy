@@ -99,10 +99,10 @@
               </ul>
               <ul class="menu-secondary mt-4 uppercase">
                 <li class="menu-item">
-                  <a href="#" class="menu-link link-transition">Linkedin.</a>
+                  <a href="https://www.linkedin.com/company/bemystudio/" class="menu-link link-transition" target="_blank">Linkedin.</a>
                 </li>
                 <li class="mt-4 menu-item">
-                  <a href="#" class="menu-link link-transition">Instagram.</a>
+                  <a href="https://www.instagram.com/bemy.studio/" class="menu-link link-transition" target="_blank">Instagram.</a>
                 </li>
               </ul>
             </div>

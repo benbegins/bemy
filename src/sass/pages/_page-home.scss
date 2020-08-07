@@ -19,7 +19,6 @@
             transform-origin: top center;
           }
         }
-        
     }
 }
 .home-projets {
@@ -32,7 +31,7 @@
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    transition: filter 0.2s linear;
+    transition: transform 0.2s linear;
     @media screen and (min-width: $lg){
       background-attachment: fixed;
       background-position: 25vw center;
@@ -46,13 +45,13 @@
       bottom: 0;
       background-color: $bemy-dark;
       transform-origin: center left;
-      transition: 0.2s linear;
+      transition: opacity 0.1s linear;
       opacity: 0;
     }
     &:hover{
-      filter: grayscale(80%);
+      //filter: grayscale(80%);
       &::after{
-        //opacity: 0.2;
+        opacity: 0.25;
       }
     }
   }

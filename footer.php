@@ -1,5 +1,5 @@
     <div class="trigger-footer"></div>
-    <footer class="bg-bemy-red min-h-screen relative lg:fixed lg:inset-0 flex flex-col items-center justify-end text-center">
+    <footer class="site-footer bg-bemy-red min-h-screen relative lg:fixed lg:inset-0 flex flex-col items-center justify-end text-center">
       <div
         class="footer-contact absolute inset-0 w-full text-center flex items-center justify-center"
       >
