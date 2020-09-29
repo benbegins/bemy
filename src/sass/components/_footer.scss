@@ -1,5 +1,8 @@
 .site-footer {
     z-index: 1;
+    ::selection{
+        color: $bemy-dark;
+    }
     @media screen and (min-width: $lg){
         z-index: -1;
     }

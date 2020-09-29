@@ -13,6 +13,18 @@
         position: relative;
         overflow: hidden;
 
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: $bemy-dark;
+            top: 0;
+            left: 0;
+            transition: opacity 0.2s;
+            opacity:0;
+            z-index: 1;
+        }
         &::after{
             content: "";
             position: absolute;
@@ -28,10 +40,13 @@
         &:hover{
             .projets-liste__item__img{
                 //transform:scale(1.04);
-                filter: grayscale(90%);
+                //filter: grayscale(90%);
             }
             &::after{
                 //transform: skewX(-18deg) translateX(15%);
+            }
+            &::before{
+                opacity: 0.25;
             }
         }
     }

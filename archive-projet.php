@@ -26,7 +26,7 @@
             </a>
             <div class="reveal-group">
                 <h2 class="uppercase opacity-50 mt-8 text-sm md:text-base reveal-item"><?php the_field('nom_du_client'); ?></h2>
-                <a href="<?php the_permalink(); ?>" class="hover:text-bemy-red transition duration-200">
+                <a href="<?php the_permalink(); ?>">
                     <h3 class="text-40 leading-tight py-2 reveal-item"><?php the_field('description_du_client'); ?></h3>
                 </a>
                 <p class="text-sm md:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>

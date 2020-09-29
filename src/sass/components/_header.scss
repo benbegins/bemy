@@ -1,7 +1,102 @@
 .logo-bemy {
+  svg {
+    fill: $bemy-light;
+    transition: 0.25s;
+    width:80px;
+    @media screen and (min-width: $md){
+      width: 100px;
+    }
+  }
+  &:hover {
     svg {
-      fill: $bemy-light;
-      transition: 0.25s;
+      fill: $bemy-red;
+    }
+  }
+}
+.nav-burger {
+  .line {
+    background-color: $bemy-light;
+    height: 1px;
+    margin: 4px 0;
+    transition: 0.25s;
+    transform-origin: center center;
+  }
+  .line1 {
+    width: 22px;
+  }
+  .line2 {
+    width: 25px;
+  }
+  .line3 {
+    width: 28px;
+  }
+}
+.nav-burger:hover {
+  .line {
+    background-color: $bemy-red;
+  }
+  .line1,
+  .line2,
+  .line3 {
+    width: 28px;
+  }
+}
+
+.menu-primary {
+  @media screen and (min-width: $md){
+    font-size:4rem;
+  }
+    @media screen and (min-width: $lg){
+      font-size: 5.5vw;
+    }
+}
+.menu-link {
+  display: inline-block;
+}
+
+/* Hide navbar on scroll */
+.site-header{
+  transition: transform 0.3s ease-in-out;
+  &.hide{
+    @media screen and (min-width: $lg){
+      transform: translateY(-100%);  
+    }
+  }
+}
+
+/*Menu deploy*/
+.site-header.active {
+  .nav-burger {
+    .line {
+      background-color: $bemy-dark;
+      transition: 0.4s;
+    }
+    .line1 {
+      width: 28px;
+      transform: rotate(45deg) translate(7px, 7px);
+    }
+    .line3 {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+    .line2 {
+      transform: scale(0);
+    }
+    &:hover {
+      .line {
+        background-color: $bemy-red;
+      }
+    }
+  }
+
+  .menu-link {
+    &:hover {
+      color: $bemy-red;
+    }
+  }
+
+  .logo-bemy {
+    svg {
+      fill: $bemy-dark;
     }
     &:hover {
       svg {
@@ -9,85 +104,4 @@
       }
     }
   }
-  .nav-burger {
-    .line {
-      background-color: $bemy-light;
-      height: 1px;
-      margin: 4px 0;
-      transition: 0.25s;
-      transform-origin: center center;
-    }
-    .line1 {
-      width: 22px;
-    }
-    .line2 {
-      width: 25px;
-    }
-    .line3 {
-      width: 28px;
-    }
-  }
-  .nav-burger:hover {
-    .line {
-      background-color: $bemy-red;
-    }
-    .line1,
-    .line2,
-    .line3 {
-      width: 28px;
-    }
-  }
-  
-  .menu-primary {
-    @media screen and (min-width: $md){
-      font-size:4rem;
-    }
-      @media screen and (min-width: $lg){
-        font-size: 5.5vw;
-      }
-  }
-  .menu-link {
-    display: inline-block;
-  }
-  
-  /*Menu deploy*/
-  .site-header.active {
-    .nav-burger {
-      .line {
-        background-color: $bemy-dark;
-        transition: 0.4s;
-      }
-      .line1 {
-        width: 28px;
-        transform: rotate(45deg) translate(7px, 7px);
-      }
-      .line3 {
-        transform: rotate(-45deg) translate(6px, -6px);
-      }
-      .line2 {
-        transform: scale(0);
-      }
-      &:hover {
-        .line {
-          background-color: $bemy-red;
-        }
-      }
-    }
-  
-    .menu-link {
-      &:hover {
-        color: $bemy-red;
-      }
-    }
-  
-    .logo-bemy {
-      svg {
-        fill: $bemy-dark;
-      }
-      &:hover {
-        svg {
-          fill: $bemy-red;
-        }
-      }
-    }
-  }
+}

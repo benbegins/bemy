@@ -50,7 +50,7 @@ get_header();
               <li class="my-1">UX/UI</li>
               <li class="my-1">Site vitrine</li>
               <li class="my-1">Site e-commerce</li>
-              <li class="my-1">Application Web</li>
+              <li class="my-1">Wordpress</li>
             </ul>
           </div>
           <div class="studio-services__item py-6 lg:px-6 reveal-item">

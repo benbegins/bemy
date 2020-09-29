@@ -5,7 +5,7 @@
     <section class="home-intro min-h-screen flex items-center justify-center container relative">
       <div class="home-intro__content mx-auto w-full">
         <h1 class="home-intro__title text-title reveal-bloc">
-          Digital productions that rock your world.
+          <?php esc_html_e('Digital productions that rock your world.', 'bemy') ?>
           <br /><span class="text-bemy-red">Nothing less.</span>
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
           <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
@@ -75,8 +75,7 @@
         <div class="home-studio__text-container xl:w-2/3">
           <p class="text-40 leading-normal reveal">
             Nous sommes un studio de création basé à Nantes et à Barcelone qui conçoit des
-            <i>sites internet</i>, des
-            <i>applications web</i> et imagine des
+            <i>sites internet</i> et imagine des
             <i>identités visuelles</i> qui envoient du pâté.
           </p>
           <div class="home-studio__btn-container relative inline-block reveal-opacity">

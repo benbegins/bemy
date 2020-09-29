@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111608099-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-111608099-5');
+    </script>
+    
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
     
@@ -14,15 +25,13 @@
 
     <header class="site_header" id="header">
       <div
-      class="site-header flex justify-between py-10 px-8 sm:px-12 lg:px-16 absolute w-full"
-      v-bind:class="{'active': menuActive}"
+      class="site-header flex justify-between pt-6 pb-6 md:pb-0 md:pt-10 px-8 sm:px-12 lg:px-16 absolute lg:fixed z-30 w-full"
+      v-bind:class="{'active': menuActive, 'hide': hideMenu}"
     >
       <div @click="clickLogo" class="z-30">
         <a href="<?php echo get_site_url(); ?>" class="logo-bemy">
           <svg
             xmlns="http://www.w3.org/2000/svg"
-            width="100"
-            height="36"
             viewBox="0 0 100 36"
             class="duration-300"
           >

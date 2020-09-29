@@ -32,7 +32,7 @@
                 <?php the_field('presentation'); ?>
             </div>
             <div class="reveal-item">
-                <a href="<?php the_field('lien'); ?>" class="uppercase font-extrabold underline std-link" target="_blank">Voir le projet</a>
+                <a href="<?php the_field('lien'); ?>" class="uppercase font-extrabold underline std-link" target="_blank">Voir le site</a>
             </div>
         </div>
     </section>

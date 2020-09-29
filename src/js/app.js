@@ -11,7 +11,6 @@ gsap.defaults({
 	duration: 1
 });
 
-
 // Parallax background effect
 const imgParallax = () => {
 	const parallaxContainers = document.querySelectorAll('.parallax-container');
@@ -57,7 +56,7 @@ const revealElements = () => {
 	const revealOpacity = document.querySelectorAll('.reveal-opacity');
 	const revealBlocs = document.querySelectorAll('.reveal-bloc');
 	// Simple reveal translate+opacity
-	if (revealElements) {
+	if (revealElements.length > 0) {
 		revealElements.forEach(element => {
 			gsap.from(element, {
 				y: `${innerHeight / 20}`,
@@ -72,7 +71,7 @@ const revealElements = () => {
 		})
 	}
 	// Reveal opacity
-	if (revealOpacity) {
+	if (revealOpacity.length > 0) {
 		revealOpacity.forEach(element => {
 			gsap.from(element, {
 				opacity: 0,
@@ -86,7 +85,7 @@ const revealElements = () => {
 		})
 	}
 	// Reveal grouped elements
-	if (revealGroups) {
+	if (revealGroups.length > 0) {
 		revealGroups.forEach(element => {
 			const revealElements = element.querySelectorAll('.reveal-item');
 			gsap.from(revealElements, {
@@ -103,7 +102,7 @@ const revealElements = () => {
 		})
 	}
 	// Reveal bloc text
-	if (revealBlocs) {
+	if (revealBlocs.length > 0) {
 		revealBlocs.forEach(bloc => {
 			const bloc1 = bloc.querySelector('.reveal-bloc-1');
 			const bloc2 = bloc.querySelector('.reveal-bloc-2');
@@ -168,16 +167,15 @@ const animStudio = () => {
 	}
 }
 
-// Page projet
+// Page projet video
 const animProjet = () => {
-	const videos = document.querySelectorAll('.video-projet');
-	if (videos) {
+	let videos = document.querySelectorAll('.video-projet');
+	if (videos.length > 0 && window.innerWidth > 1024) {
 		videos.forEach(video => {
 			video.play();
 		})
 	}
 }
-
 
 // Animation
 const animation = () => {
@@ -194,9 +192,26 @@ animation();
 let vueHeader = new Vue({
 	el: "#header",
 	data: {
-		menuActive: false
+		menuActive: false,
+		hideMenu: false,
+		lastScrollPosition: 0
+	},
+	created: function () {
+		window.addEventListener('scroll', this.menuScroll);
+	},
+	destroyed: function () {
+		window.removeEventListener('scroll', this.menuScroll);
 	},
 	methods: {
+		menuScroll: function () {
+			if (window.scrollY > 100 && window.scrollY > this.lastScrollPosition) {
+				this.hideMenu = true;
+				this.lastScrollPosition = window.scrollY;
+			} else {
+				this.hideMenu = false;
+				this.lastScrollPosition = window.scrollY;
+			}
+		},
 		toggleMenu: function () {
 			const body = document.querySelector("body");
 			this.menuActive = !this.menuActive;
@@ -249,7 +264,6 @@ let vueHeader = new Vue({
 		}
 	}
 });
-
 
 
 barba.init({
