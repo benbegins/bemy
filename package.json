@@ -16,20 +16,20 @@
 	"license": "ISC",
 	"devDependencies": {
 		"cross-env": "^7.0.2",
-		"laravel-mix": "^5.0.4",
+		"laravel-mix": "^5.0.9",
 		"mix-tailwindcss": "^1.2.0",
-		"resolve-url-loader": "^3.1.1",
-		"sass": "^1.26.10",
+		"resolve-url-loader": "^3.1.2",
+		"sass": "^1.29.0",
 		"sass-loader": "^8.0.2",
-		"tailwindcss": "^1.6.0",
-		"vue": "^2.6.11",
-		"vue-template-compiler": "^2.6.11"
+		"tailwindcss": "^1.9.6",
+		"vue": "^2.6.12",
+		"vue-template-compiler": "^2.6.12"
 	},
 	"dependencies": {
 		"@barba/core": "^2.9.7",
 		"axios": "^0.19.2",
-		"gsap": "^3.4.2",
-		"scrollmagic": "^2.0.7",
-		"smooth-scrollbar": "^8.5.2"
+		"gsap": "^3.5.1",
+		"scrollmagic": "^2.0.8",
+		"smooth-scrollbar": "^8.5.3"
 	}
 }
