@@ -78,19 +78,19 @@
       </div>
 
       <div class="menu-site flex items-center">
-        <div class="translations text-xs mr-6">
+        <div class="translationsflex text-xs mr-4">
           <?php 
           $translations = pll_the_languages( array( 'raw' => 1 ) );
           ?>
-          <a href="<?php echo $translations['fr']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
-          <a href="<?php echo $translations['en']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
+          <a href="<?php echo $translations['fr']['url']; ?>" class="p-2<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
+          <a href="<?php echo $translations['en']['url']; ?>" class="p-2<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
         </div>
         <div class="nav-burger flex flex-col items-end cursor-pointer z-30 relative">
           <div class="line line1"></div>
           <div class="line line2"></div>
           <div class="line line3"></div>
         </div>
-          <div class="menu-container fixed inset-0 min-h-screen w-full bg-bemy-light text-bemy-dark z-20">
+          <div class="menu-container hidden fixed inset-0 min-h-screen w-full bg-bemy-light text-bemy-dark z-20">
             <div class="submenu-container container flex min-h-screen flex-col justify-center">
               <ul class="menu-primary font-extrabold text-4xl leading-tight">
                 <li class="menu-item">

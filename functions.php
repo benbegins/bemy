@@ -116,3 +116,17 @@ function projet_post_type() {
 
 }
 add_action( 'init', 'projet_post_type', 0 );
+
+
+
+
+// POLYLANG
+add_action('init', function() {
+    pll_register_string('contactezNous', 'Contactez-nous');
+    pll_register_string('mentionsLegales', 'Mentions légales');
+    pll_register_string('siteVitrine', 'Site vitrine');
+    pll_register_string('siteEcommerce', 'Site e-commerce');
+    pll_register_string('identiteVisuelle', 'Identité visuelle');
+    pll_register_string('papeterie', 'Papeterie');
+    pll_register_string('kitSocialMedia', 'Kit réseaux sociaux');
+});

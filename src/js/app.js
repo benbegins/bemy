@@ -1,4 +1,4 @@
-import Vue from "vue";
+//import Vue from "vue";
 import barba from '@barba/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -185,85 +185,136 @@ const animation = () => {
 	animHome();
 	animStudio();
 	animProjet();
+	menuDeploy();
+	hidingMenu();
 }
-animation();
 
-// Menu
-let vueHeader = new Vue({
-	el: "#header",
-	data: {
-		menuActive: false,
-		hideMenu: false,
-		lastScrollPosition: 0
-	},
-	created: function () {
-		window.addEventListener('scroll', this.menuScroll);
-	},
-	destroyed: function () {
-		window.removeEventListener('scroll', this.menuScroll);
-	},
-	methods: {
-		menuScroll: function () {
-			if (window.scrollY > 100 && window.scrollY > this.lastScrollPosition) {
-				this.hideMenu = true;
-				this.lastScrollPosition = window.scrollY;
-			} else {
-				this.hideMenu = false;
-				this.lastScrollPosition = window.scrollY;
-			}
-		},
-		toggleMenu: function () {
-			const body = document.querySelector("body");
-			this.menuActive = !this.menuActive;
+// // Menu
+// let vueHeader = new Vue({
+// 	el: "#header",
+// 	data: {
+// 		menuActive: false,
+// 		hideMenu: false,
+// 		lastScrollPosition: 0
+// 	},
+// 	created: function () {
+// 		window.addEventListener('scroll', this.menuScroll);
+// 	},
+// 	destroyed: function () {
+// 		window.removeEventListener('scroll', this.menuScroll);
+// 	},
+// 	methods: {
+// 		menuScroll: function () {
+// 			if (window.scrollY > 100 && window.scrollY > this.lastScrollPosition) {
+// 				this.hideMenu = true;
+// 				this.lastScrollPosition = window.scrollY;
+// 			} else {
+// 				this.hideMenu = false;
+// 				this.lastScrollPosition = window.scrollY;
+// 			}
+// 		},
+// 		toggleMenu: function () {
+// 			const body = document.querySelector("body");
+// 			this.menuActive = !this.menuActive;
 
-			if (this.menuActive) {
-				body.style.overflow = "hidden";
-			} else {
-				body.style.overflow = "auto";
-			}
-		},
+// 			if (this.menuActive) {
+// 				body.style.overflow = "hidden";
+// 			} else {
+// 				body.style.overflow = "auto";
+// 			}
+// 		},
 
-		clickLogo: function () {
-			if (this.menuActive) {
-				this.toggleMenu();
-			}
-		},
+// 		clickLogo: function () {
+// 			if (this.menuActive) {
+// 				this.toggleMenu();
+// 			}
+// 		},
 
-		menuBeforeEnter: function (el) {
-			el.style.transform = "translateX(100%)";
-			gsap.to(".menu-item", {
+// 		menuBeforeEnter: function (el) {
+// 			el.style.transform = "translateX(100%)";
+// 			gsap.to(".menu-item", {
+// 				x: 200,
+// 				opacity: 0,
+// 				duration: 0
+// 			});
+// 		},
+
+// 		menuEnter: function (el, done) {
+// 			gsap.to(el, { x: 0 });
+// 			gsap.to(".menu-item", {
+// 				x: 0,
+// 				opacity: 1,
+// 				ease: "power3.out",
+// 				stagger: 0.1,
+// 				delay: 0.6,
+// 				duration: 0.8,
+// 				onComplete: done
+// 			});
+// 		},
+
+// 		menuLeave: function (el, done) {
+// 			gsap.to(el, { x: "100%", onComplete: done });
+// 		},
+
+// 		menuAfterLeave: function (el) {
+// 			gsap.to(".menu-item", {
+// 				x: 200,
+// 				opacity: 0,
+// 				duration: 0
+// 			});
+// 		}
+// 	}
+// });
+
+
+// Menu JS
+const menuDeploy = function () {
+	let menuActive = false;
+	const menuHeader = document.querySelector('.site-header');
+	const navBurger = document.querySelector('.nav-burger');
+	const menuContainer = document.querySelector('.menu-container');
+
+	navBurger.addEventListener('click', function () {
+		if (!menuActive) {
+			menuActive = true;
+			menuHeader.classList.add('active');
+			gsap.to(menuContainer, { x: 0 });
+			gsap.fromTo(".menu-item", {
 				x: 200,
-				opacity: 0,
-				duration: 0
-			});
-		},
-
-		menuEnter: function (el, done) {
-			gsap.to(el, { x: 0 });
-			gsap.to(".menu-item", {
+				opacity: 0
+			}, {
 				x: 0,
 				opacity: 1,
 				ease: "power3.out",
 				stagger: 0.1,
 				delay: 0.6,
 				duration: 0.8,
-				onComplete: done
 			});
-		},
-
-		menuLeave: function (el, done) {
-			gsap.to(el, { x: "100%", onComplete: done });
-		},
-
-		menuAfterLeave: function (el) {
-			gsap.to(".menu-item", {
-				x: 200,
-				opacity: 0,
-				duration: 0
-			});
+		} else {
+			menuActive = false;
+			menuHeader.classList.remove('active');
+			gsap.to(menuContainer, { x: '100%' });
 		}
-	}
-});
+	});
+}
+
+// Hide menu
+const hidingMenu = function () {
+
+	const siteHeader = document.querySelector('.site-header');
+	let lastScrollPosition = 0;
+
+	window.addEventListener('scroll', function () {
+		if (window.scrollY > 100 && window.scrollY > lastScrollPosition) {
+			siteHeader.classList.add('hide');
+			lastScrollPosition = window.scrollY;
+		} else {
+			siteHeader.classList.remove('hide');
+			lastScrollPosition = window.scrollY;
+		}
+	})
+}
+
 
 
 barba.init({
@@ -311,3 +362,5 @@ barba.init({
 		}
 	}]
 });
+
+animation();

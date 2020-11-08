@@ -54,6 +54,19 @@
   display: inline-block;
 }
 
+.translations{
+  a{
+    transition: 0.2s;
+    &:hover{
+      color: $bemy-red;
+    }
+  }
+}
+
+.menu-container{
+  transform: translateX(100%);
+}
+
 /* Hide navbar on scroll */
 .site-header{
   transition: transform 0.3s ease-in-out;
@@ -104,4 +117,5 @@
       }
     }
   }
+
 }

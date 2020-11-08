@@ -24,8 +24,11 @@
 <div id="page" class="site" data-barba="container">
 
     <header class="site_header" id="header">
-      <div class="site-header flex justify-between pt-6 pb-6 md:pb-0 md:pt-10 px-8 sm:px-12 lg:px-16 absolute lg:fixed z-30 w-full">
-      <div class="z-30">
+      <div
+      class="site-header flex justify-between pt-6 pb-6 md:pb-0 md:pt-10 px-8 sm:px-12 lg:px-16 absolute lg:fixed z-30 w-full"
+      v-bind:class="{'active': menuActive, 'hide': hideMenu}"
+    >
+      <div @click="clickLogo" class="z-30">
         <a href="
           <?php 
             if(function_exists('pll_home_url')) {
@@ -78,36 +81,50 @@
       </div>
 
       <div class="menu-site flex items-center">
-        <div class="translations text-xs mr-6">
+        <div class="translationsflex text-xs mr-4">
           <?php 
           $translations = pll_the_languages( array( 'raw' => 1 ) );
           ?>
-          <a href="<?php echo $translations['fr']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
-          <a href="<?php echo $translations['en']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
+          <a href="<?php echo $translations['fr']['url']; ?>" class="p-2<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
+          <a href="<?php echo $translations['en']['url']; ?>" class="p-2<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
         </div>
-        <div class="nav-burger flex flex-col items-end cursor-pointer z-30 relative">
+        <div
+          class="nav-burger flex flex-col items-end cursor-pointer z-30 relative"
+          @click="toggleMenu"
+        >
           <div class="line line1"></div>
           <div class="line line2"></div>
           <div class="line line3"></div>
         </div>
-          <div class="menu-container fixed inset-0 min-h-screen w-full bg-bemy-light text-bemy-dark z-20">
+
+        <transition
+          v-on:before-enter="menuBeforeEnter"
+          v-on:enter="menuEnter"
+          v-on:leave="menuLeave"
+          v-on:after-leave="menuAfterLeave"
+          v-bind:css="false"
+        >
+          <div
+            v-show="menuActive"
+            class="menu-container fixed inset-0 min-h-screen w-full bg-bemy-light text-bemy-dark z-20"
+          >
             <div class="submenu-container container flex min-h-screen flex-col justify-center">
               <ul class="menu-primary font-extrabold text-4xl leading-tight">
-                <li class="menu-item">
+                <li @click="toggleMenu" class="menu-item">
                   <?php if (pll_current_language() == "en"): ?>
                     <a href="<?php echo get_site_url(); ?>/en/studio-en" class="menu-link link-transition">Studio</a>
                   <?php else: ?>
                     <a href="<?php echo get_site_url(); ?>/studio" class="menu-link link-transition">Le studio</a>
                   <?php endif; ?>
                 </li>
-                <li class="menu-item">
+                <li @click="toggleMenu" class="menu-item">
                   <?php if (pll_current_language() == "en"): ?>
                     <a href="<?php echo get_site_url(); ?>/en/projet" class="menu-link link-transition">Projects</a>
                   <?php else: ?>
                     <a href="<?php echo get_site_url(); ?>/projet" class="menu-link link-transition">Nos projets</a>
                   <?php endif; ?>
                 </li>
-                <li class="menu-item">
+                <li @click="toggleMenu" class="menu-item">
                   <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="menu-link link-transition">Contact</a>
                 </li>
               </ul>
@@ -121,6 +138,7 @@
               </ul>
             </div>
           </div>
+        </transition>
       </div>
       <!-- /menu-site -->
     </div>

@@ -16,7 +16,8 @@
       >
         <div>
           © bemy 2020
-          <a href="<?php echo get_site_url(); ?>/mentions" class="ml-6 footer-mentions__link link-transition">Mentions légales</a>
+          <a href="<?php echo get_site_url(); ?>/mentions" class="ml-6 footer-mentions__link link-transition"><?php pll_e('Mentions légales'); ?>
+</a>
         </div>
         <div class="footer-reseaux uppercase">
           <a href="https://www.linkedin.com/company/bemystudio/" class="footer-mentions__link link-transition" target="_blank">Linkedin.</a>

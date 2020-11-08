@@ -12,7 +12,7 @@
         </h1>
         <h2 class="home-intro__description uppercase text-base xxl:text-xl pl-2 reveal-hero">Web Design &amp; Brand Identity</h2>
         <div class="home-intro__btn-container relative inline-block md:absolute mt-8 md:right-0 md:mr-12 reveal-opacity">
-          <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary relative home-intro__btn reveal-hero">Contactez-nous</a>  
+          <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary relative home-intro__btn reveal-hero"><?php pll_e('Contactez-nous'); ?></a>  
         </div>
       </div>
     </section>
@@ -73,13 +73,15 @@
     <section class="home-studio relative overflow-hidden">
       <div class="container py-32 md:my-auto md:min-h-screen md:flex items-center xl:justify-end">
         <div class="home-studio__text-container xl:w-2/3">
-          <p class="text-40 leading-normal reveal">
-            Nous sommes un studio de création basé à Nantes et à Barcelone qui conçoit des
-            <i>sites internet</i> et imagine des
-            <i>identités visuelles</i> qui envoient du pâté.
-          </p>
+          <div class="text-40 leading-normal reveal">
+            <?php the_field('presentation_studio'); ?>
+          </div>
           <div class="home-studio__btn-container relative inline-block reveal-opacity">
-            <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10 relative">Le studio</a>  
+            <?php if (pll_current_language() == "en"): ?>
+              <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10 relative">Studio</a> 
+            <?php else : ?>
+              <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10 relative">Le studio</a> 
+            <?php endif; ?>
           </div>
         </div>
       </div>
