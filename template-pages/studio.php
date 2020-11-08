@@ -114,7 +114,7 @@ get_header();
       </div>
       <div class="container pt-4 mt-32 pb-32 lg:pb-64 lg:mt-48 bg-bemy-dark relative">
         <div class="studio-projets lg:w-2/3 lg:ml-auto reveal-group">
-          <h2 class="studio-projets__title text-40 mb-4 reveal-item"><?php if (pll_current_language() == "en"){echo 'Our last projects';} else {echo 'Nos derniers projets';} ?></h2>
+          <h2 class="studio-projets__title text-40 mb-4 reveal-item"><?php if (pll_current_language() == "en"){echo 'Our lastest projects';} else {echo 'Nos derniers projets';} ?></h2>
           <ul class="studio-projets__list divide-y reveal-item">
           <?php 
           // WP_Query arguments
