@@ -130,4 +130,5 @@ add_action('init', function() {
     pll_register_string('papeterie', 'Papeterie');
     pll_register_string('kitSocialMedia', 'Kit réseaux sociaux');
     pll_register_string('projetSuivant', 'Projet suivant');
+    pll_register_string("retourAccueil", "Retour à l'accueil");
 });
