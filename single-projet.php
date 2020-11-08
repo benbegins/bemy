@@ -75,7 +75,7 @@
     <!-- Projet suivant -->
     <section class="projet-suivant">
         <div class="container py-48 lg:min-h-screen flex items-center justify-center">
-            <p class="text-title"><a href="<?php the_field('projet_suivant'); ?>" class="link-border-bottom inline-block reveal-opacity">Projet suivant</a></p>
+            <p class="text-title"><a href="<?php the_field('projet_suivant'); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
         </div>
     </section>
 </div>

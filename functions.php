@@ -129,4 +129,5 @@ add_action('init', function() {
     pll_register_string('identiteVisuelle', 'Identité visuelle');
     pll_register_string('papeterie', 'Papeterie');
     pll_register_string('kitSocialMedia', 'Kit réseaux sociaux');
+    pll_register_string('projetSuivant', 'Projet suivant');
 });
