@@ -31,7 +31,7 @@ get_header();
             if (pll_current_language() == "en"){
               echo "<strong>Tommy Bonneau</strong> and
             <strong>Benoit Beghyn</strong> founded
-            <span class='text-bemy-red font-extrabold'>Bemy Studio</span> in May 2020, in full lockdown, which reveals in them a keen sense of timing.";
+            <span class='text-bemy-red font-extrabold'>Bemy Studio</span> in May 2020, during the full lockdown, which reveal their sense of timing.";
             } else {
               echo "<strong>Tommy Bonneau</strong> et
             <strong>Benoit Beghyn</strong> fondent
@@ -41,7 +41,7 @@ get_header();
           <p class="mt-10 reveal-item">
           <?php 
           if (pll_current_language() == "en"){
-            echo "Having accumulated more than 10 years of experience in digital communication, they have a fairly precise vision of a job well done: to be useful, responsible, fluid and wicked.";
+            echo "Having accumulated more than 10 years of experience in digital communication, they have a precise vision of a job well done: to be useful, responsible, seamless and wicked.";
           } else {
             echo "Chacun affichant au compteur plus de 10 ans d’expérience en communication digitale, ils ont une vision assez précise du travail bien fait : être utile, responsable, fluide et envoyer du pâté.";
           }
@@ -94,7 +94,7 @@ get_header();
         <div class="studio-approche__text lg:w-2/3 leading-relaxed reveal-group">
           <?php 
           if (pll_current_language() == "en"){
-            echo"<p class='reveal-item'>Our approach is artisanal and user-centric. To put it simply, there is no template here. We imagine tailor-made designs and we rely on the latest technologies to offer your customers a meaningful user experience worthy of the name.</p>
+            echo"<p class='reveal-item'>Our approach is artisanal and user-centric. To put it simply, there is no template here. We imagine tailor-made designs and rely on the latest technologies to offer your customers a meaningful user experience worthy of the name.</p>
           <p
             class='my-8 reveal-item'
           >When we create a site or a brand identity, the content and the aesthetics combine harmoniously, and we take care to think about every interaction, every detail, because we are convinced that the quality lies as much in the idea as in the execution.</p>
