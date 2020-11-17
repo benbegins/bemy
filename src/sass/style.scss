@@ -19,11 +19,16 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 @import "./global";
 @import "./buttons";
 
+// Components
 @import "./components/header";
 @import "./components/footer";
+
+// Pages
 @import "./pages/page-home";
 @import "./pages/page-studio";
 @import "./pages/page-projets";
-@import "./pages/page-single-projet";
 @import "./pages/page-text";
 @import "./pages/404";
+
+// Facturation
+@import "./facturation/devis-facture";

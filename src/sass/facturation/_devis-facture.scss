@@ -1,0 +1,53 @@
+body#page-facturation{
+    background: white;
+    color: black;
+
+    @media screen {
+        padding: 3vw;
+    }
+
+    .container{
+        max-width: 1440px;
+    }
+
+    select{
+        background: #EEE;
+        padding: 15px 25px;
+        font-size: 15px;
+        line-height: 1.2;
+        height: 50px;
+    }
+    input[type="submit"]{
+        background: $bemy-dark;
+        color: white;
+        text-transform: uppercase;
+        font-weight: bold;
+        padding: 0 25px;
+        line-height: 50px;
+        font-size: 13px;
+        border: 0;
+        cursor: pointer;
+        transition: 0.2s;
+
+        &:hover{
+            background: $bemy-red;
+        }
+    }
+}
+
+.facture{
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 150px;
+
+    a{
+        color: $bemy-red;
+        text-decoration: underline;
+    }
+
+    &__chiffrage{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+
+}

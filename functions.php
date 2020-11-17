@@ -40,21 +40,6 @@ function bemytheme_register_assets(){
 }
 add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
 
-// API Menu
-// create custom function to return nav menu
-function custom_wp_menu() {
-    // Replace your menu name, slug or ID carefully
-    return wp_get_nav_menu_items('principal');
-}
-
-// create new endpoint route
-add_action( 'rest_api_init', function () {
-    register_rest_route( 'v2', '/menu', array(
-        'methods' => 'GET',
-        'callback' => 'custom_wp_menu',
-    ) );
-} );
-
 
 // Custom image size
 add_image_size( 'xl', 1440);
