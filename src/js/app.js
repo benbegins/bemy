@@ -318,6 +318,9 @@ const hidingMenu = function () {
 
 
 barba.init({
+
+	prevent: ({ el }) => el.classList && el.classList.contains('no-barba'),
+
 	transitions: [{
 		name: 'default-transition',
 		beforeLeave() {
@@ -362,5 +365,11 @@ barba.init({
 		}
 	}]
 });
+
+// Exclude Barba on Admin Bar links 
+const adminLinks = document.querySelectorAll('#wpadminbar a');
+adminLinks.forEach(link => {
+	link.classList.add('no-barba');
+})
 
 animation();

@@ -80,7 +80,7 @@ if (isset($annee) && is_numeric($annee)) {
     ?>
 
         <a href="<?php the_permalink(); ?>" class="block py-4 hover:text-bemy-red transition duration-200">
-            <div class="grid grid-cols-10">
+            <div class="grid grid-cols-10 items-center">
                 <div class="text-sm"><?php the_field('date'); ?></div>
                 <div class="text-sm"><?php the_field('numero'); ?></div>
                 <div class="col-span-4 font-bold"><?php the_title(); ?></div>
