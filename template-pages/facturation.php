@@ -76,11 +76,11 @@ get_header('facturation');
                                                 'terms'    => array('facture'),
                                             ),
             ),
-            'date_query' => array(
-                array(
-                    'year'  => $annee_en_cours,
-                ),
-            ),
+            // 'date_query' => array(
+            //     array(
+            //         'year'  => $annee_en_cours,
+            //     ),
+            // ),
         );
         $query = new WP_Query( $args );
 
