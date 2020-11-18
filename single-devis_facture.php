@@ -91,7 +91,7 @@ if(have_posts()):
             <?php 
                 $type_de_document = get_the_terms($post->ID, 'types_de_document'); 
             ?>
-            <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php the_field('date'); ?></h1>
+            <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php the_date('d-m-Y'); ?></h1>
             <h2 class="text-base"><?php the_title(); ?></h2>
             <?php 
                 $description_projet = get_field('description_du_projet');
