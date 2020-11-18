@@ -3,49 +3,70 @@
 Template Name: Facturation
 */
 get_header('facturation');
-
-$annee_en_cours = date("Y");
-
-$annee = $_GET["annee"];
-if (isset($annee) && is_numeric($annee)) {
-    $annee = strip_tags($annee);
-    $annee = stripslashes($annee);
-    $annee = trim($annee);
-
-    $annee_en_cours = $annee;
-}
 ?>
 
 
 
 <section>
     <div class="container">
-        <h1 class="font-bold uppercase text-center text-4xl mt-10">Factures <?php echo $annee_en_cours; ?></h1>
+        <h1 class="font-bold uppercase text-center text-4xl mt-10">Factures</h1>
     </div>
 </section>
 
 
 <section>
-    <div class="container mt-20">
-        <form method="get" class="flex">
-            <select name="annee" id="annee">
-                <option value="">--Année--</option>
+    <div class="container mt-32 flex justify-between items-start">
+        <div class="flex items-center">
+            <select class="select-year">
+                <option value="0">--Année--</option>
                 <?php 
-                for ($i=2020; $i <= date('Y'); $i++) { 
+                for ($i=2019; $i <= date('Y'); $i++) { 
                     echo '<option value="'. $i .'">' . $i . '</option>';
                 }
                 ?>
             </select>
-            <input type="submit" value="Filtrer">
-        </form>
+            <select class="select-month ml-2">
+                <option value="0">--Mois--</option>
+                <?php 
+                for ($i=1; $i <= 12; $i++) { 
+                    echo '<option value="'. $i .'">' . $i . '</option>';
+                }
+                ?>
+            </select>
+            <select class="select-client ml-2">
+                <option value="0">--Client--</option>
+                <?php 
+                $clients = get_terms('clients'); 
+
+                foreach($clients as $client){
+                    echo '<option value="'. $client->slug .'">' . $client->name . '</option>';
+                }
+                ?>
+            </select>
+            
+            <button class="btn-reset-filter ml-4 text-xs underline">Réinitialiser</button>
+        </div>
+
+        <div class="flex uppercase text-center">
+            <div class="border py-4 px-6">
+                <h2 class="text-xs">Chiffre d'affaires</h2>
+                <p class="font-bold text-base total_factures"></p>
+            </div>
+            <div class="ml-5 border py-4 px-6">
+                <h2 class="text-xs">Paiement en attente</h2>
+                <p class="font-bold text-base total_en_attente"></p>
+            </div>
+        </div>
+
     </div>
 </section>
 
-
 <section>
-    <div class="container divide-y divide-bemy-dark mt-5">
+    <div class="container divide-y divide-bemy-dark mt-20 liste-factures">
 
     <?php
+        $annee_en_cours = date("Y");
+
         $args = array(
             'post_type'             => 'devis_facture',
             'tax_query'             => array(
@@ -67,30 +88,10 @@ if (isset($annee) && is_numeric($annee)) {
         $facture_attente = 0;
 
         if($query->have_posts()):
-            while($query->have_posts()):$query->the_post();
+            while($query->have_posts()):$query->the_post();  
+           
+                get_template_part( './template-parts/facture');
 
-            $type_de_doc = get_the_terms($post->ID, 'types_de_document');
-            $client = get_the_terms($post->ID, 'clients');
-            $paiement = get_field('paiement');
-
-            $facture_total += get_field('total');
-            if(!$paiement){
-                $facture_attente += get_field('total');
-            }
-    ?>
-
-        <a href="<?php the_permalink(); ?>" class="block py-4 hover:text-bemy-red transition duration-200">
-            <div class="grid grid-cols-10 items-center">
-                <div class="text-sm"><?php the_field('date'); ?></div>
-                <div class="text-sm"><?php the_field('numero'); ?></div>
-                <div class="col-span-4 font-bold"><?php the_title(); ?></div>
-                <div class="col-span-2 text-sm uppercase"><?php echo $client[0]->name; ?></div>
-                <div class="text-center text-sm"><?php the_field('total'); ?> €</div>
-                <div class="text-xs italic text-center"><?php if($paiement){echo "Payé";}else{echo "<span class='text-bemy-red'>En attente de paiement</span>";} ?></div>
-            </div>
-        </a>
-
-    <?php
             endwhile;
         endif;
 
@@ -100,19 +101,6 @@ if (isset($annee) && is_numeric($annee)) {
     </div>
 </section>
 
-
-<section>
-    <div class="container flex mt-20 uppercase text-sm text-center">
-        <div class="border p-4">
-            <h2>CA <?php echo $annee_en_cours; ?></h2>
-            <p class="font-bold"><?php echo $facture_total; ?> €</p>
-        </div>
-        <div class="ml-10 border p-4">
-            <h2>En attente</h2>
-            <p class="font-bold"><?php echo $facture_attente; ?> €</p>
-        </div>
-    </div>
-</section>
 
 
 <?php get_footer('facturation'); ?>
