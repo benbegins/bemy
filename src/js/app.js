@@ -72,6 +72,11 @@ if (!bodyFacturation) {
 		}]
 	});
 
+	barba.hooks.after(() => {
+		ga('set', 'page', window.location.pathname);
+		ga('send', 'pageview');
+	});
+
 	animationInit();
 
 	// Exclude Barba on Admin Bar links 
