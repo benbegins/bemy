@@ -20,7 +20,7 @@
             } ?>
         </div>
     </section>
-    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 pb-32 lg:pb-60">
+    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8">
         <?php
         if (have_posts() ) :
             while (have_posts() ) :
