@@ -47,24 +47,6 @@
         endif;
         ?>
     </section>
-    <section class="projets-fin container">
-        <div class="flex flex-col justify-center md:min-h-screen py-40">
-        <?php if(pll_current_language() == "en"){
-            echo "<h2 class='text-title reveal-bloc'>Only <span class='text-bemy-red'>2 projects</span>? <br>It's a scandal!
-                <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
-                <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
-            </h2>
-            <p class='mt-8 leading-relaxed lg:w-1/2 lg:ml-auto lg:mt-20 reveal'>Please be patient! The studio is just getting going, we need time to do some other amazing projects. If it bothers you, we can always <a href='mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f' class='font-bold underline std-link'>work together</a> and add your project to the list.</p>";
-        } else {
-            echo "<h2 class='text-title reveal-bloc'>Seulement <span class='text-bemy-red'>2 projets</span> ? <br>C'est un scandale !
-                <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
-                <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
-            </h2>
-            <p class='mt-8 leading-relaxed lg:w-1/2 lg:ml-auto lg:mt-20 reveal'>Un peu de patience ! Le studio vient tout juste de voir le jour, il nous faut le temps de réaliser d’autres projets incroyables. Si ça vous choque, vous pouvez toujours nous <a href='mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f' class='font-bold underline std-link'>confier un projet</a> et on l’ajoutera à la liste.</p>";
-        }
-        ?>
-        </div> 
-    </section>
 </div>
 
 <?php get_footer(); ?>
