@@ -31,9 +31,14 @@
             <div class="projet__presentation my-6 leading-relaxed lg:my-10 reveal-item">
                 <?php the_field('presentation'); ?>
             </div>
+            <?php 
+            $lien = get_field('lien');
+            if($lien):
+            ?>
             <div class="reveal-item">
                 <a href="<?php the_field('lien'); ?>" class="uppercase font-extrabold underline std-link" target="_blank"><?php pll_e('Voir le site'); ?></a>
             </div>
+            <?php endif; ?>
         </div>
     </section>
 
