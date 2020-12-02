@@ -79,8 +79,33 @@
 
     <!-- Projet suivant -->
     <section class="projet-suivant">
+
+        <?php 
+            $projet_suivant = get_previous_post();
+            $projet_suivant_id = $projet_suivant->ID;
+
+            if(empty($projet_suivant) || is_null($projet_suivant)){
+
+                $args = array(
+                    'post_type'              => array( 'projet' ),
+                    'posts_per_page'         => '1',
+                );
+
+                $query = new WP_Query( $args );
+
+                // The Loop
+                if ( $query->have_posts() ) {
+                    while ( $query->have_posts() ) {
+                        $query->the_post();
+                        $projet_suivant_id = $post->ID;
+                    }
+                }
+
+            }
+        ?>
+        
         <div class="container py-48 lg:min-h-screen flex items-center justify-center">
-            <p class="text-title"><a href="<?php the_field('projet_suivant'); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
+            <p class="text-title"><a href="<?php echo get_permalink($projet_suivant_id); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
         </div>
     </section>
 </div>
