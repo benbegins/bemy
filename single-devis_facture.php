@@ -163,7 +163,8 @@ if(have_posts()):
         <p class="mb-2 italic opacity-50">TVA non applicable. Art. 293B du CGI</p>
         <footer class="facture__footer pt-5 border-t">
             <p class="font-bold">Règlement par virement</p>
-            <p>IBAN : FR76 3007 6020 8315 0498 0030 014</p>
+            <p>IBAN : FR76 1695 8000 0154 6840 6619 715</p>
+            <p>BIC/SWIFT : QNTOFRP1XXX</p>
         </footer>
     </section>
 
