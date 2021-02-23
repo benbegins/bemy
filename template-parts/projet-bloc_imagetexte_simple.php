@@ -4,7 +4,7 @@ $texte = get_sub_field('texte');
 $image = get_sub_field('image');
 ?>
 
-<section class="mt-20 lg:mt-32">
+<section class="section-pad-top">
     <div class="container md:grid md:grid-cols-2 md:col-gap-4 lg:col-gap-12">
         <div class="">
             <div class="details__text-container my-6 lg:my-4 md:flex reveal-group">

@@ -3,7 +3,7 @@ $video = get_sub_field('video');
 $image_poster = get_sub_field('image_poster');
 ?>
 
-<section class="container mt-20 lg:mt-32">
+<section class="container section-pad-top">
     <?php if(wp_is_mobile()): ?>
         <video controls muted preload="none" poster="<?php echo $image_poster['sizes']['large']; ?>" class="w-full" src="<?php echo $video['url']; ?>"></video>
     <?php else: ?>

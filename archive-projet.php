@@ -20,14 +20,14 @@
             } ?>
         </div>
     </section>
-    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8">
+    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 lg:gap-12">
         <?php
         if (have_posts() ) :
             while (have_posts() ) :
                 the_post();
         ?>
 
-        <article class="projets-liste__item py-8">
+        <article class="projets-liste__item py-8 lg:py-16">
             <a href="<?php the_permalink(); ?>">
                 <div class="projets-liste__item__img-container">
                     <div class="projets-liste__item__img reveal-opacity" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>

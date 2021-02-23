@@ -13,7 +13,7 @@
 
     <!-- Image principale -->
     <section class="parallax-container h-64 md:h-screen w-full">
-        <div class="h-full w-full bg-cover bg-center bg-no-repeat lg:bg-fixed parallax-img reveal-opacity" style="background-image: url('<?php
+        <div class="h-full w-full bg-cover bg-center bg-no-repeat parallax-img reveal-opacity" style="background-image: url('<?php
         if(wp_is_mobile()){
             the_post_thumbnail_url('large'); 
         } else {
@@ -25,7 +25,7 @@
     
 
     <!-- Presentation du projet -->
-    <section class="container pt-20 lg:pt-32">
+    <section class="container section-pad-top">
         <div class="lg:w-3/5 lg:ml-auto reveal-group">
             <h2 class="text-40 leading-tight reveal-item"><?php the_field('titre_presentation'); ?></h2>
             <div class="projet__presentation my-6 leading-relaxed lg:my-10 reveal-item">

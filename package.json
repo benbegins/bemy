@@ -21,7 +21,8 @@
 		"resolve-url-loader": "^3.1.2",
 		"sass": "^1.32.8",
 		"sass-loader": "^8.0.2",
-		"tailwindcss": "^1.9.6"
+		"tailwindcss": "^1.9.6",
+		"vue-template-compiler": "^2.6.12"
 	},
 	"dependencies": {
 		"@barba/core": "^2.9.7",

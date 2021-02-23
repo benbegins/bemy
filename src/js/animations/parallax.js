@@ -8,14 +8,20 @@ const parallax = () => {
     if (parallaxContainers && window.innerWidth > 1024) {
         parallaxContainers.forEach(container => {
             let img = container.querySelector('.parallax-img');
-            gsap.to(img, {
-                backgroundPositionY: `${-innerHeight / 2}px`,
+
+            gsap.fromTo(img, {
+                yPercent: -15,
+                scale: 1.15,
+            }, {
+                yPercent: 15,
+                scale: 1.15,
                 ease: "none",
                 scrollTrigger: {
                     trigger: container,
                     scrub: true,
                 }
-            })
+            });
+
         });
     }
 

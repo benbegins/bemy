@@ -5,7 +5,7 @@ $image1 = get_sub_field('image1');
 $image2 = get_sub_field('image2');
 ?>
 
-<section class="mt-20 lg:mt-32">
+<section class="section-pad-top">
     <div class="container md:grid md:grid-cols-2 md:col-gap-4 lg:col-gap-12">
         <div>
             <div class="my-6 lg:my-4 lg:flex reveal-group">

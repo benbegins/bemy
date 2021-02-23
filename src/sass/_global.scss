@@ -63,6 +63,8 @@ strong{
 	transition: 0.25s;
 }
 
+
+// Reveal
 .reveal-bloc{
 	position: relative;
 	overflow: hidden;
@@ -82,6 +84,8 @@ strong{
 	transform-origin: center left;
 }
 
+
+// Page Transition
 .page-transition{
 	pointer-events: none;
 	.swipe{
@@ -109,4 +113,51 @@ strong{
 		pointer-events: none;
 		opacity: 0;
 	}
+}
+
+// Parallax
+.parallax-container{
+	overflow: hidden;
+}
+
+// Sections padding
+.section-pad{
+    padding-top: 80px;
+    padding-bottom: 80px;
+    @media screen and (min-width: $md){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-top: 130px;
+        padding-bottom: 130px;
+    }
+    @media screen and (min-width: $xl){
+        padding-top: 10vw;
+        padding-bottom: 10vw;
+    }
+}
+.section-pad-top{
+    padding-top: 80px;
+    @media screen and (min-width: $md){
+        padding-top: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-top: 130px;
+    }
+    @media screen and (min-width: $xl){
+        padding-top: 10vw;
+    }
+}
+.section-pad-bottom{
+    padding-bottom: 80px;
+    @media screen and (min-width: $md){
+        padding-bottom: 100px;
+    }
+    @media screen and (min-width: $lg){
+        padding-bottom: 130px;
+    }
+    @media screen and (min-width: $xl){
+        padding-bottom: 10vw;
+    }
 }
