@@ -118,6 +118,9 @@
                 <li class="mt-4 menu-item">
                   <a href="https://www.instagram.com/bemy.studio/" class="menu-link link-transition" target="_blank">Instagram.</a>
                 </li>
+                <li class="mt-4 menu-item">
+                  <a href="https://www.behance.net/bemystudio" class="menu-link link-transition" target="_blank">Behance.</a>
+                </li>
               </ul>
             </div>
           </div>

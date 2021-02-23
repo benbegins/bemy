@@ -22,6 +22,7 @@
         <div class="footer-reseaux uppercase">
           <a href="https://www.linkedin.com/company/bemystudio/" class="footer-mentions__link link-transition" target="_blank">Linkedin.</a>
           <a href="https://www.instagram.com/bemy.studio/" class="ml-6 footer-mentions__link link-transition" target="_blank">Instagram.</a>
+          <a href="https://www.behance.net/bemystudio" class="ml-6 footer-mentions__link link-transition" target="_blank">Behance.</a>
         </div>
       </div>
     </footer>
