@@ -12,7 +12,7 @@
       </div>
     </section>
 
-    <section class="page-text__content container pb-20 lg:pb-40">
+    <section class="page-text__content container section-pad-bottom">
         <div class="lg:w-3/4">
             <?php 
             while(have_posts()): the_post();
