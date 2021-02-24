@@ -1,6 +1,6 @@
 const cursor = () => {
     const cursor = document.querySelector('.cursor');
-    const links = document.querySelectorAll('a, button, input[type="submit"]');
+    const links = document.querySelectorAll('a, button, .nav-burger');
 
     if (window.innerWidth >= 1024) {
         window.addEventListener('mousemove', function (e) {
