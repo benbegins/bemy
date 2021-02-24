@@ -40,11 +40,6 @@ if (!bodyFacturation) {
 				let done = this.async();
 				let body = document.querySelector('body');
 				body.style.overflow = "hidden";
-				gsap.to('.loading-icon', {
-					opacity: 0.7,
-					ease: "none",
-					delay: 0.7
-				});
 				gsap.to('.swipe', {
 					x: "0%",
 					stagger: 0.1,
@@ -60,10 +55,6 @@ if (!bodyFacturation) {
 			},
 			after() {
 				animationInit();
-				gsap.to('.loading-icon', {
-					opacity: 0,
-					ease: "none"
-				});
 				gsap.to('.swipe', {
 					x: "100%",
 					stagger: -0.1,

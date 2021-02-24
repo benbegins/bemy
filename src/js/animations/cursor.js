@@ -2,6 +2,10 @@ const cursor = () => {
     const cursor = document.querySelector('.cursor');
     const links = document.querySelectorAll('a, button, .nav-burger');
 
+    if (cursor.classList.contains('hover')) {
+        cursor.classList.remove('hover');
+    }
+
     if (window.innerWidth >= 1024) {
         window.addEventListener('mousemove', function (e) {
             cursor.style.transform = "translate(" + e.clientX + "px, " + e.clientY + "px)";
