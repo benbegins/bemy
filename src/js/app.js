@@ -3,7 +3,7 @@ import barba from '@barba/core';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Timeline } from "gsap/gsap-core";
-import { menu, reveal, parallax, videoPlay } from './animations';
+import { menu, reveal, parallax, videoPlay, cursor } from './animations';
 import facturation from './facturation/facturation';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -18,6 +18,7 @@ const animationInit = () => {
 	reveal();
 	videoPlay();
 	menu();
+	cursor();
 }
 
 const bodyFacturation = document.querySelector('#page-facturation');

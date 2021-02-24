@@ -33,11 +33,10 @@
 <div class="page-transition">
   <div class="swipe swipe-1 bg-bemy-light"></div>
   <div class="swipe swipe-2 bg-bemy-dark"></div>
-  <div class="swipe swipe-3 bg-bemy-red overflow-hidden">
-    <div class="loading-icon"></div>
-  </div>
-  
+  <div class="swipe swipe-3 bg-bemy-red"></div>
 </div>
+
+<div class="cursor"></div>
 
 
 

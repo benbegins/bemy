@@ -101,18 +101,6 @@ strong{
 		height: 100%;
 		transform: translateX(-100%);
 	}
-	.loading-icon{
-		display: none;
-		background: url('./dist/images/loading.gif') center center no-repeat;
-		width: 40px;
-		height: 40px;
-		position: fixed;
-		top: calc(50% - 20px);
-		left: calc(50% - 20px);
-		z-index: 110;
-		pointer-events: none;
-		opacity: 0;
-	}
 }
 
 // Parallax
