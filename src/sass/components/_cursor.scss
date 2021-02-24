@@ -11,7 +11,7 @@
     mix-blend-mode: difference;
     transition: 0.2s ease-out;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 99;
 
     @media screen and (min-width: $lg){
         display: block;
