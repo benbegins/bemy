@@ -41,7 +41,7 @@
             ><?php the_field('nom_du_client'); ?></p>
             <p class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-40 leading-tight reveal-item"
             ><a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a></p>
-            <p class="home-projets__proj-services text-sm lg:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
+            <p class="home-projets__proj-services font-normal text-sm lg:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
         <a href="<?php the_permalink(); ?>" class="cursor-image">

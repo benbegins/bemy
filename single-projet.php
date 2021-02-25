@@ -6,8 +6,8 @@
     <section class="container pb-48 pt-64">
         <div class="projet-intro md:w-1/2 lg:w-2/5 reveal-group">
             <p class="opacity-50 uppercase reveal-item"><?php the_field('nom_du_client'); ?></p>
-            <h2 class="text-40 leading-tight my-4 reveal-item"><?php the_field('description_du_client'); ?></h2>
-            <p class="reveal-item"><?php the_field('liste_des_services'); ?></p>
+            <h2 class="text-40 leading-tight py-4 lg:py-6 reveal-item"><?php the_field('description_du_client'); ?></h2>
+            <p class="reveal-item font-normal"><?php the_field('liste_des_services'); ?></p>
         </div>
     </section>
 

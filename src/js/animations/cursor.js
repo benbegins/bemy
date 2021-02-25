@@ -2,10 +2,21 @@ const cursor = () => {
     const cursor = document.querySelector('.cursor');
     const links = document.querySelectorAll('a, button, .nav-burger');
 
-    // Remove hover on page transition
-    if (cursor.classList.contains('hover')) {
-        removeClasses();
+
+
+    // Fonction remove classes
+    const removeClasses = () => {
+        if (cursor.classList.contains('hover')) {
+            cursor.classList.remove('hover');
+        }
+        if (cursor.classList.contains('image')) {
+            cursor.classList.remove('image');
+        }
     }
+
+    // Remove hover on page transition
+    removeClasses();
+
 
 
     if (window.innerWidth >= 1024) {
@@ -28,11 +39,7 @@ const cursor = () => {
         });
     }
 
-    // Fonction remove classes
-    const removeClasses = () => {
-        cursor.classList.remove('hover');
-        cursor.classList.remove('image');
-    }
+
 
 }
 

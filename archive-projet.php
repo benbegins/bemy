@@ -20,7 +20,7 @@
             } ?>
         </div>
     </section>
-    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 lg:gap-12">
+    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
         <?php
         if (have_posts() ) :
             while (have_posts() ) :
@@ -28,17 +28,17 @@
         ?>
 
         <article class="projets-liste__item py-8 lg:py-16">
-            <a href="<?php the_permalink(); ?>">
-                <div class="projets-liste__item__img-container">
-                    <div class="projets-liste__item__img reveal-opacity" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
+            <a href="<?php the_permalink(); ?>" class="cursor-image">
+                <div class="projets-liste__item__img-container parallax-container">
+                    <div class="projets-liste__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
                 </div>
             </a>
             <div class="reveal-group">
                 <h2 class="uppercase opacity-50 mt-8 text-sm md:text-base reveal-item"><?php the_field('nom_du_client'); ?></h2>
-                <a href="<?php the_permalink(); ?>">
-                    <h3 class="text-40 leading-tight py-2 reveal-item"><?php the_field('description_du_client'); ?></h3>
+                <a href="<?php the_permalink(); ?>" class="cursor-image">
+                    <h3 class="text-40 leading-tight py-2 md:py-6 reveal-item"><?php the_field('description_du_client'); ?></h3>
                 </a>
-                <p class="text-sm md:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
+                <p class="text-sm font-normal md:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
             </div>
         </article>
 
