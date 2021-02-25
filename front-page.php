@@ -36,7 +36,7 @@
         
       <div class="home-projets__item md:min-h-screen relative my-24 md:my-auto parallax-container">
         <div class="container md:flex md:min-h-screen flex-col justify-center">
-          <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-1/3 reveal-group">
+          <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5 reveal-group">
             <p class="home-projets__proj-title uppercase opacity-50 text-sm lg:text-base reveal-item"
             ><?php the_field('nom_du_client'); ?></p>
             <p class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-40 leading-tight reveal-item"
