@@ -1,3 +1,5 @@
+$cursor-color : #FFFCF5;
+
 .cursor{
     display: none;
     position: fixed;
@@ -6,7 +8,7 @@
     width: 18px;
     height: 18px;
     background: transparent;
-    border: 1px solid #FFFCF5;
+    border: 1px solid $cursor-color;
     border-radius:100%;
     mix-blend-mode: difference;
     transition: 0.2s ease-out;
@@ -23,6 +25,24 @@
         top: -60px;
         left: -60px;
         background: transparent;
-        border: 1.5px solid #FFFCF5;
+        border: 1.5px solid $cursor-color;
+
+        // Roll over sur images
+        &.image{
+            background: $cursor-color;
+            border: 0;
+
+            &::after{
+                content: "";
+                background: url('./dist/images/icon-eye.svg') center center no-repeat;
+                background-size: 38px 25px;
+                width: 38px;
+                height: 25px;
+                position: absolute;
+                top: calc(50% - 12px);
+                left: calc(50% - 19px);
+            }
+        }
     }
+
 }

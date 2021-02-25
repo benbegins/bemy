@@ -40,11 +40,11 @@
             <p class="home-projets__proj-title uppercase opacity-50 text-sm lg:text-base reveal-item"
             ><?php the_field('nom_du_client'); ?></p>
             <p class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-40 leading-tight reveal-item"
-            ><a href="<?php the_permalink(); ?>"><?php the_field('description_du_client'); ?></a></p>
+            ><a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a></p>
             <p class="home-projets__proj-services text-sm lg:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
-        <a href="<?php the_permalink(); ?>">
+        <a href="<?php the_permalink(); ?>" class="cursor-image">
           <div class="home-projets__img-container overflow-hidden h-64 md:h-auto md:w-1/2 md:absolute inset-y-0 right-0 mt-8 md:mt-0">
               <div
                 class="home-projets__img h-full w-full parallax-img"
