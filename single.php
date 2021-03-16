@@ -14,14 +14,16 @@
             
         </div>
         <div class="single-article__thumbnail reveal-opacity absolute inset-0 z-0">
-            <img 
-            src="<?php the_post_thumbnail_url('xxl'); ?>"
-            srcset="<?php the_post_thumbnail_url('xxl'); ?> 1920w,
-                <?php the_post_thumbnail_url('xl'); ?> 1440w,
-                <?php the_post_thumbnail_url('large'); ?> 1024w"
-            alt="<?php echo get_the_title(); ?>"
-            class="w-full h-full object-cover opacity-25"
-            >
+            <div class="opacity-25 w-full h-full">
+                <img 
+                src="<?php the_post_thumbnail_url('xxl'); ?>"
+                srcset="<?php the_post_thumbnail_url('xxl'); ?> 1920w,
+                    <?php the_post_thumbnail_url('xl'); ?> 1440w,
+                    <?php the_post_thumbnail_url('large'); ?> 1024w"
+                alt="<?php echo get_the_title(); ?>"
+                class="w-full h-full object-cover"
+                >    
+            </div>
         </div>
     </section>
 
