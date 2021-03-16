@@ -43,7 +43,7 @@ get_header();
             <article class="blog__item text-sm mb-20">
                 <a href="<?php the_permalink(); ?>" class="block cursor-image reveal-opacity">
                     <div class="blog__item__img-container parallax-container">
-                        <div class="blog__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('medium_large'); ?>')"></div>
+                        <div class="blog__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
                     </div>
                 </a>
                 <div class="reveal-group">
