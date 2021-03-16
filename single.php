@@ -42,7 +42,6 @@
     <?php 
     $args = array(
         'post_type'          	=> array( 'post' ),
-        'post_status'    		=> 'publish',
         'post__not_in'    		=> array($post->ID),
 
     );
