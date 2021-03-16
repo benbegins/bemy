@@ -14,7 +14,7 @@
             
         </div>
         <div class="single-article__thumbnail reveal-opacity absolute inset-0 z-0">
-            <div class="opacity-25 w-full h-full">
+            <div class="single-article__thumbnail-container">
                 <img 
                 src="<?php the_post_thumbnail_url('xxl'); ?>"
                 srcset="<?php the_post_thumbnail_url('xxl'); ?> 1920w,

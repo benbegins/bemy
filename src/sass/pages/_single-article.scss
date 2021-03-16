@@ -10,6 +10,11 @@
         }
     }
 
+    &__thumbnail-container{
+        @apply h-full w-full;
+        opacity:0.15;
+    }
+
     &__title{
         @media screen and (min-width: $md){
             position: relative;
