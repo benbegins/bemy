@@ -1,9 +1,9 @@
 .home-intro {
     &__btn-container {
-        @apply relative; 
+        @apply relative mt-12; 
 
         @media screen and (min-width: $md){
-            @apply absolute inline-block;
+            @apply absolute mt-0;
             bottom: 5rem;
             right: 3rem;
         }
