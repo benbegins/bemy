@@ -9,7 +9,7 @@ $image2 = get_sub_field('image2');
     <div class="container md:grid md:grid-cols-2 md:col-gap-4 lg:col-gap-12">
         <div>
             <div class="my-6 lg:my-4 lg:flex reveal-group">
-                <h3 class="uppercase font-extrabold text-sm lg:w-1/3 lg:pr-10 lg:text-right reveal-item"><?php echo $titre; ?></h3>
+                <h3 class="uppercase font-extrabold text-sm md:mt-1 lg:w-1/3 lg:pr-10 lg:text-right reveal-item"><?php echo $titre; ?></h3>
                 <p class="lg:w-2/3 reveal-item"><?php echo $texte; ?></p>
             </div>
             <?php if($image1): ?>

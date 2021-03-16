@@ -42,14 +42,6 @@
   }
 }
 
-.menu-primary {
-  @media screen and (min-width: $md){
-    font-size:4rem;
-  }
-    @media screen and (min-width: $lg){
-      font-size: 5.5vw;
-    }
-}
 .menu-link {
   display: inline-block;
 }

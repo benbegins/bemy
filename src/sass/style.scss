@@ -13,6 +13,7 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+// Font Aktiv Grotesk 300, 400, 800 (light, regular, xbold)
 @import url("https://use.typekit.net/cdi3ris.css");
 
 @import "./variables";
@@ -29,6 +30,8 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 @import "./pages/page-studio";
 @import "./pages/page-projets";
 @import "./pages/page-text";
+@import "./pages/blog";
+@import "./pages/single-article";
 @import "./pages/404";
 
 // Facturation

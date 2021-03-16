@@ -1,21 +1,25 @@
 <?php get_header(); ?>
 
 <div class="home">
+
+
     <!--intro-->
     <section class="home-intro min-h-screen flex items-center justify-center container relative">
       <div class="home-intro__content mx-auto w-full">
-        <h1 class="home-intro__title text-title reveal-bloc">
+        <h1 class="home-intro__title text-3xl reveal-bloc md:w-5/6">
           <?php esc_html_e('Digital productions that rock your world.', 'bemy') ?>
           <br /><span class="text-bemy-red">Nothing less.</span>
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
           <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
         </h1>
-        <h2 class="home-intro__description uppercase text-base xxl:text-xl pl-2 reveal-hero">Web Design &amp; Brand Identity</h2>
-        <div class="home-intro__btn-container relative inline-block md:absolute mt-8 md:right-0 md:mr-12 reveal-opacity">
-          <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary relative home-intro__btn reveal-hero"><?php pll_e('Contactez-nous'); ?></a>  
+        <p class="home-intro__description uppercase text-sm pl-2 reveal-hero">Web Design &amp; Brand Identity</p>
+        <div class="home-intro__btn-container">
+          <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary home-intro__btn reveal-hero"><?php pll_e('Contactez-nous'); ?></a>  
         </div>
       </div>
     </section>
+
+
     <!--projets-->
     <section class="home-projets relative overflow-hidden">
       <?php 
@@ -37,11 +41,11 @@
       <div class="home-projets__item md:min-h-screen relative my-24 md:my-auto parallax-container">
         <div class="container md:flex md:min-h-screen flex-col justify-center">
           <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5 reveal-group">
-            <p class="home-projets__proj-title uppercase opacity-50 text-sm lg:text-base reveal-item"
+            <p class="home-projets__proj-title uppercase opacity-50 text-sm reveal-item"
             ><?php the_field('nom_du_client'); ?></p>
-            <p class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-40 leading-tight reveal-item"
-            ><a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a></p>
-            <p class="home-projets__proj-services font-normal text-sm lg:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
+            <h2 class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-2xl leading-tight reveal-item"
+            ><a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a></h2>
+            <p class="home-projets__proj-services font-normal text-sm reveal-item"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
         <a href="<?php the_permalink(); ?>" class="cursor-image">
@@ -68,25 +72,29 @@
       wp_reset_postdata();
       ?>
       <div class="home-projets__reveal-mask absolute bg-bemy-dark w-1/2 h-full right-0 top-0 pointer-events-none"></div>
-      
     </section>
+
+
+
     <!--studio-->
     <section class="home-studio relative overflow-hidden">
       <div class="container py-32 md:my-auto md:min-h-screen md:flex items-center xl:justify-end">
         <div class="home-studio__text-container xl:w-2/3">
-          <div class="text-40 leading-normal reveal">
+          <div class="text-2xl font-extrabold reveal">
             <?php the_field('presentation_studio'); ?>
           </div>
           <div class="home-studio__btn-container relative inline-block reveal-opacity">
             <?php if (pll_current_language() == "en"): ?>
-              <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10 relative">Studio</a> 
+              <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10">Studio</a> 
             <?php else : ?>
-              <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10 relative">Le studio</a> 
+              <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10">Le studio</a> 
             <?php endif; ?>
           </div>
         </div>
       </div>
     </section>
+
+
 </div>
 
 <?php get_footer(); ?>

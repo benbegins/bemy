@@ -5,9 +5,9 @@
     <!-- Intro -->
     <section class="container pb-48 pt-64">
         <div class="projet-intro md:w-1/2 lg:w-2/5 reveal-group">
-            <p class="opacity-50 uppercase reveal-item"><?php the_field('nom_du_client'); ?></p>
-            <h2 class="text-40 leading-tight py-4 lg:py-6 reveal-item"><?php the_field('description_du_client'); ?></h2>
-            <p class="reveal-item font-normal"><?php the_field('liste_des_services'); ?></p>
+            <p class="opacity-50 uppercase reveal-item text-sm"><?php the_field('nom_du_client'); ?></p>
+            <h2 class="text-2xl leading-tight py-4 lg:py-6 reveal-item"><?php the_field('description_du_client'); ?></h2>
+            <p class="reveal-item font-normal text-sm"><?php the_field('liste_des_services'); ?></p>
         </div>
     </section>
 
@@ -27,7 +27,7 @@
     <!-- Presentation du projet -->
     <section class="container section-pad-top">
         <div class="lg:w-3/5 lg:ml-auto reveal-group">
-            <h2 class="text-40 leading-tight reveal-item"><?php the_field('titre_presentation'); ?></h2>
+            <h2 class="text-2xl leading-tight reveal-item"><?php the_field('titre_presentation'); ?></h2>
             <div class="projet__presentation my-6 leading-relaxed lg:my-10 reveal-item">
                 <?php the_field('presentation'); ?>
             </div>
@@ -105,7 +105,7 @@
         ?>
         
         <div class="container py-48 lg:min-h-screen flex items-center justify-center">
-            <p class="text-title"><a href="<?php echo get_permalink($projet_suivant_id); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
+            <p class="text-3xl font-extrabold"><a href="<?php echo get_permalink($projet_suivant_id); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
         </div>
     </section>
 </div>

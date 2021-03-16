@@ -30,6 +30,14 @@ if (!bodyFacturation) {
 		prevent: ({ el }) => el.classList && el.classList.contains('no-barba'),
 		transitions: [{
 			name: 'default-transition',
+			once() {
+				gsap.from('.site-header', {
+					opacity: 0,
+					duration: 0.75,
+					ease: "none",
+					delay: 1
+				})
+			},
 			beforeLeave() {
 				gsap.to(".swipe", {
 					x: "-100%",

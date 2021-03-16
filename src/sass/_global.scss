@@ -10,48 +10,29 @@ body {
 	background: $bemy-dark;
 	color: $bemy-light;
 	font-weight: 300;
+	@apply text-base;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 800;
 }
 
 strong{
 	font-weight: 800;
 }
 
+a{
+	transition: 0.25s;
+}
+
 .container{
-	max-width: 1480px;
+	max-width:none;
 }
 
 .page-container{
 	background-color: $bemy-dark;
 	@media screen and (min-width: $lg){
 		margin-bottom:100vh;
-	}
-}
-
-.text-40{
-	@apply font-extrabold text-2xl;
-	@media screen and (min-width: $md){
-		font-size: 1.875rem;
-	}
-	@media screen and (min-width: $lg){
-		font-size: 2.25rem;
-	}
-	@media screen and (min-width: $xxl){
-		font-size: 2.75rem;
-	}
-}
-
-.text-title{
-	font-size: 40px;
-	font-weight: 900;
-	line-height: 1.05;
-	@media screen and (min-width: $sm){
-		font-size: 3.75rem;
-	}
-	@media screen and (min-width: $lg){
-		font-size: 7vw;
-	}
-	@media screen and (min-width: $xxl){
-		font-size: 7.5rem;
 	}
 }
 

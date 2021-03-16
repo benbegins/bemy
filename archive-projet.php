@@ -4,18 +4,18 @@
     <section class="projets-intro container">
         <div class="projets-intro__maincontent py-40 flex flex-col justify-center md:min-h-screen">
             <?php if(pll_current_language() == "en"){
-                echo "<h1 class='projets-intro__title text-title md:w-11/12 reveal-bloc'>Calm yourself, here are our <span class='text-bemy-red'>latest projects.</span>
+                echo "<h1 class='projets-intro__title text-3xl md:w-11/12 reveal-bloc'>Calm yourself, here are our <span class='text-bemy-red'>latest projects.</span>
                 <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
                 <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
                 </h1>
-                <p class='text-40 mt-6 inline-block reveal-hero'>(Be careful, they are amazing)
+                <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>(Be careful, they are amazing)
                 </p>";
             } else {
-                echo "<h1 class='projets-intro__title text-title md:w-11/12 reveal-bloc'>Calmez-vous, voici nos <span class='text-bemy-red'>derniers projets.</span>
+                echo "<h1 class='projets-intro__title text-3xl md:w-11/12 reveal-bloc'>Calmez-vous, voici nos <span class='text-bemy-red'>derniers projets.</span>
                 <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
                 <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
                 </h1>
-                <p class='text-40 mt-6 inline-block reveal-hero'>(Attention, ça envoie)
+                <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>(Attention, ça envoie)
                 </p>";
             } ?>
         </div>
@@ -34,11 +34,11 @@
                 </div>
             </a>
             <div class="reveal-group">
-                <h2 class="uppercase opacity-50 mt-8 text-sm md:text-base reveal-item"><?php the_field('nom_du_client'); ?></h2>
+                <h2 class="uppercase font-normal opacity-50 mt-8 text-sm reveal-item"><?php the_field('nom_du_client'); ?></h2>
                 <a href="<?php the_permalink(); ?>" class="cursor-image">
-                    <h3 class="text-40 leading-tight py-2 md:py-6 reveal-item"><?php the_field('description_du_client'); ?></h3>
+                    <h3 class="text-2xl leading-tight py-2 md:py-6 reveal-item"><?php the_field('description_du_client'); ?></h3>
                 </a>
-                <p class="text-sm font-normal md:text-base reveal-item"><?php the_field('liste_des_services'); ?></p>
+                <p class="text-sm font-normal reveal-item"><?php the_field('liste_des_services'); ?></p>
             </div>
         </article>
 

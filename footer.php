@@ -11,13 +11,10 @@
           <div class="footer-contact__over-link"></div>
         </div>
       </div>
-      <div
-        class="container footer-mentions text-xs py-4 md:w-full md:flex md:justify-between md:py-8 z-10"
-      >
+      <div class="footer-mentions text-xs py-4 md:w-full md:flex md:justify-between md:py-8 z-10 px-8 sm:px-12 lg:px-16" >
         <div>
           © bemy 2020
-          <a href="<?php echo get_site_url(); ?>/mentions" class="ml-6 footer-mentions__link link-transition"><?php pll_e('Mentions légales'); ?>
-</a>
+          <a href="<?php echo get_site_url(); ?>/mentions" class="ml-6 footer-mentions__link link-transition"><?php pll_e('Mentions légales'); ?></a>
         </div>
         <div class="footer-reseaux uppercase">
           <a href="https://www.linkedin.com/company/bemystudio/" class="footer-mentions__link link-transition" target="_blank">Linkedin.</a>

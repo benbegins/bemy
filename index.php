@@ -4,7 +4,7 @@
 
     <section class="container">
       <div class="py-40 flex flex-col justify-center min-h-screen">
-        <h1 class="text-title reveal-bloc">
+        <h1 class="text-3xl reveal-bloc">
           <?php the_title(); ?>
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
           <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>

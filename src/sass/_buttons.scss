@@ -2,10 +2,7 @@
 	@apply uppercase font-extrabold border-solid border border-bemy-light py-4 px-8 inline-block z-10 overflow-hidden;
 }
 .btn-primary{
-	font-size: 0.85rem;
-	@media screen and (min-width: $md){
-		font-size: 0.95rem;
-	}
+	@apply text-sm relative;
 }
 .btn::before{
 	content: "";

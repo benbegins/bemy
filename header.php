@@ -92,7 +92,7 @@
         </div>
           <div class="menu-container fixed inset-0 min-h-screen w-full bg-bemy-light text-bemy-dark z-20">
             <div class="submenu-container container flex min-h-screen flex-col justify-center">
-              <ul class="menu-primary font-extrabold text-4xl leading-tight">
+              <ul class="menu-primary font-extrabold text-3xl leading-tight">
                 <li class="menu-item">
                   <?php if (pll_current_language() == "en"): ?>
                     <a href="<?php echo get_site_url(); ?>/en/studio-en" class="menu-link link-transition">Studio</a>
@@ -111,7 +111,7 @@
                   <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="menu-link link-transition">Contact</a>
                 </li>
               </ul>
-              <ul class="menu-secondary mt-4 uppercase">
+              <ul class="menu-secondary text-sm mt-4 uppercase">
                 <li class="menu-item">
                   <a href="https://www.linkedin.com/company/bemystudio/" class="menu-link link-transition" target="_blank">Linkedin.</a>
                 </li>

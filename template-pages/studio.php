@@ -9,7 +9,7 @@ get_header();
   <div class="overflow-hidden">
     <section class="studio-intro container">
       <div class="studio-intro__maincontent py-40 flex flex-col justify-center min-h-screen">
-        <h1 class="studio-intro__title text-title reveal-bloc">
+        <h1 class="studio-intro__title text-3xl reveal-bloc">
           <?php if (pll_current_language() == "en"){
             echo 'Behind the studio,<br />two <span class="text-bemy-red">humble geniuses.</span>';
           } else {
@@ -24,7 +24,7 @@ get_header();
     <section class="studio-presentation relative">
       <div class="container md:grid md:grid-cols-2 lg:grid-cols-3">
         <div
-          class="studio-presentation__text md:col-start-2 lg:col-start-3 md:mb-40 lg:mb-64 z-20 lg:text-xl reveal-group"
+          class="studio-presentation__text md:col-start-2 lg:col-start-3 md:mb-40 lg:mb-64 z-20 reveal-group"
         >
           <p class="reveal-item">
             <?php 
@@ -59,7 +59,7 @@ get_header();
           class="studio-services__list text-center md:text-left md:grid md:grid-cols-3 lg:w-4/5 lg:mx-auto reveal-group"
         >
           <div class="studio-services__item py-6 lg:px-6 reveal-item">
-            <h2 class="studio-services__title text-40 uppercase">Web</h2>
+            <h2 class="studio-services__title text-2xl uppercase">Web</h2>
             <ul class="uppercase text-xs mt-4">
               <li class="my-1">UX/UI</li>
               <li class="my-1"><?php pll_e('Site vitrine'); ?></li>
@@ -68,7 +68,7 @@ get_header();
             </ul>
           </div>
           <div class="studio-services__item py-6 lg:px-6 reveal-item">
-            <h2 class="studio-services__title text-40 uppercase">Content</h2>
+            <h2 class="studio-services__title text-2xl uppercase">Content</h2>
             <ul class="uppercase text-xs mt-4">
               <li class="my-1">Motion</li>
               <li class="my-1">Photo</li>
@@ -77,7 +77,7 @@ get_header();
             </ul>
           </div>
           <div class="studio-services__item py-6 lg:px-6 reveal-item">
-            <h2 class="studio-services__title text-40 uppercase">Branding</h2>
+            <h2 class="studio-services__title text-2xl uppercase">Branding</h2>
             <ul class="uppercase text-xs mt-4">
               <li class="my-1">Logo</li>
               <li class="my-1"><?php pll_e('Identité visuelle'); ?></li>
@@ -114,7 +114,7 @@ get_header();
       </div>
       <div class="container pt-4 mt-32 pb-32 lg:pb-64 lg:mt-48 bg-bemy-dark relative">
         <div class="studio-projets lg:w-2/3 lg:ml-auto reveal-group">
-          <h2 class="studio-projets__title text-40 mb-4 reveal-item"><?php if (pll_current_language() == "en"){echo 'Our lastest projects';} else {echo 'Nos derniers projets';} ?></h2>
+          <h2 class="studio-projets__title text-2xl mb-6 reveal-item"><?php if (pll_current_language() == "en"){echo 'Our lastest projects';} else {echo 'Nos derniers projets';} ?></h2>
           <ul class="studio-projets__list divide-y reveal-item">
           <?php 
           // WP_Query arguments
@@ -131,7 +131,7 @@ get_header();
               $query->the_post();
           ?>
             <a href="<?php the_permalink(); ?>" class="block">
-              <li class="studio-projets__item py-4 md:py-5 grid text-sm grid-cols-2 md:grid-cols-3">
+              <li class="studio-projets__item py-4 md:py-6 grid text-sm grid-cols-2 md:grid-cols-3">
                 <div class="studio-projets__item__nom-client uppercase font-extrabold"><?php the_field('nom_du_client'); ?></div>
                 <div class="studio-projets__item__services md:col-span-2"><?php the_field('liste_des_services'); ?></div>
               </li>  

@@ -37,7 +37,7 @@ const reveal = () => {
     const revealOpacity = document.querySelectorAll('.reveal-opacity');
     const revealBlocs = document.querySelectorAll('.reveal-bloc');
     // Simple reveal translate+opacity
-    if (revealElements.length > 0) {
+    if (revealElements) {
         revealElements.forEach(element => {
             gsap.from(element, {
                 y: `${innerHeight / 20}`,
@@ -52,7 +52,7 @@ const reveal = () => {
         })
     }
     // Reveal opacity
-    if (revealOpacity.length > 0) {
+    if (revealOpacity) {
         revealOpacity.forEach(element => {
             gsap.from(element, {
                 opacity: 0,
@@ -66,7 +66,7 @@ const reveal = () => {
         })
     }
     // Reveal grouped elements
-    if (revealGroups.length > 0) {
+    if (revealGroups) {
         revealGroups.forEach(element => {
             const revealElements = element.querySelectorAll('.reveal-item');
             gsap.from(revealElements, {
@@ -83,7 +83,7 @@ const reveal = () => {
         })
     }
     // Reveal bloc text
-    if (revealBlocs.length > 0) {
+    if (revealBlocs) {
         revealBlocs.forEach(bloc => {
             const bloc1 = bloc.querySelector('.reveal-bloc-1');
             const bloc2 = bloc.querySelector('.reveal-bloc-2');

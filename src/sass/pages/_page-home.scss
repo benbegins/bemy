@@ -1,23 +1,28 @@
 .home-intro {
     &__btn-container {
+        @apply relative; 
+
         @media screen and (min-width: $md){
+            @apply absolute inline-block;
             bottom: 5rem;
+            right: 3rem;
         }
         @media screen and (min-width: $lg){
             bottom: 15vh;
-        }
-        @media screen and (min-width: $lg){
-          &::after{
-            content: "";
-            background-color: $bemy-light;
-            position: absolute;
-            width: 1px;
-            height: 500px;
-            bottom: -30px;
-            left: 50%;
-            transform: translateY(100%) rotate(18deg);
-            transform-origin: top center;
-          }
+            right: 9vw;
+
+
+            &::after{
+              content: "";
+              background-color: $bemy-light;
+              position: absolute;
+              width: 1px;
+              height: 500px;
+              bottom: -30px;
+              left: 50%;
+              transform: translateY(100%) rotate(18deg);
+              transform-origin: top center;
+            }
         }
     }
 }
