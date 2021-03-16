@@ -6,7 +6,7 @@
     <!--intro-->
     <section class="home-intro min-h-screen flex items-center justify-center container relative">
       <div class="home-intro__content mx-auto w-full">
-        <h1 class="home-intro__title text-3xl reveal-bloc md:w-5/6">
+        <h1 class="home-intro__title text-3xl reveal-bloc">
           <?php esc_html_e('Digital productions that rock your world.', 'bemy') ?>
           <br /><span class="text-bemy-red">Nothing less.</span>
           <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>

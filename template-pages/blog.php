@@ -12,7 +12,7 @@ get_header();
     <!-- Intro -->
     <section>
         <div class="container py-40 flex flex-col justify-center md:min-h-screen">
-            <h1 class="text-3xl md:w-5/6 reveal-bloc">
+            <h1 class="text-3xl reveal-bloc">
                 Ici, on parle de sujets qui <span class='text-bemy-red'>nous intéressent.</span>
                 <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
                 <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>    

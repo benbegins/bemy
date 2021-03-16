@@ -4,14 +4,14 @@
     <section class="projets-intro container">
         <div class="projets-intro__maincontent py-40 flex flex-col justify-center md:min-h-screen">
             <?php if(pll_current_language() == "en"){
-                echo "<h1 class='projets-intro__title text-3xl md:w-11/12 reveal-bloc'>Calm yourself, here are our <span class='text-bemy-red'>latest projects.</span>
+                echo "<h1 class='projets-intro__title text-3xl reveal-bloc'>Calm yourself, here are our <span class='text-bemy-red'>latest projects.</span>
                 <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
                 <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
                 </h1>
                 <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>(Be careful, they are amazing)
                 </p>";
             } else {
-                echo "<h1 class='projets-intro__title text-3xl md:w-11/12 reveal-bloc'>Calmez-vous, voici nos <span class='text-bemy-red'>derniers projets.</span>
+                echo "<h1 class='projets-intro__title text-3xl reveal-bloc'>Calmez-vous, voici nos <span class='text-bemy-red'>derniers projets.</span>
                 <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
                 <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
                 </h1>

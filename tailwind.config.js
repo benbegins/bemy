@@ -22,7 +22,7 @@ module.exports = {
 			lg: ['max(calc(1.3rem + 0.3vw), 1rem)', { lineHeight: '1.6' }],
 			xl: ['max(2.1vw, 1.25rem)', { lineHeight: '1.25' }],
 			'2xl': ['max(2.8vw, 1.5rem)', { lineHeight: '1.25' }],
-			'3xl': ['max(6.4vw, 2.5rem)', { lineHeight: '1.1' }],
+			'3xl': ['max(7vw, 2.5rem)', { lineHeight: '1.1' }],
 		},
 		screens: {
 			'sm': '640px',
