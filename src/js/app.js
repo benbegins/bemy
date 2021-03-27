@@ -36,6 +36,7 @@ if (!bodyFacturation) {
 				var intro = new Timeline();
 				intro.to('.intro__reveal', {
 					xPercent: 100,
+					duration: 1.5,
 					onComplete: reveal,
 				})
 				intro.to('.intro', {
