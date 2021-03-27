@@ -2,6 +2,7 @@ module.exports = {
 	theme: {
 		colors: {
 			bemy: {
+				black: "#000",
 				dark: "#151A20",
 				light: "#f2eddf",
 				red: "#f54f4f",

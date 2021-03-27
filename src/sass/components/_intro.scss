@@ -1,0 +1,17 @@
+.intro{
+    @apply inset-0 bg-bemy-dark fixed z-50 flex items-center justify-center overflow-hidden;
+    // box-shadow: -1px 0 0 rgba($bemy-light, 0.5);
+
+    &__logo{
+        width: 80vw;
+        opacity: 0.05;
+        position: fixed;
+        left: 10%;
+    }
+
+    &__reveal{
+        @apply absolute inset-0;
+        background: $bemy-dark;
+        background: linear-gradient(90deg, rgba($bemy-dark,0) 0%, rgba($bemy-dark,1) 10%, rgba($bemy-dark,1) 100%);
+    }
+}

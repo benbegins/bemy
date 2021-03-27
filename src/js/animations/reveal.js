@@ -93,22 +93,18 @@ const reveal = () => {
                     start: "top 85%"
                 }
             });
-            tl
-                .from(bloc2, {
-                    scaleX: 0
-                })
-                .to(bloc1, {
-                    scaleX: 0
-                }, "-=1")
-                .to(bloc2, {
-                    scaleX: 0,
-                    transformOrigin: "center right"
-                })
-                .from('.reveal-hero', {
-                    opacity: 0,
-                    y: 50,
-                    ease: "power3.out"
-                }, "-=0.7")
+            tl.to(bloc1, {
+                scaleX: 0
+            })
+            tl.to(bloc2, {
+                scaleX: 0,
+                transformOrigin: "center right"
+            }, "-=0.5")
+            tl.from('.reveal-hero', {
+                opacity: 0,
+                duration: 0.25,
+                ease: "linear"
+            }, "-=0.5")
         })
     }
 }
