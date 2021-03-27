@@ -22,7 +22,9 @@
 <?php wp_body_open(); ?>
 
 <div class="intro">
-  <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo-bemy.svg" alt="Logo Bemy Studio" class="intro__logo">
+  <div class="intro__logo-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo-bemy.svg" alt="Logo Bemy Studio" class="intro__logo">
+  </div>
   <div class="intro__reveal"></div>
 </div>
 
