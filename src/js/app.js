@@ -39,7 +39,7 @@ if (!bodyFacturation) {
 					duration: 1.6,
 				})
 				intro.from('.intro__logo', {
-					scale: 0.8,
+					scale: 0.9,
 					duration: 1.5,
 					ease: 'power3.out',
 					onComplete: reveal,
