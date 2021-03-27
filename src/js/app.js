@@ -36,14 +36,19 @@ if (!bodyFacturation) {
 				var intro = new Timeline();
 				intro.to('.intro__reveal', {
 					xPercent: 100,
-					duration: 1.5,
-					onComplete: reveal,
+					duration: 1.6,
 				})
+				intro.from('.intro__logo', {
+					scale: 0.8,
+					duration: 1.5,
+					ease: 'power3.out',
+					onComplete: reveal,
+				}, "-=1.5")
 				intro.to('.intro', {
 					xPercent: 101,
 				})
-				intro.to('.intro__logo', {
-					xPercent: -126,
+				intro.to('.intro__logo-container', {
+					xPercent: -101,
 				}, "-=1")
 				intro.from('.site-header', {
 					top: '-80px',
