@@ -130,4 +130,5 @@ add_action('init', function() {
     pll_register_string("bonjour", "bonjour");
     pll_register_string("contenu", "Contenu");
     pll_register_string("identite", "Identité");
+    pll_register_string("projets", "Projets");
 });

@@ -5,8 +5,10 @@
 
 @font-face {
 	font-family: "Fonde";
-	src: url("./dist/fonts/fonde.woff") format("woff"),
-		url("./dist/fonts/fonde.ttf") format("ttf");
+	src: url("./dist/fonts/fonde.woff2") format("woff2"),
+		url("./dist/fonts/fonde.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
 }
 
 body {

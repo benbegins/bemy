@@ -9,7 +9,7 @@
         <div class="lg:w-10/12">
           <?php if (pll_current_language() == "en"): ?>
             <h1 class="text-3xl page-title">
-            We create<span class="fonde">visual identities</span> and <span class="fonde">websites</span> you're proud&nbsp;of.
+            We create <span class="fonde">visual identities</span> and <span class="fonde">websites</span> you're proud&nbsp;of.
             </h1>
             <p class="text-2xl font-extrabold mt-6">(Like... really)</p>
           <?php else : ?>
