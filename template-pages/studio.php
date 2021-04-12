@@ -129,7 +129,7 @@ get_header();
         </ul>
         <div class="text-right mt-12">
           <?php if (pll_current_language() == "en"): ?>
-            <a href="<?php echo get_site_url(); ?>/en/projet" class="btn btn-primary">All work</a> 
+            <a href="<?php echo get_site_url(); ?>/en/projet" class="btn btn-primary">All projects</a> 
           <?php else : ?>
             <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary">Tous les projets</a> 
           <?php endif; ?>
