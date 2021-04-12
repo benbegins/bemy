@@ -4,24 +4,49 @@
 
 
     <!--intro-->
-    <section class="home-intro min-h-screen flex items-center justify-center container relative">
-      <div class="home-intro__content mx-auto w-full">
-        <h1 class="home-intro__title text-3xl reveal-bloc">
-          <?php esc_html_e('Digital productions that rock your world.', 'bemy') ?>
-          <br /><span class="text-bemy-red">Nothing less.</span>
-          <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
-          <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
-        </h1>
-        <p class="home-intro__description uppercase text-sm pl-2 reveal-hero">Web Design &amp; Brand Identity</p>
-        <div class="home-intro__btn-container">
-          <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="btn btn-primary home-intro__btn reveal-hero"><?php pll_e('Contactez-nous'); ?></a>  
+    <section class="home-intro min-h-screen flex items-center relative">
+      <div class="container">
+        <div class="lg:w-10/12">
+          <?php if (pll_current_language() == "en"): ?>
+            <h1 class="text-3xl page-title">
+            We create<span class="fonde">visual identities</span> and <span class="fonde">websites</span> you're proud&nbsp;of.
+            </h1>
+            <p class="text-2xl font-extrabold mt-6">(Like... really)</p>
+          <?php else : ?>
+            <h1 class="text-3xl page-title">
+            Nous créons des <span class="fonde">identités visuelles</span> et des <span class="fonde">sites</span> dont vous êtes fiers.
+            </h1>
+            <p class="text-xl font-extrabold mt-6">(Genre... vraiment)</p>
+          <?php endif; ?>
+        </div>  
+      </div>
+    </section>
+
+
+    <!-- Studio -->
+    <section class="section-pad-bottom">
+      <div class="container">
+        <div class="md:w-1/2 md:ml-auto">
+          <p><?php pll_e('Nous sommes un studio de création Barcelo-Nantais qui accompagne les agences et les marques dans la production d’expériences claires, esthétiques et durables.'); ?></p>
+          <?php if (pll_current_language() == "en"): ?>
+            <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10">Studio</a> 
+          <?php else : ?>
+            <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10">Le studio</a> 
+          <?php endif; ?>
         </div>
       </div>
     </section>
 
 
     <!--projets-->
+    <section class="section-pad">
+      <div class="container text-center md:pb-12">
+        <h2 class="text-3xl back-line"><?php pll_e('Nos derniers projets'); ?></h2>
+      </div>
+    </section>
+
     <section class="home-projets relative overflow-hidden">
+      
       <?php 
       // WP_Query arguments
       $args = array(
@@ -40,12 +65,14 @@
         
       <div class="home-projets__item md:min-h-screen relative my-24 md:my-auto parallax-container">
         <div class="container md:flex md:min-h-screen flex-col justify-center">
-          <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5 reveal-group">
-            <p class="home-projets__proj-title uppercase opacity-50 text-sm reveal-item"
-            ><?php the_field('nom_du_client'); ?></p>
-            <h2 class="home-projets__proj-description my-4 md:my-6 lg:my-8 text-2xl leading-tight reveal-item"
-            ><a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a></h2>
-            <p class="home-projets__proj-services font-normal text-sm reveal-item"><?php the_field('liste_des_services'); ?></p>
+          <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5">
+            <p class="home-projets__proj-title uppercase text-sm font-extrabold text-bemy-red"><?php the_field('nom_du_client'); ?></p>
+
+            <h2 class="home-projets__proj-description mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight">
+              <a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a>
+            </h2>
+
+            <p class="home-projets__proj-services text-sm"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
         <a href="<?php the_permalink(); ?>" class="cursor-image">
@@ -74,25 +101,54 @@
       <div class="home-projets__reveal-mask absolute bg-bemy-dark w-1/2 h-full right-0 top-0 pointer-events-none"></div>
     </section>
 
-
-
-    <!--studio-->
-    <section class="home-studio relative overflow-hidden">
-      <div class="container py-32 md:my-auto md:min-h-screen md:flex items-center xl:justify-end">
-        <div class="home-studio__text-container xl:w-2/3">
-          <div class="text-2xl font-extrabold reveal">
-            <?php the_field('presentation_studio'); ?>
-          </div>
-          <div class="home-studio__btn-container relative inline-block reveal-opacity">
-            <?php if (pll_current_language() == "en"): ?>
-              <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10">Studio</a> 
-            <?php else : ?>
-              <a href="<?php echo get_site_url(); ?>/studio" class="btn btn-primary mt-10">Le studio</a> 
-            <?php endif; ?>
-          </div>
-        </div>
+    <section class="section-pad">
+      <div class="container text-center py-12">
+        <?php if (pll_current_language() == "en"): ?>
+          <a href="<?php echo get_site_url(); ?>/en/projet" class="btn btn-primary">All projects</a> 
+        <?php else : ?>
+          <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary">Tous les projets</a> 
+        <?php endif; ?>
       </div>
     </section>
+
+
+
+     <!-- Autres articles -->
+     <?php 
+    $args = array(
+        'post_type'          	=> array( 'post' ),
+        'post_status'         => array('publish'),
+        'posts_per_page'      => 3,
+    );
+    
+    $query = new WP_Query( $args );
+    if($query->have_posts()): 
+    ?>
+    <section class="section-pad">
+        <div class="container lg:grid lg:grid-cols-2 pb-12">
+            <div>
+                <h2 class="text-3xl mb-16 lg:mb-10 lg:w-5/6 back-line text-center lg:text-left"><?php pll_e('Nos derniers articles') ?></h2>
+            </div>
+            <div>
+                <ul class="border-t border-bemy-light border-opacity-50">
+                    <?php 
+                    while($query->have_posts()):
+                        $query->the_post();
+                    ?> 
+
+                    <li class="border-b border-bemy-light border-opacity-50">
+                        <a href="<?php the_permalink(); ?>" class="grid grid-cols-3 items-center py-4 hover:text-bemy-red">
+                            <p class="text-sm uppercase opacity-50"><?php the_date('F Y'); ?></p>
+                            <p class="col-span-2"><?php the_title(); ?></p>    
+                        </a>
+                    </li>
+
+                    <?php endwhile; ?>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
 
 
 </div>

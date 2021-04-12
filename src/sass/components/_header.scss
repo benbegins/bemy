@@ -1,113 +1,131 @@
 .logo-bemy {
-  svg {
-    fill: $bemy-light;
-    transition: 0.25s;
-    width:80px;
-    @media screen and (min-width: $md){
-      width: 100px;
-    }
-  }
-  &:hover {
-    svg {
-      fill: $bemy-red;
-    }
-  }
+	svg {
+		fill: $bemy-light;
+		transition: 0.25s;
+		width: 80px;
+		@media screen and (min-width: $md) {
+			// width: 100px;
+		}
+	}
+	&:hover {
+		svg {
+			fill: $bemy-red;
+		}
+	}
 }
 .nav-burger {
-  .line {
-    background-color: $bemy-light;
-    height: 1px;
-    margin: 4px 0;
-    transition: 0.25s;
-    transform-origin: center center;
-  }
-  .line1 {
-    width: 22px;
-  }
-  .line2 {
-    width: 25px;
-  }
-  .line3 {
-    width: 28px;
-  }
+	.line {
+		background-color: $bemy-light;
+		height: 1px;
+		margin: 4px 0;
+		transition: 0.25s;
+		transform-origin: center center;
+	}
+	.line1 {
+		width: 22px;
+	}
+	.line2 {
+		width: 25px;
+	}
+	.line3 {
+		width: 28px;
+	}
 }
 .nav-burger:hover {
-  .line {
-    background-color: $bemy-red;
-  }
-  .line1,
-  .line2,
-  .line3 {
-    width: 28px;
-  }
+	.line {
+		background-color: $bemy-red;
+	}
+	.line1,
+	.line2,
+	.line3 {
+		width: 28px;
+	}
 }
 
 .menu-link {
-  display: inline-block;
+	display: inline-block;
 }
 
-.translations{
-  a{
-    transition: 0.2s;
-    &:hover{
-      color: $bemy-red;
-    }
-  }
+.translations {
+	a {
+		transition: 0.2s;
+		&:hover {
+			color: $bemy-red;
+		}
+	}
 }
 
-.menu-container{
-  transform: translateX(100%);
+.menu-container {
+	transition: 1s $ease;
+	transform: translateX(100%);
+
+	&.open {
+		transform: translateX(0);
+
+		@media screen and (min-width: $lg) {
+			transform: translateX(50%);
+		}
+	}
 }
 
 /* Hide navbar on scroll */
-.site-header{
-  transition: transform 0.3s ease-in-out;
-  &.hide{
-    @media screen and (min-width: $lg){
-      transform: translateY(-100%);  
-    }
-  }
+.site-header {
+	transition: transform 0.3s ease-in-out;
+	&.hide {
+		@media screen and (min-width: $lg) {
+			transform: translateY(-100%);
+		}
+	}
 }
 
 /*Menu deploy*/
 .site-header.active {
-  .nav-burger {
-    .line {
-      background-color: $bemy-dark;
-      transition: 0.4s;
-    }
-    .line1 {
-      width: 28px;
-      transform: rotate(45deg) translate(7px, 7px);
-    }
-    .line3 {
-      transform: rotate(-45deg) translate(6px, -6px);
-    }
-    .line2 {
-      transform: scale(0);
-    }
-    &:hover {
-      .line {
-        background-color: $bemy-red;
-      }
-    }
-  }
+	.nav-burger {
+		.line {
+			background-color: $bemy-dark;
+			transition: 0.4s;
+		}
+		.line1 {
+			width: 28px;
+			transform: rotate(45deg) translate(7px, 7px);
+		}
+		.line3 {
+			transform: rotate(-45deg) translate(6px, -6px);
+		}
+		.line2 {
+			transform: scale(0);
+		}
+		&:hover {
+			.line {
+				background-color: $bemy-red;
+			}
+		}
+	}
 
-  .menu-link {
-    &:hover {
-      color: $bemy-red;
-    }
-  }
+	.menu-link {
+		&:hover {
+			color: $bemy-red;
+		}
+	}
 
-  .logo-bemy {
-    svg {
-      fill: $bemy-dark;
-    }
-    &:hover {
-      svg {
-        fill: $bemy-red;
-      }
-    }
-  }
-
+	.logo-bemy {
+		svg {
+			fill: $bemy-dark;
+		}
+		&:hover {
+			svg {
+				fill: $bemy-red;
+			}
+		}
+		@media screen and (min-width: $lg) {
+			svg {
+				fill: $bemy-light;
+			}
+			&:hover {
+				svg {
+					fill: $bemy-red;
+				}
+			}
+		}
+	}
 }

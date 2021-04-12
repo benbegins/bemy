@@ -1,10 +1,10 @@
-.btn{
-	@apply uppercase font-extrabold border-solid border border-bemy-light py-4 px-8 inline-block z-10 overflow-hidden;
+.btn {
+	@apply uppercase font-extrabold border-solid border border-bemy-light border-opacity-50 py-4 px-8 inline-block z-10 overflow-hidden;
 }
-.btn-primary{
+.btn-primary {
 	@apply text-sm relative;
 }
-.btn::before{
+.btn::before {
 	content: "";
 	background: $bemy-red;
 	display: block;
@@ -18,7 +18,7 @@
 	transform-origin: center left;
 	transition: transform 0.4s 0.1s $ease;
 }
-.btn::after{
+.btn::after {
 	content: "";
 	background: $bemy-light;
 	display: block;
@@ -32,72 +32,72 @@
 	transform-origin: center left;
 	transition: transform 0.4s $ease;
 }
-.btn:hover{
-	&::before{
+.btn:hover {
+	&::before {
 		transform: scaleX(1) skewX(-18deg);
 	}
-	&::after{
+	&::after {
 		transform: scaleX(1) skewX(-18deg);
 	}
 }
 
-.link-border-bottom{
+.link-border-bottom {
 	line-height: 1;
 	position: relative;
 	z-index: 1;
 	font-size: 1.5rem;
-    &::after{
-        content: "";
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: -5px;
-        width: 100%;
-        height: 2px;
-        background-color: $bemy-light;
-    }
-    @media screen and (min-width: $md){
-        font-size: 3rem;
-        &::after{
-            height: 3px;
-            bottom: -10px;
-        }
-    }
-    @media screen and (min-width: $lg) {
-        font-size: 6vw;
-        transition:color 0.3s;
-        &::after{
-            height: 4px;
-            bottom: -20px;
-            z-index: -1;
-            transition: 0.4s $ease;
-        }
-        &::before{
-            content: "";
-            display: block;
-            position: absolute;
-            left: 0;
-            bottom: -20px;
-            width: 100%;
-            height: calc(100% + 20px);
-            transform: scaleY(0);
-            transform-origin: bottom center;
-            transition: 0.4s $ease;
-            z-index: -1;
-            background-color: $bemy-light;
-        }
-        &:hover{
-            color: $bemy-red;
-            &::before{
-                transform: scaleY(1);
-            }
-        }
-    }
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -5px;
+		width: 100%;
+		height: 2px;
+		background-color: $bemy-light;
+	}
+	@media screen and (min-width: $md) {
+		font-size: 3rem;
+		&::after {
+			height: 3px;
+			bottom: -10px;
+		}
+	}
+	@media screen and (min-width: $lg) {
+		font-size: 6vw;
+		transition: color 0.3s;
+		&::after {
+			height: 4px;
+			bottom: -20px;
+			z-index: -1;
+			transition: 0.4s $ease;
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: -20px;
+			width: 100%;
+			height: calc(100% + 20px);
+			transform: scaleY(0);
+			transform-origin: bottom center;
+			transition: 0.4s $ease;
+			z-index: -1;
+			background-color: $bemy-light;
+		}
+		&:hover {
+			color: $bemy-red;
+			&::before {
+				transform: scaleY(1);
+			}
+		}
+	}
 }
 
-.std-link{
-	transition:0.3s;
-	&:hover{
+.std-link {
+	transition: 0.3s;
+	&:hover {
 		background: $bemy-light;
 		color: $bemy-red;
 		text-decoration: none;

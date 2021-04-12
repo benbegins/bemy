@@ -1,75 +1,132 @@
-::selection{
+::selection {
 	background: transparent;
 	color: $bemy-red;
+}
+
+@font-face {
+	font-family: "Fonde";
+	src: url("./dist/fonts/fonde.woff") format("woff"),
+		url("./dist/fonts/fonde.ttf") format("ttf");
 }
 
 body {
 	font-family: aktiv-grotesk, sans-serif;
 	-webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;
 	background: $bemy-dark;
 	color: $bemy-light;
 	font-weight: 300;
 	@apply text-base;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
 	font-weight: 800;
 }
 
-strong{
+strong {
 	font-weight: 800;
 }
 
-a{
+a {
 	transition: 0.25s;
 }
 
-.container{
-	max-width:none;
+.fonde {
+	font-family: "Fonde", serif;
+	font-weight: 400;
 }
 
-.page-container{
+.container {
+	max-width: none;
+}
+
+.page-container {
 	background-color: $bemy-dark;
-	@media screen and (min-width: $lg){
-		margin-bottom:100vh;
+	@media screen and (min-width: $lg) {
+		margin-bottom: 100vh;
 	}
 }
 
-.skew-18{
+.skew-18 {
 	transform: skewX(-18deg);
 }
 
-.link-transition{
+.link-transition {
 	transition: 0.25s;
 }
 
+.page-title {
+	@apply relative;
+
+	&::before {
+		content: "";
+		width: 60vw;
+		height: 1px;
+		background: $bemy-light;
+		position: absolute;
+		transform: rotate(-45deg) translateX(-50%) translateY(11vw);
+		transform-origin: top left;
+		opacity: 0.5;
+
+		@media screen and (min-width: $md) {
+			width: 35vw;
+		}
+	}
+}
+
+.back-line {
+	@apply relative;
+	z-index: 2;
+
+	&::before {
+		content: "";
+		width: 60vw;
+		height: 1px;
+		top: 50%;
+		left: 50%;
+		background: $bemy-light;
+		position: absolute;
+		transform: rotate(-45deg) translateX(-50%);
+		transform-origin: top left;
+		opacity: 0.5;
+		z-index: -1;
+
+		@media screen and (min-width: $md) {
+			width: 25vw;
+		}
+	}
+}
 
 // Reveal
-.reveal-bloc{
+.reveal-bloc {
 	position: relative;
 	overflow: hidden;
 	padding: 20px 0;
 }
-.reveal-bloc-1, .reveal-bloc-2{
+.reveal-bloc-1,
+.reveal-bloc-2 {
 	position: absolute;
 	width: 120%;
 	height: 110%;
 	left: -10%;
 	top: -5%;
 }
-.reveal-bloc-1{
+.reveal-bloc-1 {
 	transform-origin: center right;
 }
-.reveal-bloc-2{
+.reveal-bloc-2 {
 	transform-origin: center left;
 }
 
-
 // Page Transition
-.page-transition{
+.page-transition {
 	pointer-events: none;
-	.swipe{
+	.swipe {
 		height: 100vh;
 		width: 100%;
 		position: fixed;
@@ -80,53 +137,53 @@ a{
 		left: 0;
 		width: 100%;
 		height: 100%;
-		transform: translateX(-100%);
+		transform: translateX(0);
 	}
 }
 
 // Parallax
-.parallax-container{
+.parallax-container {
 	overflow: hidden;
 }
 
 // Sections padding
-.section-pad{
-    padding-top: 80px;
-    padding-bottom: 80px;
-    @media screen and (min-width: $md){
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-    @media screen and (min-width: $lg){
-        padding-top: 130px;
-        padding-bottom: 130px;
-    }
-    @media screen and (min-width: $xl){
-        padding-top: 10vw;
-        padding-bottom: 10vw;
-    }
+.section-pad {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	@media screen and (min-width: $md) {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-top: 130px;
+		padding-bottom: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-top: 10vw;
+		padding-bottom: 10vw;
+	}
 }
-.section-pad-top{
-    padding-top: 80px;
-    @media screen and (min-width: $md){
-        padding-top: 100px;
-    }
-    @media screen and (min-width: $lg){
-        padding-top: 130px;
-    }
-    @media screen and (min-width: $xl){
-        padding-top: 10vw;
-    }
+.section-pad-top {
+	padding-top: 80px;
+	@media screen and (min-width: $md) {
+		padding-top: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-top: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-top: 10vw;
+	}
 }
-.section-pad-bottom{
-    padding-bottom: 80px;
-    @media screen and (min-width: $md){
-        padding-bottom: 100px;
-    }
-    @media screen and (min-width: $lg){
-        padding-bottom: 130px;
-    }
-    @media screen and (min-width: $xl){
-        padding-bottom: 10vw;
-    }
+.section-pad-bottom {
+	padding-bottom: 80px;
+	@media screen and (min-width: $md) {
+		padding-bottom: 100px;
+	}
+	@media screen and (min-width: $lg) {
+		padding-bottom: 130px;
+	}
+	@media screen and (min-width: $xl) {
+		padding-bottom: 10vw;
+	}
 }

@@ -1,44 +1,42 @@
 <?php get_header(); ?>
 
 <div class="projets">
-    <section class="projets-intro container">
-        <div class="projets-intro__maincontent py-40 flex flex-col justify-center md:min-h-screen">
-            <?php if(pll_current_language() == "en"){
-                echo "<h1 class='projets-intro__title text-3xl reveal-bloc'>Calm yourself, here are our <span class='text-bemy-red'>latest projects.</span>
-                <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
-                <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
-                </h1>
-                <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>(Be careful, they are amazing)
-                </p>";
-            } else {
-                echo "<h1 class='projets-intro__title text-3xl reveal-bloc'>Calmez-vous, voici nos <span class='text-bemy-red'>derniers projets.</span>
-                <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
-                <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>
-                </h1>
-                <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>(Attention, ça envoie)
-                </p>";
-            } ?>
+
+    <!-- Intro -->
+    <section class="container">
+        <div class="py-40 flex flex-col justify-center min-h-screen lg:w-2/3">
+            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1"><?php pll_e('Le studio'); ?></p>
+            <h1 class="text-3xl page-title">
+                <?php if (pll_current_language() == "en"){
+                echo 'I hope you are sitting down because here are our <span class="fonde">lastest projects.</span>';
+                } else {
+                echo 'J\'espère que vous êtes assis car voici nos <span class="fonde">derniers projets.</span>';
+                } ?>
+            </h1>
         </div>
     </section>
-    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 lg:gap-16">
+
+    
+    <!-- Liste Projets -->
+    <section class="projets-liste container md:grid md:grid-cols-2 md:gap-8 lg:gap-20">
         <?php
         if (have_posts() ) :
             while (have_posts() ) :
                 the_post();
         ?>
 
-        <article class="projets-liste__item py-8 lg:py-16">
+        <article class="projets-liste__item">
             <a href="<?php the_permalink(); ?>" class="cursor-image">
                 <div class="projets-liste__item__img-container parallax-container">
-                    <div class="projets-liste__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
+                    <div class="projets-liste__item__img parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
                 </div>
             </a>
-            <div class="reveal-group">
-                <h2 class="uppercase font-normal opacity-50 mt-8 text-sm reveal-item"><?php the_field('nom_du_client'); ?></h2>
+            <div>
+                <h2 class="uppercase text-sm font-extrabold text-bemy-red mt-8 lg:mt-12"><?php the_field('nom_du_client'); ?></h2>
                 <a href="<?php the_permalink(); ?>" class="cursor-image">
-                    <h3 class="text-2xl leading-tight py-2 md:py-6 reveal-item"><?php the_field('description_du_client'); ?></h3>
+                    <h3 class="mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight"><?php the_field('description_du_client'); ?></h3>
                 </a>
-                <p class="text-sm font-normal reveal-item"><?php the_field('liste_des_services'); ?></p>
+                <p class="text-sm"><?php the_field('liste_des_services'); ?></p>
             </div>
         </article>
 
@@ -47,6 +45,8 @@
         endif;
         ?>
     </section>
+
+
 </div>
 
 <?php get_footer(); ?>

@@ -1,27 +1,33 @@
-.intro{
-    @apply inset-0 bg-bemy-dark fixed z-50 overflow-hidden;
-    pointer-events:none;
+.intro {
+	@apply inset-0 fixed overflow-hidden;
+	z-index: 110;
+	pointer-events: none;
 
-    &__logo{
-        width: 70vw;
-        position: absolute;
-        left: 15%;
-        pointer-events: none;
+	&__logo {
+		width: 70vw;
+		position: absolute;
+		left: 15%;
+		pointer-events: none;
 
-        @media screen and (min-width: $lg){
-            width: 50vw;
-            left: 25%;
-        }
-    }
+		@media screen and (min-width: $lg) {
+			width: 50vw;
+			left: 25%;
+		}
+	}
 
-    &__logo-container{
-        @apply inset-0 fixed flex items-center justify-center ;
-        opacity: 0.05;
-    }
+	&__logo-container {
+		@apply inset-0 fixed flex items-center justify-center;
+		opacity: 0.07;
+	}
 
-    &__reveal{
-        @apply absolute inset-0;
-        background: $bemy-dark;
-        background: linear-gradient(90deg, rgba($bemy-dark,0) 0%, rgba($bemy-dark,1) 15%, rgba($bemy-dark,1) 100%);
-    }
+	&__reveal {
+		@apply absolute inset-0;
+		background: $bemy-dark;
+		background: linear-gradient(
+			90deg,
+			rgba($bemy-dark, 0) 0%,
+			rgba($bemy-dark, 1) 15%,
+			rgba($bemy-dark, 1) 100%
+		);
+	}
 }

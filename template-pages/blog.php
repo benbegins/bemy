@@ -8,17 +8,18 @@ get_header();
 
 <div class="blog">
 
-
     <!-- Intro -->
-    <section>
-        <div class="container py-40 flex flex-col justify-center md:min-h-screen">
-            <h1 class="text-3xl reveal-bloc">
-                Ici, on parle de sujets qui <span class='text-bemy-red'>nous intéressent.</span>
-                <div class='reveal-bloc-1 bg-bemy-dark skew-18'></div>
-                <div class='reveal-bloc-2 bg-bemy-red skew-18'></div>    
+    <section class="container">
+        <div class="py-40 flex flex-col justify-center min-h-screen lg:w-2/3">
+            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1"><?php pll_e('Le blog'); ?></p>
+            <h1 class="text-3xl page-title">
+                <?php if (pll_current_language() == "en"){
+                echo 'Here, we talk about stuffs that <span class="text-bemy-red">interest us.</span>';
+                } else {
+                echo 'Ici, on parle de sujets qui <span class="fonde">nous intéressent.</span>';
+                } ?>
             </h1>
-            <p class='text-2xl font-extrabold mt-6 inline-block reveal-hero'>( Vous aussi peut-être )
-            </p>
+            <p class="text-xl font-extrabold mt-6">(Vous aussi peut-être)</p>
         </div>
     </section>
 
@@ -32,15 +33,15 @@ get_header();
     $query = new WP_Query( $args );
     if($query->have_posts()): 
     ?>
-    <section class="section-pad">
-        <div class="container md:grid md:grid-cols-2 md:gap-10 lg:gap-16">
+    <section class="section-pad-bottom">
+        <div class="container md:grid md:grid-cols-2 md:gap-10 lg:gap-20">
 
             <?php 
             while($query->have_posts()):
                 $query->the_post();
             ?> 
 
-            <article class="blog__item text-sm mb-20">
+            <article class="blog__item text-sm">
                 <a href="<?php the_permalink(); ?>" class="block cursor-image reveal-opacity">
                     <div class="blog__item__img-container parallax-container">
                         <div class="blog__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
@@ -48,10 +49,9 @@ get_header();
                 </a>
                 <div class="reveal-group">
                     <div class="my-10">
-                        <p class="uppercase opacity-50 reveal-item"><?php the_date('F Y'); ?></p>
-                        <h2 class="text-2xl font-extrabold reveal-item"><a class="cursor-image" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>    
+                        <h2 class="text-xl font-extrabold"><a class="cursor-image" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>    
                     </div>
-                    <div class="reveal-item">
+                    <div class="text-base">
                         <?php the_excerpt(); ?>    
                     </div>    
                 </div>

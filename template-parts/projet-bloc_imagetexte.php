@@ -8,12 +8,12 @@ $image2 = get_sub_field('image2');
 <section class="section-pad-top">
     <div class="container md:grid md:grid-cols-2 md:col-gap-4 lg:col-gap-12">
         <div>
-            <div class="my-6 lg:my-4 lg:flex reveal-group">
-                <h3 class="uppercase font-extrabold text-sm md:mt-1 lg:w-1/3 lg:pr-10 lg:text-right reveal-item"><?php echo $titre; ?></h3>
-                <p class="lg:w-2/3 reveal-item"><?php echo $texte; ?></p>
+            <div class="my-6 lg:my-4 lg:flex">
+                <h3 class="uppercase text-bemy-red font-extrabold text-sm md:mt-1 lg:w-1/3 lg:pr-10 lg:text-right"><?php echo $titre; ?></h3>
+                <p class="lg:w-2/3"><?php echo $texte; ?></p>
             </div>
             <?php if($image1): ?>
-            <div class="reveal">
+            <div>
                 <img 
                     src="<?php echo $image1["sizes"]["large"]; ?>"
                     srcset="<?php echo $image1["sizes"]["medium_large"] . ' ' . $image1["sizes"]["medium_large-width"] . 'w'; ?>,
@@ -25,7 +25,7 @@ $image2 = get_sub_field('image2');
             <?php endif; ?>
         </div>
         
-        <div class="my-6 lg:my-4 reveal">
+        <div class="my-6 lg:my-4">
             <?php if($image2): ?>
             <img 
                 src="<?php echo $image2["sizes"]["large"]; ?>"

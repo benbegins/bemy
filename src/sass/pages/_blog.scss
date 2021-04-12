@@ -1,9 +1,22 @@
-.blog{
-    &__item__img{
-        width: 100%;
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        padding-bottom: 65%;
-    }
+.blog {
+	&__item {
+		@apply py-8;
+		@media screen and (min-width: $md) {
+			@apply py-0;
+		}
+	}
+
+	&__item:nth-child(odd) {
+		@media screen and (min-width: $md) {
+			padding-top: 10vw;
+			padding-bottom: 0;
+		}
+	}
+	&__item__img {
+		width: 100%;
+		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
+		padding-bottom: 65%;
+	}
 }

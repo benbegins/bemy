@@ -4,10 +4,11 @@
         class="footer-contact absolute inset-0 w-full text-center flex items-center justify-center"
       >
         <div class="relative">
-          <a
-            href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f"
-            class="footer-contact__link font-extrabold text-2xl inline-block"
-          >hello&#64;bemy.studio</a>
+          <p class="footer-contact__link font-extrabold text-3xl inline-block back-line">
+            <?php pll_e('Dites-nous'); ?>
+            <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f"><?php pll_e('bonjour'); ?></a>
+          </p>
+          
           <div class="footer-contact__over-link"></div>
         </div>
       </div>
@@ -29,8 +30,9 @@
 
 <div class="page-transition">
   <div class="swipe swipe-1 bg-bemy-light"></div>
-  <div class="swipe swipe-2 bg-bemy-dark"></div>
+  
   <div class="swipe swipe-3 bg-bemy-red"></div>
+  <div class="swipe swipe-2 bg-bemy-dark"></div>
 </div>
 
 <div class="cursor"></div>

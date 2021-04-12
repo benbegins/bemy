@@ -5,15 +5,15 @@
     <!-- Article Title -->
     <section class="single-article__section-title relative">
         <div class="container min-h-screen flex items-center py-40 relative z-10">
-            <div class="single-article__title xl:w-4/5">
-                <p class="text-sm reveal-opacity uppercase opacity-50 lg:ml-1"><?php echo get_the_date('F Y'); ?></p>
-                <h1 class="text-3xl reveal">
+            <div class="single-article__title lg:w-2/3">
+                <p class="text-sm uppercase opacity-50 lg:ml-1"><?php echo get_the_date('F Y'); ?></p>
+                <h1 class="text-3xl page-title">
                     <?php the_title(); ?>
                 </h1>    
             </div>
             
         </div>
-        <div class="single-article__thumbnail reveal-opacity absolute inset-0 z-0">
+        <div class="single-article__thumbnail absolute inset-0 z-0">
             <div class="single-article__thumbnail-container">
                 <img 
                 src="<?php the_post_thumbnail_url('xxl'); ?>"
@@ -50,9 +50,9 @@
     if($query->have_posts()): 
     ?>
     <section class="section-pad">
-        <div class="container lg:grid lg:grid-cols-2">
+        <div class="container lg:grid lg:grid-cols-2 pb-12">
             <div>
-                <h2 class="text-3xl mb-10 reveal lg:w-5/6">Nos derniers articles</h2>
+                <h2 class="text-3xl mb-16 lg:mb-10 reveal lg:w-5/6 back-line text-center lg:text-left">Nos derniers articles</h2>
             </div>
             <div>
                 <ul class="border-t border-bemy-light border-opacity-50">

@@ -114,6 +114,12 @@
                       <a href="<?php echo get_site_url(); ?>/projet" class="menu-link link-transition">Nos projets</a>
                     <?php endif; ?>
                   </li>
+                  <?php if (pll_current_language() == "en"): ?>
+                  <?php else: ?>
+                  <li class="menu-item">
+                    <a href="<?php echo get_site_url(); ?>/blog" class="menu-link link-transition">Le blog</a>
+                  </li>
+                  <?php endif; ?>
                   <li class="menu-item">
                     <a href="mailto:hel&#108;o&#64;b%65%6dy%2e&#115;%74&#117;di%6f" class="menu-link link-transition">Contact</a>
                   </li>

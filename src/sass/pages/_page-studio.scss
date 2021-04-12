@@ -1,37 +1,48 @@
 .studio-presentation {
-    &__img {
-      background: url("./dist/images/benoit-tommy.png") no-repeat;
-      background-size: contain;
-      background-position: left bottom;
-      padding-bottom: 100%;
-        
-      @media screen and (min-width: $md){
-        background-position: -50px bottom;
-        top: -70%;
-        padding-bottom: 0;
-      }
-    }
-  }
+	&__container {
+		@media screen and (min-width: $lg) {
+			min-height: 45vw;
+			display: flex;
+			align-items: center;
+		}
+	}
+	&__img {
+		background: url("./dist/images/benoit-tommy.png") no-repeat;
+		background-size: contain;
+		background-position: bottom right;
+		padding-bottom: 75%;
+		pointer-events: none;
+		width: 100%;
+		margin-top: 40px;
 
-  .studio-approche{
-    &__img{
-      &::after{
-        @extend %line-bottom;
-      }
-    }
-  }
+		@media screen and (min-width: $md) {
+			position: absolute;
+			right: 5vw;
+			bottom: 0;
+			width: 60%;
+		}
+	}
+}
 
-  .studio-projets{
-    &__list{
-      border-top:1px solid $bemy-light;
-      border-bottom:1px solid $bemy-light;
-    }
-    &__item{
-      position: relative;
-      z-index: 1;
-      transition: 0.25s;
-      &:hover{
-        color: $bemy-red;
-      }
-    }
-  }
+.studio-approche {
+	&__img {
+		&::after {
+			@extend %line-bottom;
+		}
+	}
+}
+
+.studio-projets {
+	&__item {
+		position: relative;
+		z-index: 1;
+		transition: 0.25s;
+		&:hover {
+			color: $bemy-red;
+		}
+	}
+}
+
+.photo-bureaux {
+	height: 50vw;
+}
