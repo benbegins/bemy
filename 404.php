@@ -4,12 +4,10 @@
 
     <section class="container">
       <div class="py-40 flex flex-col justify-center min-h-screen relative">
-        <h1 class="text-3xl reveal-bloc">
+        <h1 class="text-3xl">
           4<span class="text-bemy-red">0</span>4
-          <div class="reveal-bloc-1 bg-bemy-dark skew-18"></div>
-          <div class="reveal-bloc-2 bg-bemy-red skew-18"></div>
 		</h1>
-		<p class="text-2xl reveal-hero">
+		<p class="text-lg">
     <?php 
     if (pll_current_language() == "en"){
       echo "Don't panic! Page is just missing.";

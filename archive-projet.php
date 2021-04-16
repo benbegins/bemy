@@ -5,14 +5,12 @@
     <!-- Intro -->
     <section class="container">
         <div class="py-40 flex flex-col justify-center min-h-screen lg:w-2/3">
-            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1"><?php pll_e('Projets'); ?></p>
-            <h1 class="text-3xl page-title">
-                <?php if (pll_current_language() == "en"){
-                echo 'I hope you are sitting down because here are our <span class="fonde">lastest projects.</span>';
+            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1 reveal-opacity"><?php pll_e('Projets'); ?></p>
+            <h1 class="text-3xl page-title"><?php if (pll_current_language() == "en"){
+                echo 'I hope you are sitting down because here are our <i>lastest</i> <i>projects.</i>';
                 } else {
-                echo 'J\'espère que vous êtes assis car voici nos <span class="fonde">derniers projets.</span>';
-                } ?>
-            </h1>
+                echo 'J\'espère que vous êtes assis car voici nos <i>derniers</i> <i>projets.</i>';
+                } ?></h1>
         </div>
     </section>
 

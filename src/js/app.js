@@ -3,7 +3,14 @@ import barba from "@barba/core"
 import { gsap } from "gsap"
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { Timeline } from "gsap/gsap-core"
-import { menu, reveal, parallax, videoPlay, cursor } from "./animations"
+import {
+	menu,
+	reveal,
+	parallax,
+	videoPlay,
+	cursor,
+	textReveal,
+} from "./animations"
 import facturation from "./facturation/facturation"
 
 gsap.registerPlugin(ScrollTrigger)
@@ -14,12 +21,15 @@ gsap.defaults({
 
 // AnimationInit
 const animationInit = () => {
+	textReveal()
 	parallax()
-	//reveal();
+	reveal()
 	videoPlay()
 	menu()
 	cursor()
 }
+
+// animationInit()
 
 const bodyFacturation = document.querySelector("#page-facturation")
 
@@ -43,7 +53,6 @@ if (!bodyFacturation) {
 							scale: 0.85,
 							duration: 1.5,
 							ease: "power3.out",
-							onComplete: reveal,
 						},
 						"-=1.5"
 					)
@@ -51,6 +60,7 @@ if (!bodyFacturation) {
 						opacity: 0,
 						duration: 1,
 						delay: 0.5,
+						onComplete: animationInit,
 					})
 					intro.to(
 						".swipe",
@@ -100,7 +110,6 @@ if (!bodyFacturation) {
 
 				after() {
 					animationInit()
-					reveal()
 					var swipeTl = new Timeline()
 					swipeTl.to(".swipe", {
 						x: "100%",
@@ -121,8 +130,6 @@ if (!bodyFacturation) {
 		ga("set", "page", window.location.pathname)
 		ga("send", "pageview")
 	})
-
-	animationInit()
 
 	// Exclude Barba on Admin Bar links
 	const adminLinks = document.querySelectorAll("#wpadminbar a")

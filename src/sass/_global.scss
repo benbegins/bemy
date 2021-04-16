@@ -64,9 +64,24 @@ a {
 
 .page-title {
 	@apply relative;
+	opacity: 0;
+	line-height: 1.1;
 
-	&::before {
-		content: "";
+	i {
+		font-style: normal;
+		font-family: "Fonde", serif;
+		font-weight: 300;
+		line-height: 1;
+	}
+
+	span {
+		display: inline-block;
+		position: relative;
+	}
+
+	.line {
+		top: 0;
+		left: 0;
 		width: 60vw;
 		height: 1px;
 		background: $bemy-light;
@@ -105,24 +120,8 @@ a {
 }
 
 // Reveal
-.reveal-bloc {
-	position: relative;
-	overflow: hidden;
-	padding: 20px 0;
-}
-.reveal-bloc-1,
-.reveal-bloc-2 {
-	position: absolute;
-	width: 120%;
-	height: 110%;
-	left: -10%;
-	top: -5%;
-}
-.reveal-bloc-1 {
-	transform-origin: center right;
-}
-.reveal-bloc-2 {
-	transform-origin: center left;
+.reveal-opacity {
+	opacity: 0;
 }
 
 // Page Transition

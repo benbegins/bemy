@@ -4,10 +4,10 @@
 
     <!-- Intro -->
     <section class="container pb-48 pt-64">
-        <div class="projet-intro md:w-1/2 lg:w-2/5 reveal-group">
-            <p class="font-extrabold text-bemy-red uppercase text-sm"><?php the_field('nom_du_client'); ?></p>
-            <h2 class="text-2xl leading-tight pb-4 lg:pb-6"><?php the_field('description_du_client'); ?></h2>
-            <p class="text-sm"><?php the_field('liste_des_services'); ?></p>
+        <div class="projet-intro md:w-1/2 lg:w-2/5">
+            <p class="font-extrabold text-bemy-red uppercase text-sm reveal-opacity"><?php the_field('nom_du_client'); ?></p>
+            <h2 class="text-2xl leading-tight mt-2 pb-4 lg:pb-6 page-title no-line"><?php the_field('description_du_client'); ?></h2>
+            <p class="text-sm reveal-opacity"><?php the_field('liste_des_services'); ?></p>
         </div>
     </section>
 
@@ -26,7 +26,7 @@
 
     <!-- Presentation du projet -->
     <section class="container section-pad-top">
-        <div class="lg:w-3/5 lg:ml-auto reveal-group">
+        <div class="lg:w-3/5 lg:ml-auto">
             <h2 class="text-2xl leading-tight "><?php the_field('titre_presentation'); ?></h2>
             <div class="projet__presentation my-6 leading-relaxed lg:my-10 ">
                 <?php the_field('presentation'); ?>
@@ -105,7 +105,7 @@
         ?>
         
         <div class="container py-48 lg:min-h-screen flex items-center justify-center">
-            <p class="text-3xl font-extrabold"><a href="<?php echo get_permalink($projet_suivant_id); ?>" class="link-border-bottom inline-block reveal-opacity"><?php pll_e('Projet suivant'); ?></a></p>
+            <p class="text-3xl font-extrabold"><a href="<?php echo get_permalink($projet_suivant_id); ?>" class="link-border-bottom inline-block"><?php pll_e('Projet suivant'); ?></a></p>
         </div>
     </section>
 </div>

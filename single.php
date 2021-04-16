@@ -7,9 +7,7 @@
         <div class="container min-h-screen flex items-center py-40 relative z-10">
             <div class="single-article__title lg:w-2/3">
                 <p class="text-sm uppercase opacity-50 lg:ml-1"><?php echo get_the_date('F Y'); ?></p>
-                <h1 class="text-3xl page-title">
-                    <?php the_title(); ?>
-                </h1>    
+                <h1 class="text-3xl page-title"><?php the_title(); ?></h1>    
             </div>
             
         </div>
@@ -52,7 +50,7 @@
     <section class="section-pad">
         <div class="container lg:grid lg:grid-cols-2 pb-12">
             <div>
-                <h2 class="text-3xl mb-16 lg:mb-10 reveal lg:w-5/6 back-line text-center lg:text-left">Nos derniers articles</h2>
+                <h2 class="text-3xl mb-16 lg:mb-10 lg:w-5/6 back-line text-center lg:text-left">Nos derniers articles</h2>
             </div>
             <div>
                 <ul class="border-t border-bemy-light border-opacity-50">
@@ -82,9 +80,9 @@
             <div class="lg:w-1/2">
                 <img src="<?php echo get_template_directory_uri(); ?>/dist/images/benoit-tommy.png" alt="Tommy Bonneau / Benoit Beghyn" class="w-full" />
             </div>
-            <div class="pb-20 lg:pb-40 lg:w-5/12 lg:ml-auto reveal">
-                <p class="reveal">Vous savez qu’on crée des <strong>identités visuelles</strong> et des <strong>sites web</strong> qui envoient du pâté ? Allez jeter un oeil à nos projets pour voir de quoi on est capable.</p>
-                <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary mt-10 reveal">Voir nos projets</a>
+            <div class="pb-20 lg:pb-40 lg:w-5/12 lg:ml-auto">
+                <p>Vous savez qu’on crée des <strong>identités visuelles</strong> et des <strong>sites web</strong> qui envoient du pâté ? Allez jeter un oeil à nos projets pour voir de quoi on est capable.</p>
+                <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary mt-10">Voir nos projets</a>
             </div>
         </div>
     </section>

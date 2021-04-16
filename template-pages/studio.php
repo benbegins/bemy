@@ -10,14 +10,12 @@ get_header();
   <!-- Intro -->
   <section class="container">
     <div class="py-40 flex flex-col justify-center min-h-screen lg:w-2/3">
-      <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1"><?php pll_e('Le studio'); ?></p>
-      <h1 class="text-3xl page-title">
-        <?php if (pll_current_language() == "en"){
-          echo 'Share with the world what makes you <span class="fonde">exceptional.</span>';
+      <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1 reveal-opacity"><?php pll_e('Le studio'); ?></p>
+      <h1 class="text-3xl page-title"><?php if (pll_current_language() == "en"){
+          echo 'Share with the world what makes you <i>exceptional.</i>';
         } else {
-          echo 'Partager avec le monde ce qui vous rend <span class="fonde">exceptionnel.</span>';
-        } ?>
-      </h1>
+          echo 'Partager avec le monde ce qui vous rend <i>exceptionnel.</i>';
+        } ?></h1>
     </div>
   </section>
 

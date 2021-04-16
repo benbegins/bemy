@@ -28,13 +28,23 @@
   </div><!-- .page-container -->
 </div><!-- #page -->
 
+
+<!-- Intro -->
+<div class="intro">
+  <div class="intro__logo-container">
+    <img src="<?php echo get_template_directory_uri(); ?>/dist/images/logo-bemy.svg" alt="Logo Bemy Studio" class="intro__logo">
+  </div>
+  <div class="intro__reveal"></div>
+</div>
+
+<!-- Page Transition -->
 <div class="page-transition">
   <div class="swipe swipe-1 bg-bemy-light"></div>
-  
   <div class="swipe swipe-3 bg-bemy-red"></div>
   <div class="swipe swipe-2 bg-bemy-dark"></div>
 </div>
 
+<!-- Cursor -->
 <div class="cursor"></div>
 
 

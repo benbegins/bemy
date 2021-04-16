@@ -8,15 +8,11 @@
       <div class="container">
         <div class="lg:w-10/12">
           <?php if (pll_current_language() == "en"): ?>
-            <h1 class="text-3xl page-title">
-            We create <span class="fonde">visual identities</span> and <span class="fonde">websites</span> you're proud&nbsp;of.
-            </h1>
-            <p class="text-2xl font-extrabold mt-6">(Like... really)</p>
+            <h1 class="text-3xl page-title">We create visual identities and websites you're proud&nbsp;of.</h1>
+            <p class="text-2xl font-extrabold mt-6 reveal-opacity">(Like... really)</p>
           <?php else : ?>
-            <h1 class="text-3xl page-title">
-            Nous créons des <span class="fonde">identités visuelles</span> et des <span class="fonde">sites</span> dont vous êtes fiers.
-            </h1>
-            <p class="text-xl font-extrabold mt-6">(Genre... vraiment)</p>
+            <h1 class="text-3xl page-title">Nous créons des <i>identités</i> <i>visuelles</i> et des <i>sites</i> dont vous êtes fiers.</h1>
+            <p class="text-xl font-extrabold mt-6 reveal-opacity">(Genre... vraiment)</p>
           <?php endif; ?>
         </div>  
       </div>

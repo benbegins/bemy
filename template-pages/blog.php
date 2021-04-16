@@ -11,15 +11,13 @@ get_header();
     <!-- Intro -->
     <section class="container">
         <div class="py-40 flex flex-col justify-center min-h-screen lg:w-2/3">
-            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1"><?php pll_e('Le blog'); ?></p>
-            <h1 class="text-3xl page-title">
-                <?php if (pll_current_language() == "en"){
-                echo 'Here, we talk about stuffs that <span class="text-bemy-red">interest us.</span>';
+            <p class="text-sm font-extrabold text-bemy-red uppercase mb-2 ml-1 reveal-opacity"><?php pll_e('Le blog'); ?></p>
+            <h1 class="text-3xl page-title"><?php if (pll_current_language() == "en"){
+                echo 'Here, we talk about stuffs that <i>interest</i> <i>us.</i>';
                 } else {
-                echo 'Ici, on parle de sujets qui <span class="fonde">nous intéressent.</span>';
-                } ?>
-            </h1>
-            <p class="text-xl font-extrabold mt-6">(Vous aussi peut-être)</p>
+                echo 'Ici, on parle de sujets qui <i>nous</i> <i>intéressent.</i>';
+                } ?></h1>
+            <p class="text-xl font-extrabold mt-6 reveal-opacity">(Vous aussi peut-être)</p>
         </div>
     </section>
 
@@ -42,12 +40,12 @@ get_header();
             ?> 
 
             <article class="blog__item text-sm">
-                <a href="<?php the_permalink(); ?>" class="block cursor-image reveal-opacity">
+                <a href="<?php the_permalink(); ?>" class="block cursor-image">
                     <div class="blog__item__img-container parallax-container">
-                        <div class="blog__item__img reveal-opacity parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
+                        <div class="blog__item__img parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
                     </div>
                 </a>
-                <div class="reveal-group">
+                <div>
                     <div class="my-10">
                         <h2 class="text-xl font-extrabold"><a class="cursor-image" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>    
                     </div>
@@ -70,9 +68,9 @@ get_header();
             <div class="lg:w-1/2">
                 <img src="<?php echo get_template_directory_uri(); ?>/dist/images/benoit-tommy.png" alt="Tommy Bonneau / Benoit Beghyn" class="w-full" />
             </div>
-            <div class="pb-20 lg:pb-40 lg:w-5/12 lg:ml-auto reveal">
-                <p class="reveal">Vous savez qu’on crée des <strong>identités visuelles</strong> et des <strong>sites web</strong> qui envoient du pâté ? Allez jeter un oeil à nos projets pour voir de quoi on est capable.</p>
-                <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary mt-10 reveal">Voir nos projets</a>
+            <div class="pb-20 lg:pb-40 lg:w-5/12 lg:ml-auto">
+                <p>Vous savez qu’on crée des <strong>identités visuelles</strong> et des <strong>sites web</strong> qui envoient du pâté ? Allez jeter un oeil à nos projets pour voir de quoi on est capable.</p>
+                <a href="<?php echo get_site_url(); ?>/projet" class="btn btn-primary mt-10">Voir nos projets</a>
             </div>
         </div>
     </section>

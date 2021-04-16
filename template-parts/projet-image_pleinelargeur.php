@@ -2,7 +2,7 @@
 $image = get_sub_field('image');
 ?>
 
-<section class="container section-pad-top reveal-opacity">
+<section class="container section-pad-top">
     <img 
     src="<?php echo $image["sizes"]["xxl"]; ?>"
     srcset="<?php echo $image["sizes"]["medium_large"] . ' ' . $image["sizes"]["medium_large-width"] . 'w'; ?>,
