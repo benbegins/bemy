@@ -18,10 +18,10 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper" data-scroll-container>
+<body <?php body_class(); ?> data-barba="wrapper">
 <?php wp_body_open(); ?>
 
-<div id="page" class="site" data-barba="container">
+<div id="page" class="site" data-barba="container" data-scroll-container>
 
     
       <header class="site-header flex justify-between pt-6 pb-6 md:pb-0 md:pt-10 px-8 sm:px-12 lg:px-16 absolute lg:fixed z-30 w-full">

@@ -9870,8 +9870,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: #f54f4f;
-  background: linear-gradient(90deg, rgba(245, 79, 79, 0) 0%, #f54f4f 15%, #f54f4f 100%);
+  background: #151A20;
+  background: linear-gradient(90deg, rgba(21, 26, 32, 0) 0%, #151a20 15%, #151a20 100%);
 }
 
 .btn {
