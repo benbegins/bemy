@@ -33,6 +33,9 @@
 
 
 
+  </div><!-- .page-container -->
+</div><!-- #page -->
+
 
 <!-- Intro -->
 <div class="intro">

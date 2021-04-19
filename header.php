@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper">
+<body <?php body_class(); ?> data-barba="wrapper" data-scroll-container>
 <?php wp_body_open(); ?>
 
   <header data-scroll-sticky class="site-header flex justify-between pt-6 pb-6 md:pb-0 md:pt-10 px-8 sm:px-12 lg:px-16 fixed inset-x-0 z-30 w-full">
