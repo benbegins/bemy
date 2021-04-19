@@ -28,6 +28,7 @@
 		"@barba/core": "^2.9.7",
 		"axios": "^0.21.1",
 		"gsap": "^3.6.1",
+		"locomotive-scroll": "^4.1.1",
 		"scrollmagic": "^2.0.8"
 	}
 }

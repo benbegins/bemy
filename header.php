@@ -18,7 +18,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> data-barba="wrapper">
+<body <?php body_class(); ?> data-barba="wrapper" data-scroll-container>
 <?php wp_body_open(); ?>
 
 <div id="page" class="site" data-barba="container">

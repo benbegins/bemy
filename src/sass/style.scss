@@ -18,13 +18,14 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 
 @import "./variables";
 @import "./global";
-@import "./buttons";
 
 // Components
 @import "./components/header";
 @import "./components/footer";
 @import "./components/cursor";
 @import "./components/intro";
+@import "./components/buttons";
+@import "./components/locomotive";
 
 // Pages
 @import "./pages/page-home";
@@ -33,7 +34,6 @@ Tags: blue, orange, light, three-columns, left-sidebar, responsive-layout, edito
 @import "./pages/page-text";
 @import "./pages/blog";
 @import "./pages/single-article";
-@import "./pages/404";
 
 // Facturation
 @import "./facturation/devis-facture";

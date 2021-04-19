@@ -12,6 +12,7 @@ import {
 	textReveal,
 } from "./animations"
 import facturation from "./facturation/facturation"
+import LocomotiveScroll from "locomotive-scroll"
 
 gsap.registerPlugin(ScrollTrigger)
 gsap.defaults({
@@ -19,11 +20,17 @@ gsap.defaults({
 	duration: 1,
 })
 
+const locomotiveScroll = new LocomotiveScroll({
+	el: document.querySelector("[data-scroll-container]"),
+	smooth: true,
+	multiplier: 2,
+})
+
 // AnimationInit
 const animationInit = () => {
 	textReveal()
-	parallax()
-	reveal()
+	//parallax()
+	// reveal()
 	videoPlay()
 	menu()
 	cursor()

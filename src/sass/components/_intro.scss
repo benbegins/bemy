@@ -1,12 +1,13 @@
 .intro {
 	@apply inset-0 fixed overflow-hidden;
-	z-index: 110;
+	z-index: 9999;
 	pointer-events: none;
 
 	&__logo {
 		width: 70vw;
 		position: absolute;
 		left: 15%;
+		z-index: 9999;
 		pointer-events: none;
 
 		@media screen and (min-width: $lg) {
