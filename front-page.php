@@ -8,7 +8,7 @@
       <div class="container">
         <div class="lg:w-10/12">
           <?php if (pll_current_language() == "en"): ?>
-            <h1 class="text-3xl page-title">We create visual identities and websites you're proud&nbsp;of.</h1>
+            <h1 class="text-3xl page-title">We create <i>visual</i> <i>identities</i> and <i>websites</i> you're proud&nbsp;of.</h1>
             <p class="text-2xl font-extrabold mt-6 reveal-opacity">(Like... really)</p>
           <?php else : ?>
             <h1 class="text-3xl page-title">Nous créons des <i>identités</i> <i>visuelles</i> et des <i>sites</i> dont vous êtes fiers.</h1>
