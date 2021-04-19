@@ -1,0 +1,100 @@
+.btn {
+	@apply uppercase font-extrabold border-solid border border-bemy-light border-opacity-50 py-4 px-8 inline-block z-10 overflow-hidden;
+}
+.btn-primary {
+	@apply text-sm relative;
+}
+.btn::before {
+	content: "";
+	background: $bemy-red;
+	display: block;
+	position: absolute;
+	width: 120%;
+	height: 100%;
+	left: -10%;
+	top: 0;
+	z-index: -1;
+	transform: scaleX(0) skewX(-18deg);
+	transform-origin: center left;
+	transition: transform 0.4s 0.1s $ease;
+}
+.btn::after {
+	content: "";
+	background: $bemy-light;
+	display: block;
+	position: absolute;
+	width: 120%;
+	height: 100%;
+	left: -10%;
+	top: 0;
+	z-index: -2;
+	transform: scaleX(0) skewX(-18deg);
+	transform-origin: center left;
+	transition: transform 0.4s $ease;
+}
+.btn:hover {
+	&::before {
+		transform: scaleX(1) skewX(-18deg);
+	}
+	&::after {
+		transform: scaleX(1) skewX(-18deg);
+	}
+}
+
+.link-border-bottom {
+	line-height: 1;
+	position: relative;
+	z-index: 1;
+	&::after {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $bemy-light;
+	}
+	@media screen and (min-width: $md) {
+		&::after {
+			height: 3px;
+		}
+	}
+	@media screen and (min-width: $lg) {
+		transition: color 0.3s;
+		&::after {
+			height: 4px;
+			z-index: -1;
+			transition: 0.4s $ease;
+		}
+		&::before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			height: 100%;
+			transform: scaleY(0);
+			transform-origin: bottom center;
+			transition: 0.4s $ease;
+			z-index: -1;
+			background-color: $bemy-light;
+		}
+		&:hover {
+			color: $bemy-red;
+			&::before {
+				transform: scaleY(1);
+			}
+		}
+	}
+}
+
+.std-link {
+	transition: 0.3s;
+	&:hover {
+		background: $bemy-light;
+		color: $bemy-red;
+		text-decoration: none;
+	}
+}
