@@ -22,7 +22,7 @@
     <!-- Studio -->
     <section class="section-pad-bottom">
       <div class="container">
-        <div class="md:w-1/2 md:ml-auto">
+        <div class="md:w-1/2 md:ml-auto" data-scroll data-scroll-speed="1">
           <p><?php pll_e('Nous sommes un studio de création Barcelo-Nantais qui accompagne les agences et les marques dans la production d’expériences claires, esthétiques et durables.'); ?></p>
           <?php if (pll_current_language() == "en"): ?>
             <a href="<?php echo get_site_url(); ?>/en/studio-en" class="btn btn-primary mt-10">Studio</a> 
@@ -62,28 +62,27 @@
       <div class="home-projets__item md:min-h-screen relative my-24 md:my-auto parallax-container">
         <div class="container md:flex md:min-h-screen flex-col justify-center">
           <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5">
-            <p class="home-projets__proj-title uppercase text-sm font-extrabold text-bemy-red"><?php the_field('nom_du_client'); ?></p>
+            <p data-scroll data-scroll-speed="2" class="home-projets__proj-title uppercase text-sm font-extrabold text-bemy-red"><?php the_field('nom_du_client'); ?></p>
 
-            <h2 class="home-projets__proj-description mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight">
+            <h2 data-scroll data-scroll-delay="0.1" data-scroll-speed="2" class="home-projets__proj-description mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight">
               <a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a>
             </h2>
 
-            <p class="home-projets__proj-services text-sm"><?php the_field('liste_des_services'); ?></p>
+            <p data-scroll data-scroll-delay="0.07" data-scroll-speed="2" class="home-projets__proj-services text-sm"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
         <a href="<?php the_permalink(); ?>" class="cursor-image">
-          <div class="home-projets__img-container overflow-hidden h-64 md:h-auto md:w-1/2 md:absolute inset-y-0 right-0 mt-8 md:mt-0">
-              <div
-                class="home-projets__img h-full w-full parallax-img"
-                style="background-image:url('<?php
-                if(wp_is_mobile()){
-                    the_post_thumbnail_url('large');
-                } else {
-                  the_post_thumbnail_url('xxl');
-                }
-                ?>')"
+          <div data-scroll class="home-projets__img-container overflow-hidden h-64 md:h-auto md:w-1/2 md:absolute inset-y-0 right-0 mt-8 md:mt-0">
+            <div class="parallax-img-wrapper">
+              <img src="<?php the_post_thumbnail_url('xxl'); ?>"
+                srcset="<?php the_post_thumbnail_url('xxl'); ?> 1920w,
+                <?php the_post_thumbnail_url('xl'); ?> 1440w,
+                <?php the_post_thumbnail_url('large'); ?> 1024w"
+                alt="<?php echo get_the_title(); ?>"
+                class="h-full w-full object-cover" 
+                data-scroll data-scroll-speed="-2"
               >
-              </div>
+            </div>  
           </div>
         </a>
       </div>
@@ -94,7 +93,7 @@
       // Restore original Post Data
       wp_reset_postdata();
       ?>
-      <div class="home-projets__reveal-mask absolute bg-bemy-dark w-1/2 h-full right-0 top-0 pointer-events-none"></div>
+      <div class="home-projets__reveal-mask absolute bg-bemy-dark w-1/2 h-full right-0 top-0 pointer-events-none" data-scroll data-scroll-offset="20%"></div>
     </section>
 
     <section class="section-pad">
@@ -122,7 +121,7 @@
     ?>
     <section class="section-pad">
         <div class="container lg:grid lg:grid-cols-2 pb-12">
-            <div>
+            <div data-scroll data-scroll-speed="1">
                 <h2 class="text-3xl mb-16 lg:mb-10 lg:w-5/6 back-line text-center lg:text-left"><?php pll_e('Nos derniers articles') ?></h2>
             </div>
             <div>

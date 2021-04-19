@@ -3,7 +3,6 @@ import { gsap } from "gsap"
 const menu = () => {
 	// MENU DEPLOYEMENT
 	let menuActive = false
-	const body = document.querySelector("body")
 	const menuHeader = document.querySelector(".site-header")
 	const navBurger = document.querySelector(".nav-burger")
 	const menuContainer = document.querySelector(".menu-container")
@@ -14,7 +13,6 @@ const menu = () => {
 				menuActive = true
 				menuHeader.classList.add("active")
 				menuContainer.classList.add("open")
-				body.style.overflow = "hidden"
 				gsap.fromTo(
 					".menu-item",
 					{
@@ -34,7 +32,6 @@ const menu = () => {
 				menuActive = false
 				menuHeader.classList.remove("active")
 				menuContainer.classList.remove("open")
-				body.style.overflow = "scroll"
 			}
 		})
 	}

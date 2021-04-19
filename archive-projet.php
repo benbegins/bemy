@@ -26,7 +26,9 @@
         <article class="projets-liste__item">
             <a href="<?php the_permalink(); ?>" class="cursor-image">
                 <div class="projets-liste__item__img-container parallax-container">
-                    <div class="projets-liste__item__img parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>
+                    <div class="parallax-img-wrapper">
+                        <div data-scroll data-scroll-speed="-2" class="projets-liste__item__img parallax-img" style="background-image: url('<?php  the_post_thumbnail_url('large'); ?>')"></div>    
+                    </div>
                 </div>
             </a>
             <div>

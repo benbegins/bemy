@@ -18,7 +18,6 @@ const cursor = () => {
 	if (window.innerWidth >= 1024) {
 		// Cursor follow
 		window.addEventListener("mousemove", function(e) {
-			console.log(document.querySelector("body").style)
 			cursor.style.transform =
 				"translate(" + e.clientX + "px, " + e.clientY + "px)"
 		})

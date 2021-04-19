@@ -10,7 +10,7 @@ import {
 	videoPlay,
 	cursor,
 	textReveal,
-} from "./animations"
+} from "./components"
 import facturation from "./facturation/facturation"
 import LocomotiveScroll from "locomotive-scroll"
 
@@ -23,7 +23,6 @@ gsap.defaults({
 const locomotiveScroll = new LocomotiveScroll({
 	el: document.querySelector("[data-scroll-container]"),
 	smooth: true,
-	multiplier: 2,
 })
 
 // AnimationInit
@@ -99,8 +98,8 @@ if (!bodyFacturation) {
 
 				leave() {
 					let done = this.async()
-					let body = document.querySelector("body")
-					body.style.overflow = "hidden"
+					// let body = document.querySelector("body")
+					// body.style.overflow = "hidden"
 					gsap.to(".swipe", {
 						x: "0%",
 						stagger: 0.1,
@@ -110,9 +109,15 @@ if (!bodyFacturation) {
 				},
 
 				enter() {
-					window.scrollTo(0, 0)
+					// window.scrollTo(0, 0)
+					const menuHeader = document.querySelector(".site-header")
+					const menuContainer = document.querySelector(".menu-container")
+					menuHeader.classList.remove("active")
+					menuContainer.classList.remove("open")
+
+					locomotiveScroll.scrollTo(0, { duration: 0 })
 					let body = document.querySelector("body")
-					body.style.overflow = "auto"
+					body.style.overflowY = "auto"
 				},
 
 				after() {
@@ -134,6 +139,8 @@ if (!bodyFacturation) {
 	})
 
 	barba.hooks.after(() => {
+		locomotiveScroll.update()
+
 		ga("set", "page", window.location.pathname)
 		ga("send", "pageview")
 	})

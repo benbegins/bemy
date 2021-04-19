@@ -25,7 +25,7 @@ $image2 = get_sub_field('image2');
             <?php endif; ?>
         </div>
         
-        <div class="my-6 lg:my-4">
+        <div class="my-6 lg:my-4" data-scroll data-scroll-speed="1">
             <?php if($image2): ?>
             <img 
                 src="<?php echo $image2["sizes"]["large"]; ?>"

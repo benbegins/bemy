@@ -5,6 +5,14 @@
 		width: 150%;
 		transform: skewX(-18deg) translateX(-70%);
 	}
+
+	&__reveal-mask {
+		transition: transform 1s $ease;
+		&.is-inview {
+			transform: translateX(100%);
+		}
+	}
+
 	&__img {
 		position: relative;
 		background-size: cover;

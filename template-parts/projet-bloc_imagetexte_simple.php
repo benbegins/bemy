@@ -12,7 +12,7 @@ $image = get_sub_field('image');
                 <p class="md:w-2/3"><?php echo $texte; ?></p>
             </div>
         </div>
-        <div class="my-6 lg:my-4">
+        <div class="my-6 lg:my-4" data-scroll data-scroll-speed="1">
             <?php if($image): ?>
             <img 
                 src="<?php echo $image["sizes"]["large"]; ?>"

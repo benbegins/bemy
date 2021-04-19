@@ -23,7 +23,7 @@ get_header();
   <!-- Texte d'intro -->
   <section class="section-pad-bottom">
     <div class="container">
-      <div class="md:w-1/2 md:ml-auto">
+      <div class="md:w-1/2 md:ml-auto" data-scroll data-scroll-speed="1">
         <p><?php pll_e('Nous croyons en la force de l’esthétique et de l’authenticité pour créer un lien émotionnel et de confiance avec votre cible. Nous créons des identités visuelles et des sites clairs, uniques et durables, pour mieux vous raconter, et vous montrer sous votre meilleur jour.'); ?></p>
         <p class="mt-10"><?php pll_e('Pour faire simple, on bosse bien.'); ?></p>
       </div>
@@ -33,7 +33,9 @@ get_header();
   <!-- Photo bureaux -->
   <section class="bg-bemy-light">
         <div class="photo-bureaux overflow-hidden parallax-container">
-          <img src="<?php echo get_template_directory_uri(); ?>/dist/images/bemy-bureaux.jpg" alt="Bureaux Bemy" class="w-full h-full object-cover parallax-img">
+          <div class="parallax-img-wrapper">
+            <img data-scroll data-scroll-speed="-2" src="<?php echo get_template_directory_uri(); ?>/dist/images/bemy-bureaux.jpg" alt="Bureaux Bemy" class="w-full h-full object-cover parallax-img">
+          </div>
         </div>
   </section>
   
@@ -142,6 +144,7 @@ get_header();
     <div class="studio-presentation__container container">
       <div
         class="studio-presentation__text md:pb-40 md:w-1/2 lg:w-1/3 lg:pb-0 z-20"
+        data-scroll data-scroll-speed="1"
       >
         <p>
           <?php 

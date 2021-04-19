@@ -5,21 +5,24 @@
     <!-- Intro -->
     <section class="container pb-48 pt-64">
         <div class="projet-intro md:w-1/2 lg:w-2/5">
-            <p class="font-extrabold text-bemy-red uppercase text-sm reveal-opacity"><?php the_field('nom_du_client'); ?></p>
-            <h2 class="text-2xl leading-tight mt-2 pb-4 lg:pb-6 page-title no-line"><?php the_field('description_du_client'); ?></h2>
-            <p class="text-sm reveal-opacity"><?php the_field('liste_des_services'); ?></p>
+            <p data-scroll data-scroll-speed="2" class="font-extrabold text-bemy-red uppercase text-sm reveal-opacity"><?php the_field('nom_du_client'); ?></p>
+            <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.1" class="text-2xl leading-tight mt-1 pb-4 lg:pb-6 page-title no-line"><?php the_field('description_du_client'); ?></h2>
+            <p data-scroll data-scroll-speed="2" data-scroll-delay="0.07" class="text-sm reveal-opacity"><?php the_field('liste_des_services'); ?></p>
         </div>
     </section>
 
     <!-- Image principale -->
     <section class="parallax-container h-64 md:h-screen w-full">
-        <div class="h-full w-full bg-cover bg-center bg-no-repeat parallax-img reveal-opacity" style="background-image: url('<?php
-        if(wp_is_mobile()){
-            the_post_thumbnail_url('large'); 
-        } else {
-            the_post_thumbnail_url('xxl'); 
-        }
-        ?>')">
+        <div class="parallax-img-wrapper">
+            <img 
+            src="<?php the_post_thumbnail_url('xxl'); ?>"
+            srcset="<?php the_post_thumbnail_url('xxl'); ?> 1920w,
+                <?php the_post_thumbnail_url('xl'); ?> 1440w,
+                <?php the_post_thumbnail_url('large'); ?> 1024w"
+            alt="<?php echo get_the_title(); ?>"
+            class="w-full h-full object-cover reveal-opacity"
+            data-scroll data-scroll-speed="-2"
+            >        
         </div>
     </section>
     

@@ -50,7 +50,7 @@ a {
 .page-container {
 	background-color: $bemy-dark;
 	@media screen and (min-width: $lg) {
-		margin-bottom: 100vh;
+		// margin-bottom: 100vh;
 	}
 }
 
@@ -98,7 +98,7 @@ a {
 
 .back-line {
 	@apply relative;
-	z-index: 2;
+	z-index: 1;
 
 	&::before {
 		content: "";
@@ -145,6 +145,11 @@ a {
 // Parallax
 .parallax-container {
 	overflow: hidden;
+}
+.parallax-img-wrapper {
+	transform: scale(1.2);
+	height: 100%;
+	width: 100%;
 }
 
 // Sections padding
