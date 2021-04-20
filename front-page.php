@@ -93,7 +93,7 @@
       // Restore original Post Data
       wp_reset_postdata();
       ?>
-      <div class="home-projets__reveal-mask absolute bg-bemy-dark w-1/2 h-full right-0 top-0 pointer-events-none" data-scroll data-scroll-offset="20%"></div>
+      <div class="home-projets__reveal-mask" data-scroll data-scroll-offset="20%"></div>
     </section>
 
     <section class="section-pad">
