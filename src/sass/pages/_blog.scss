@@ -19,4 +19,10 @@
 		background-repeat: no-repeat;
 		padding-bottom: 65%;
 	}
+	&__portrait__wrapper {
+		@media screen and (min-width: $lg) {
+			width: 50%;
+			height: 35vw;
+		}
+	}
 }

@@ -77,8 +77,8 @@
     <!-- Bemy -->
     <section class="pt-20 lg:pt-0">
         <div class="container flex flex-col-reverse lg:flex-row lg:items-end">
-            <div class="lg:w-1/2">
-                <img src="<?php echo get_template_directory_uri(); ?>/dist/images/benoit-tommy.png" alt="Tommy Bonneau / Benoit Beghyn" class="w-full" />
+            <div class="blog__portrait__wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/dist/images/benoit-tommy.png" alt="Tommy Bonneau / Benoit Beghyn" class="w-full h-full object-cover" />
             </div>
             <div class="pb-20 lg:pb-40 lg:w-5/12 lg:ml-auto" data-scroll data-scroll-speed="1">
                 <p>Vous savez qu’on crée des <strong>identités visuelles</strong> et des <strong>sites web</strong> qui envoient du pâté ? Allez jeter un oeil à nos projets pour voir de quoi on est capable.</p>
