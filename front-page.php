@@ -61,14 +61,14 @@
         
       <div class="home-projets__item md:min-h-screen relative my-24 md:my-auto parallax-container">
         <div class="container md:flex md:min-h-screen flex-col justify-center">
-          <div class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5">
-            <p data-scroll data-scroll-speed="2" class="home-projets__proj-title uppercase text-sm font-extrabold text-bemy-red"><?php the_field('nom_du_client'); ?></p>
+          <div data-scroll data-scroll-speed="2" class="home-projets__text-container z-10 relative md:w-1/2 lg:w-2/5">
+            <p class="home-projets__proj-title uppercase text-sm font-extrabold text-bemy-red"><?php the_field('nom_du_client'); ?></p>
 
-            <h2 data-scroll data-scroll-delay="0.1" data-scroll-speed="2" class="home-projets__proj-description mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight">
+            <h2 class="home-projets__proj-description mt-1 mb-4 md:mb-6 lg:mb-8 text-xl leading-tight">
               <a href="<?php the_permalink(); ?>" class="cursor-image"><?php the_field('description_du_client'); ?></a>
             </h2>
 
-            <p data-scroll data-scroll-delay="0.07" data-scroll-speed="2" class="home-projets__proj-services text-sm"><?php the_field('liste_des_services'); ?></p>
+            <p class="home-projets__proj-services text-sm"><?php the_field('liste_des_services'); ?></p>
           </div>
         </div>
         <a href="<?php the_permalink(); ?>" class="cursor-image">

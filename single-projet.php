@@ -4,10 +4,10 @@
 
     <!-- Intro -->
     <section class="container pb-48 pt-64">
-        <div class="projet-intro md:w-1/2 lg:w-2/5">
-            <p data-scroll data-scroll-speed="2" class="font-extrabold text-bemy-red uppercase text-sm reveal-opacity"><?php the_field('nom_du_client'); ?></p>
-            <h2 data-scroll data-scroll-speed="2" data-scroll-delay="0.1" class="text-2xl leading-tight mt-1 pb-4 lg:pb-6 page-title no-line"><?php the_field('description_du_client'); ?></h2>
-            <p data-scroll data-scroll-speed="2" data-scroll-delay="0.07" class="text-sm reveal-opacity"><?php the_field('liste_des_services'); ?></p>
+        <div data-scroll data-scroll-speed="2" class="projet-intro md:w-1/2 lg:w-2/5">
+            <p class="font-extrabold text-bemy-red uppercase text-sm reveal-opacity"><?php the_field('nom_du_client'); ?></p>
+            <h2 class="text-2xl leading-tight mt-1 pb-4 lg:pb-6 page-title no-line"><?php the_field('description_du_client'); ?></h2>
+            <p class="text-sm reveal-opacity"><?php the_field('liste_des_services'); ?></p>
         </div>
     </section>
 
