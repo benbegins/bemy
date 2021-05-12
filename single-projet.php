@@ -56,9 +56,13 @@
             if( get_row_layout() == 'image_fullscreen' ):
                 get_template_part('template-parts/projet-image_fullscreen');
 
-            // Section Image container
+            // Section Image largeur container
             elseif( get_row_layout() == 'image_pleine_largeur' ): 
                 get_template_part('template-parts/projet-image_pleinelargeur');
+            
+            // Section Image 75%
+            elseif( get_row_layout() == 'image_75' ): 
+                get_template_part('template-parts/projet-image_75');
             
             // Section Bloc image-texte
             elseif( get_row_layout() == 'bloc_image_texte' ): 
