@@ -26,6 +26,6 @@ switch ($disposition){
         <?php echo $image["sizes"]["xl"] . ' ' . $image["sizes"]["xl-width"] . 'w'; ?>,
         <?php echo $image["sizes"]["xxl"] . ' ' . $image["sizes"]["xxl-width"] . 'w'; ?>"
     alt="<?php echo $image["alt"]; ?>"
-    class="w-full md:w-3/4<?php if($margin){echo ' md:' . $margin;} ?>"
+    class="w-full md:w-3/4<?php if($margin){echo ' ' . $margin;} ?>"
     >
 </section>
