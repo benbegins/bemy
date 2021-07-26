@@ -13,10 +13,7 @@ gsap.defaults({
 	duration: 1,
 })
 
-const locomotiveScroll = new LocomotiveScroll({
-	el: document.querySelector("[data-scroll-container]"),
-	smooth: true,
-})
+let locomotiveScroll
 
 // AnimationInit
 const animationInit = () => {
@@ -32,6 +29,11 @@ const bodyFacturation = document.querySelector("#page-facturation")
 
 // Check si on est sur la page facturation
 if (!bodyFacturation) {
+	locomotiveScroll = new LocomotiveScroll({
+		el: document.querySelector("[data-scroll-container]"),
+		smooth: true,
+	})
+
 	barba.init({
 		prevent: ({ el }) => el.classList && el.classList.contains("no-barba"),
 		transitions: [
@@ -99,7 +101,9 @@ if (!bodyFacturation) {
 
 				enter() {
 					const menuHeader = document.querySelector(".site-header")
-					const menuContainer = document.querySelector(".menu-container")
+					const menuContainer = document.querySelector(
+						".menu-container"
+					)
 					menuHeader.classList.remove("active")
 					menuContainer.classList.remove("open")
 					locomotiveScroll.scrollTo(0, { duration: 0 })
