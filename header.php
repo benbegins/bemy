@@ -79,8 +79,8 @@
         <?php 
         $translations = pll_the_languages( array( 'raw' => 1 ) );
         ?>
-        <a href="<?php echo $translations['fr']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
-        <a href="<?php echo $translations['en']['url']; ?>" class="px-2 py-1 font-normal<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
+        <a href="<?php echo $translations['fr']['url']; ?>" class="px-2 py-1 font-normal no-barba<?php if($translations['fr']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">FR</a>
+        <a href="<?php echo $translations['en']['url']; ?>" class="px-2 py-1 font-normal no-barba<?php if($translations['en']['current_lang']){echo ' bg-bemy-light text-bemy-dark font-extrabold';} ?>">EN</a>
       </div>
       <div class="nav-burger flex flex-col items-end cursor-pointer z-30 relative">
         <div class="line line1"></div>
