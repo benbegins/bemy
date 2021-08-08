@@ -1,7 +1,10 @@
 <?php get_header('facturation'); 
 
 if(have_posts()):
+
     while(have_posts()): the_post();
+
+    $type_de_document = get_the_terms($post->ID, 'types_de_document'); 
 ?>
 
 
@@ -88,9 +91,6 @@ if(have_posts()):
     <!-- DESCRIPTION PROJET -->
     <section class="mb-16">
         <div class="w-3/4">
-            <?php 
-                $type_de_document = get_the_terms($post->ID, 'types_de_document'); 
-            ?>
             <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php the_date('d-m-Y'); ?></h1>
             <h2 class="text-base"><?php the_title(); ?></h2>
             <?php 
@@ -161,12 +161,21 @@ if(have_posts()):
     <!-- FOOTER -->
     <section class="text-center mt-20">
         <p class="mb-2 italic opacity-50">TVA non applicable. Art. 293B du CGI</p>
+        <?php 
+            // Affiche le RIB uniquement si on est sur un facture
+            if($type_de_document[0]->slug === "facture"):
+        ?>
         <footer class="facture__footer pt-5 border-t">
             <p class="font-bold">Règlement par virement</p>
             <p>IBAN : FR76 1695 8000 0154 6840 6619 715</p>
             <p>BIC/SWIFT : QNTOFRP1XXX</p>
         </footer>
+        <?php 
+            endif;
+        ?>
     </section>
+
+   
 
 </div>
 
