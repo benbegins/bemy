@@ -159,7 +159,7 @@ if(have_posts()):
 
 
     <!-- FOOTER -->
-    <section class="text-center absolute bottom-0 left-0 w-full">
+    <section class="text-center mt-20">
         <p class="mb-2 italic opacity-50">TVA non applicable. Art. 293B du CGI</p>
         <footer class="facture__footer pt-5 border-t">
             <p class="font-bold">Règlement par virement</p>
