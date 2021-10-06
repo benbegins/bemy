@@ -72,7 +72,7 @@ if(have_posts()):
 
 
     <!-- COORDONNEES CLIENT -->
-    <section class="mb-16">
+    <section class="mb-10">
         <div class="w-1/3 ml-auto">
             <?php 
                 $client = get_the_terms( $post->ID, 'clients' );
@@ -89,7 +89,7 @@ if(have_posts()):
 
 
     <!-- DESCRIPTION PROJET -->
-    <section class="mb-16">
+    <section class="mb-10">
         <div class="w-3/4">
             <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php the_date('d-m-Y'); ?></h1>
             <h2 class="text-base"><?php the_title(); ?></h2>
@@ -106,7 +106,7 @@ if(have_posts()):
 
 
     <!-- CHIFFRAGE -->
-    <section class="leading-normal">
+    <section class="leading-tight">
 
         <!-- PREMIERE LIGNE -->
         <div class="facture__chiffrage">
@@ -127,10 +127,10 @@ if(have_posts()):
                 $prix_ligne = get_sub_field('prix');
                 $description_ligne = get_sub_field('description');
         ?>
-        <div class="facture__chiffrage mt-5">
+        <div class="facture__chiffrage mt-8">
             <div class="">
                 <p class="uppercase"><?php echo $titre_ligne; ?></p>
-                <p class="ml-5"><?php if($description_ligne){echo $description_ligne;} ?></p>
+                <p class="ml-8"><?php if($description_ligne){echo $description_ligne;} ?></p>
             </div>
             <div class="text-right">
                 <p><?php if($prix_ligne){echo $prix_ligne;} ?></p>
