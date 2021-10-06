@@ -159,7 +159,7 @@ if(have_posts()):
 
 
     <!-- FOOTER -->
-    <section class="text-center mt-20">
+    <section class="text-center mt-10">
         <p class="mb-2 italic opacity-50">TVA non applicable. Art. 293B du CGI</p>
         <?php 
             // Affiche le RIB uniquement si on est sur un facture
