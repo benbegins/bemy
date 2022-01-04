@@ -11,9 +11,9 @@
     function modify_page_title($title) {
         $prefixe = '';
         if($type_de_document = 'facture'){
-            $prefixe = "Facture F";
+            $prefixe = "Facture ";
         } else if ($type_de_document = 'devis'){
-            $prefixe = "Devis D";
+            $prefixe = "Devis ";
         }
         $title = $prefixe . get_field('numero');
         return $title;
