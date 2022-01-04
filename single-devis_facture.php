@@ -93,7 +93,7 @@
                                     $description_projet = get_field('description_du_projet');
                                     if($description_projet):
                                 ?>
-                                    <p class="mt-5 italic opacity-50"><?php echo $description_projet; ?></p>
+                                    <p class="mt-5 italic"><?php echo $description_projet; ?></p>
                                 <?php
                                     endif;
                                 ?>
@@ -168,7 +168,7 @@
 
     <!-- FOOTER -->
     <footer class="footer text-center mt-10">
-        <p class="mb-2 italic opacity-50">TVA non applicable. Art. 293B du CGI</p>
+        <p class="mb-2 italic">TVA non applicable. Art. 293B du CGI</p>
         <?php 
             // Affiche le RIB uniquement si on est sur un facture
             if($type_de_document[0]->slug === "facture"):
