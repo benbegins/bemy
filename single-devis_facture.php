@@ -1,6 +1,25 @@
-<?php 
-    get_header('facturation'); 
+<?php   
+
+    // Variables
     $type_de_document = get_the_terms($post->ID, 'types_de_document'); 
+    $client = get_the_terms( $post->ID, 'clients' );
+    $coordonnees_client = get_field('coordonnees', 'clients_' . $client[0]->term_id);
+    $nom_client = $client[0]->name;
+
+    // Modify Page title
+    add_filter('pre_get_document_title', 'modify_page_title');
+    function modify_page_title($title) {
+        $prefixe = '';
+        if($type_de_document = 'facture'){
+            $prefixe = "Facture F";
+        } else if ($type_de_document = 'devis'){
+            $prefixe = "Devis D";
+        }
+        $title = $prefixe . get_field('numero');
+        return $title;
+    }
+
+    get_header('facturation'); 
 ?>
 
 
@@ -72,12 +91,8 @@
                         <!-- COORDONNEES CLIENT -->
                         <section class="mb-10">
                             <div class="w-1/3 ml-auto">
-                                <?php 
-                                    $client = get_the_terms( $post->ID, 'clients' );
-                                    $coordonnees_client = get_field('coordonnees', 'clients_' . $client[0]->term_id);
-                                ?>
                                 <p>
-                                    <strong class="uppercase"><?php echo $client[0]->name; ?></strong>
+                                    <strong class="uppercase"><?php echo $nom_client; ?></strong>
                                 </p>
                                 <p class="mt-2 text-italic">
                                     <?php echo $coordonnees_client; ?>
@@ -87,7 +102,7 @@
                         <!-- DESCRIPTION PROJET -->
                         <section class="mb-10">
                             <div class="w-3/4">
-                                <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php the_date('d-m-Y'); ?></h1>
+                                <h1 class="font-bold text-xl"><?php echo $type_de_document[0]->name; ?> N° <?php the_field('numero'); ?> du <?php echo get_the_date('d-m-Y'); ?></h1>
                                 <h2 class="text-base"><?php the_title(); ?></h2>
                                 <?php 
                                     $description_projet = get_field('description_du_projet');
