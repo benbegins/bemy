@@ -2,11 +2,12 @@
 $type_de_doc = get_the_terms($post->ID, 'types_de_document');
 $client = get_the_terms($post->ID, 'clients');
 $paiement = get_field('paiement');
+$date = get_the_date('d-m-Y');
 ?>
 
 <a href="<?php the_permalink(); ?>" class="block py-4 hover:text-bemy-red transition duration-200">
     <div class="grid grid-cols-10 items-center facture-item<?php if(!$paiement){echo ' facture_en_attente';} ?>">
-        <div class="text-sm"><?php the_date('d-m-Y'); ?></div>
+        <div class="text-sm"><?php echo $date; ?></div>
         <div class="text-sm"><?php the_field('numero'); ?></div>
         <div class="col-span-4 font-bold"><?php the_title(); ?></div>
         <div class="col-span-2 text-sm uppercase"><?php echo $client[0]->name; ?></div>

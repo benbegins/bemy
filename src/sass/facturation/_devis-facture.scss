@@ -37,8 +37,15 @@ body#page-facturation {
 
 .facture {
 	position: relative;
-	min-height: 100vh;
-	padding-bottom: 150px;
+	max-width: 1280px;
+	margin: 0 auto;
+
+	@media print {
+		max-width: none;
+		margin: 0;
+	}
+	// min-height: 100vh;
+	// padding-bottom: 150px;
 
 	a {
 		color: $bemy-red;
@@ -48,5 +55,37 @@ body#page-facturation {
 	&__chiffrage {
 		display: grid;
 		grid-template-columns: 3fr 1fr;
+	}
+
+	table {
+		width: 100%;
+	}
+	.footer,
+	.footer-space {
+		height: 130px;
+	}
+
+	.footer {
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		display: none;
+
+		@media print {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+	}
+
+	.btn-export {
+		.btn {
+			background: $bemy-dark;
+			color: $bemy-light;
+			border: 0;
+		}
+		@media print {
+			display: none;
+		}
 	}
 }
