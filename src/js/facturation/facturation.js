@@ -79,8 +79,8 @@ const facturation = () => {
 					}
 				})
 				// Mise à jour du prix net et moyenne mensuelle
-				prixTotalNet = prixTotal * 0.75
-				moyenneMensuelle = prixTotalNet / 12
+				prixTotalNet = (prixTotal * 0.75).toFixed(0)
+				moyenneMensuelle = (prixTotalNet / 12).toFixed(0)
 			}
 			// On met à jour le Total sur la page
 			document.querySelector(".total_factures").innerText =
