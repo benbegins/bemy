@@ -14,6 +14,27 @@ get_header('facturation');
 
 
 <section>
+    <div class="container mt-32">
+        <div class="grid grid-cols-4 gap-x-4 uppercase text-center">
+            <div class=" border py-4 px-6">
+                <h2 class="text-xs">Chiffre d'affaires</h2>
+                <p class="font-bold text-base total_factures"></p>
+            </div>
+            <div class="border py-4 px-6">
+                <h2 class="text-xs">Total Net</h2>
+                <p class="font-bold text-base total_net"></p>
+            </div>
+            <div class="border py-4 px-6">
+                <h2 class="text-xs">Moyenne net mensuelle</h2>
+                <p class="font-bold text-base moyenne_mensuelle"></p>
+            </div>
+            <div class="border border-bemy-red text-bemy-red py-4 px-6">
+                <h2 class="text-xs">Paiement en attente</h2>
+                <p class="font-bold text-base total_en_attente"></p>
+            </div>
+        </div>
+    </div>
+
     <div class="container mt-32 flex justify-between items-start">
         <div class="flex items-center">
             <select class="select-year">
@@ -45,23 +66,11 @@ get_header('facturation');
             
             <button class="btn-reset-filter ml-4 text-xs underline">Réinitialiser</button>
         </div>
-
-        <div class="flex uppercase text-center">
-            <div class="border py-4 px-6">
-                <h2 class="text-xs">Chiffre d'affaires</h2>
-                <p class="font-bold text-base total_factures"></p>
-            </div>
-            <div class="ml-5 border py-4 px-6">
-                <h2 class="text-xs">Paiement en attente</h2>
-                <p class="font-bold text-base total_en_attente"></p>
-            </div>
-        </div>
-
     </div>
 </section>
 
 <section>
-    <div class="container divide-y divide-bemy-dark mt-20 liste-factures">
+    <div class="container divide-y divide-bemy-dark mt-10 liste-factures">
 
     <?php
         $annee_en_cours = date("Y");

@@ -59,6 +59,8 @@ const facturation = () => {
 		function calculateTotalFactures() {
 			let prixTotal = 0
 			let prixTotalEnAttente = 0
+			let prixTotalNet = 0
+			let moyenneMensuelle = 0
 			let factures = document.querySelectorAll(".facture-item")
 
 			if (factures) {
@@ -76,12 +78,18 @@ const facturation = () => {
 						prixTotalEnAttente += prixParsed
 					}
 				})
+				// Mise à jour du prix net et moyenne mensuelle
+				prixTotalNet = prixTotal * 0.75
+				moyenneMensuelle = prixTotalNet / 12
 			}
 			// On met à jour le Total sur la page
 			document.querySelector(".total_factures").innerText =
 				prixTotal + " €"
 			document.querySelector(".total_en_attente").innerText =
 				prixTotalEnAttente + " €"
+			document.querySelector(".total_net").innerText = prixTotalNet + " €"
+			document.querySelector(".moyenne_mensuelle").innerText =
+				moyenneMensuelle + " €"
 		}
 		calculateTotalFactures()
 
