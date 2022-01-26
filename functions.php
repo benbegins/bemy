@@ -45,6 +45,9 @@ add_action( 'wp_enqueue_scripts', 'bemytheme_register_assets');
 add_image_size( 'xl', 1440);
 add_image_size( 'xxl', 1900);
 
+//Disable plugin auto-update email notification
+add_filter('auto_plugin_update_send_email', '__return_false');
+
 
 //Projet post type
 function projet_post_type() {
