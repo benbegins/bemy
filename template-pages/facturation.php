@@ -45,7 +45,7 @@ get_header('facturation');
                 }
                 ?>
             </select>
-            <select class="select-month ml-2">
+            <select class="select-month ml-2 hidden">
                 <option value="0">--Mois--</option>
                 <?php 
                 for ($i=1; $i <= 12; $i++) { 
@@ -53,7 +53,7 @@ get_header('facturation');
                 }
                 ?>
             </select>
-            <select class="select-client ml-2">
+            <select class="select-client ml-2 hidden">
                 <option value="0">--Client--</option>
                 <?php 
                 $clients = get_terms('clients'); 

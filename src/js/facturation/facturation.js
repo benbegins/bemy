@@ -78,9 +78,21 @@ const facturation = () => {
 						prixTotalEnAttente += prixParsed
 					}
 				})
-				// Mise à jour du prix net et moyenne mensuelle
+				// Mise à jour du prix net
 				prixTotalNet = (prixTotal * 0.75).toFixed(0)
-				moyenneMensuelle = (prixTotalNet / 12).toFixed(0)
+				// Mise à jour de la moyenne mensuelle
+				const date = new Date()
+				let currentMonth = date.getMonth()
+				let currentYear = date.getFullYear()
+				console.log(year.value)
+				if (year.value === 0 || year.value === currentYear) {
+					moyenneMensuelle = (
+						(prixTotalNet / 12) *
+						(currentMonth + 1)
+					).toFixed(0)
+				} else {
+					moyenneMensuelle = (prixTotalNet / 12).toFixed(0)
+				}
 			}
 			// On met à jour le Total sur la page
 			document.querySelector(".total_factures").innerText =
