@@ -5,6 +5,10 @@ const facturation = () => {
 
 	if (listeFactures) {
 		//ELEMENTS
+		// Current datas
+		const date = new Date()
+		let currentMonth = date.getMonth()
+		let currentYear = date.getFullYear()
 		// Selects
 		let year = document.querySelector(".select-year")
 		let month = document.querySelector(".select-month")
@@ -18,7 +22,11 @@ const facturation = () => {
 		function getListFactures() {
 			let params = new URLSearchParams()
 			params.append("action", "filter_posts")
-			params.append("year", year.value)
+			if (year.value == 0) {
+				params.append("year", currentYear)
+			} else {
+				params.append("year", year.value)
+			}
 			params.append("month", month.value)
 			params.append("client", client.value)
 
@@ -81,12 +89,9 @@ const facturation = () => {
 				// Mise à jour du prix net
 				prixTotalNet = (prixTotal * 0.75).toFixed(0)
 				// Mise à jour de la moyenne mensuelle
-				const date = new Date()
-				let currentMonth = date.getMonth()
-				let currentYear = date.getFullYear()
-				if (year.value === 0 || year.value === currentYear) {
+				if (year.value == 0 || year.value == currentYear) {
 					moyenneMensuelle = (
-						(prixTotalNet / 12) *
+						prixTotalNet /
 						(currentMonth + 1)
 					).toFixed(0)
 				} else {
