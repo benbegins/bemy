@@ -84,7 +84,6 @@ const facturation = () => {
 				const date = new Date()
 				let currentMonth = date.getMonth()
 				let currentYear = date.getFullYear()
-				console.log(year.value)
 				if (year.value === 0 || year.value === currentYear) {
 					moyenneMensuelle = (
 						(prixTotalNet / 12) *
